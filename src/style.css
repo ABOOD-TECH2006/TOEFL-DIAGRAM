@@ -1,0 +1,307 @@
+/* ========== GLOBAL RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Inter", sans-serif;
+  transition: all 0.4s ease-in-out;
+}
+
+/* ========== ROOT COLORS ========== */
+:root {
+  --primary: #6759ff;
+  --secondary: #8f85ff;
+  --accent: #ffd93d;
+  --bg-light: #f9f9ff;
+  --bg-gradient: linear-gradient(135deg, #f0f4ff, #faf8ff);
+  --text-dark: #1e1e2f;
+  --text-light: #6f6f8a;
+  --card-bg: #ffffff;
+  --shadow: 0 10px 35px rgba(103, 89, 255, 0.12);
+  --radius: 18px;
+}
+
+/* ========== BODY ========== */
+body {
+  background: var(--bg-gradient);
+  color: var(--text-dark);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px 20px;
+  background-image: url("https://cdn.pixabay.com/photo/2016/11/29/02/34/abstract-1867880_1280.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: lighten;
+  animation: fadeIn 1.2s ease-in-out forwards;
+}
+
+/* ========== CONTAINER ========== */
+.app-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: slideUp 1s ease;
+}
+
+/* ========== HEADER ========== */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeInDown 1.2s ease;
+}
+
+header h1 {
+  font-size: 3rem;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ========== CONTROLS ========== */
+.controls {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+select,
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: var(--shadow);
+}
+
+select {
+  background: var(--card-bg);
+  border: 1px solid #e3e3f5;
+}
+
+select:hover {
+  border-color: var(--primary);
+}
+
+button {
+  background: var(--primary);
+  color: #fff;
+}
+
+button:hover {
+  background: var(--secondary);
+  transform: translateY(-3px);
+}
+
+/* ========== MAIN GRID ========== */
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  width: 100%;
+  justify-content: center;
+}
+
+/* ========== CARD ========== */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 1.8rem;
+  box-shadow: var(--shadow);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  animation: float 4s ease-in-out infinite;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(103, 89, 255, 0.2);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  top: 0;
+  left: 0;
+}
+
+/* ========== CARD CONTENT ========== */
+.card h2 {
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.tip {
+  background: #f6f6ff;
+  border-left: 5px solid var(--primary);
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin: 8px 0;
+  font-size: 0.9rem;
+}
+
+.tip:hover {
+  background: #fff9e6;
+  border-left-color: var(--accent);
+}
+
+/* ========== IMAGE SECTIONS ========== */
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 12px;
+  object-fit: cover;
+  background-position: center;
+  max-height: 180px;
+  filter: brightness(0.95);
+  transition: transform 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* ========== FOOTER ========== */
+footer {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-light);
+  animation: fadeInUp 1s ease;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+/* Section layout: text + image */
+/* Section layout: text + image */
+.section-card .section-content {
+  display: flex;
+  flex-direction: column; /* <-- change from column to row */
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap; /* optional, for responsiveness */
+}
+
+.section-card .section-content .tips {
+  flex: 1; /* text takes remaining space */
+}
+
+.section-card .section-content .images {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}
+
+.section-card .section-content img {
+  width: 100%; /*  image width */
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  filter: brightness(0.95);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.section-card .section-content img:hover {
+  transform: scale(1.05) rotate(1deg);
+  filter: brightness(1);
+}
+
+/* Optional: make it responsive on small screens */
+@media (max-width: 900px) {
+  .section-card .section-content {
+    flex-direction: column; /* stack on mobile */
+    align-items: center;
+  }
+
+  .section-card .section-content img {
+    width: 100%;
+    /* height: auto; */
+    height: 100%;
+  }
+}

@@ -1,0 +1,148 @@
+import React, { useState, useEffect } from "react";
+import jsPDF from "jspdf";
+import "./style.css";
+import { toeflData } from "./data/toeflUnified";
+import reading1 from "./assets/reading1.jpg";
+import reading2 from "./assets/reading2.jpg";
+
+import listening1 from "./assets/listening1.jpg";
+import listening2 from "./assets/listening2.jpg";
+import listening3 from "./assets/listening3.jpg";
+
+import speaking1 from "./assets/speaking1.jpg";
+
+import writing1 from "./assets/writing1.jpg";
+import writing2 from "./assets/writing2.jpg";
+import writing3 from "./assets/writing3.jpg";
+
+export default function ToeflCompanion() {
+  const [theme, setTheme] = useState("default");
+
+  // Section images (multiple per section)
+  const sectionImages = {
+    Reading: [reading1, reading2],
+    Listening: [listening1, listening2, listening3],
+    Speaking: [speaking1],
+    Writing: [writing1, writing2, writing3],
+  };
+
+  const [currentImageIndex, setCurrentImageIndex] = useState({
+    Reading: 0,
+    Listening: 0,
+    Speaking: 0,
+    Writing: 0,
+  });
+
+  // Rotate images every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => {
+        const newIndex = {};
+        for (const section in prev) {
+          newIndex[section] =
+            (prev[section] + 1) % sectionImages[section].length;
+        }
+        return newIndex;
+      });
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const generatePDF = () => {
+    const doc = new jsPDF();
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(20);
+    doc.text("TOEFL Study Plan", 20, 20);
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(12);
+    doc.text(
+      "Get acquainted with the TOEFL structure and essential strategies.",
+      20,
+      30,
+      { maxWidth: 170 }
+    );
+    let y = 45;
+    toeflData.toeflTips.forEach((section) => {
+      doc.setFont("helvetica", "bold");
+      doc.text(`${section.section} Section`, 20, y);
+      doc.setFont("helvetica", "normal");
+      y += 7;
+      section.tips.forEach((tip) => {
+        const splitTip = doc.splitTextToSize(`- ${tip}`, 170);
+        splitTip.forEach((line) => {
+          doc.text(line, 25, y);
+          y += 7;
+        });
+      });
+      y += 5;
+    });
+    doc.setFont("helvetica", "italic");
+    doc.setFontSize(10);
+    doc.text(
+      "© 2025 TOEFL Companion | Designed to help you achieve your dream score!",
+      20,
+      y + 10
+    );
+    doc.save("TOEFL_Study_Plan.pdf");
+  };
+
+  // Helper to render a section with images beside it
+  const renderSection = (title, tips, sectionKey) => (
+    <div className="card section-card">
+      <div className="section-content">
+        <div className="tips">
+          <h2>{title}</h2>
+          <ul>
+            {tips.map((tip, i) => (
+              <li className="tip" key={i}>{tip}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="images">
+          <img
+          
+            src={sectionImages[sectionKey][currentImageIndex[sectionKey]]}
+            alt={`${sectionKey} Illustration`}
+          />
+        </div>
+      </div>
+    </div>
+  );
+
+  return (
+    <div className="app-wrapper">
+      <header>
+        <h1>TOEFL Companion</h1>
+        <p>Get acquainted with the TOEFL — structure, strategies, and templates</p>
+        <div className="controls">
+          <select value={theme} onChange={(e) => setTheme(e.target.value)}>
+            <option value="default">Classic</option>
+            <option value="calm">Calm</option>
+            <option value="mint">Mint</option>
+          </select>
+          <button onClick={generatePDF}>Download Study Plan (PDF)</button>
+        </div>
+      </header>
+
+      <main className="main-grid">
+        {renderSection("Reading Section", toeflData.studyMap.reading, "Reading")}
+        {renderSection("Listening Section", toeflData.studyMap.listening, "Listening")}
+        {renderSection(
+          "Speaking Section",
+          [...toeflData.studyMap.speaking.delivery, ...toeflData.studyMap.speaking.content],
+          "Speaking"
+        )}
+        {renderSection(
+          "Writing Section",
+          [...toeflData.studyMap.writing.integrated, ...toeflData.studyMap.writing.academicDiscussion],
+          "Writing"
+        )}
+      </main>
+
+      <footer>
+        © 2025 TOEFL Companion — Built with 💜 to help you succeed.
+      </footer>
+    </div>
+  );
+}
