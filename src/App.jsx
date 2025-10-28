@@ -122,6 +122,7 @@ export default function ToeflCompanion() {
             <option value="mint">Mint</option>
           </select>
           <button onClick={generatePDF}>Download Study Plan (PDF)</button>
+          <button ><a href="/vocabs" style={{color:'white',textDecoration:"none"}}>Vocabs</a></button>
         </div>
       </header>
 

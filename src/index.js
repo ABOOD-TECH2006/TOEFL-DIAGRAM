@@ -1,10 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './App';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import Vocabs from "./vocabs"
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <h1> Error Page</h1>,
+  },
+  {
+    path: "/Vocabs",
+    element: <Vocabs/>,
+  },])
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <App />
+    <RouterProvider router={router} />
 );
 
 // If you want to start measuring performance in your app, pass a function
