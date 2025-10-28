@@ -1,4 +1,3 @@
-/* General layout */
 .vocab-wrapper {
   min-height: 100vh;
   background: linear-gradient(135deg, #dff1ff, #fff8f8);
@@ -8,6 +7,7 @@
   animation: fadeIn 1s ease-in-out;
 }
 
+/* Header */
 .vocab-header {
   text-align: center;
   margin-bottom: 40px;
@@ -16,77 +16,125 @@
 
 .vocab-header h1 {
   font-size: 2.8rem;
-  color: #2b4b80;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  color: #1e3d58;
 }
 
 .vocab-header p {
-  font-size: 1.2rem;
-  color: #444;
-  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 5px;
 }
 
-.vocab-content {
+/* Buttons */
+.batch-buttons {
+  margin-top: 25px;
   display: flex;
-  flex-direction: column;
-  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
 }
 
-/* Section styling */
+.batch-btn {
+  background: linear-gradient(135deg, #4f9efc, #90caf9);
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 10px 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.batch-btn:hover {
+  background: linear-gradient(135deg, #1976d2, #64b5f6);
+  transform: scale(1.05);
+}
+
+.batch-btn.active {
+  background: linear-gradient(135deg, #1e88e5, #1565c0);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Batch section */
 .vocab-section {
   background: #ffffffd9;
   padding: 30px;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  animation: fadeUp 1.3s ease;
 }
 
 .batch-title {
   text-align: center;
   color: #155e63;
   font-size: 1.8rem;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   border-bottom: 3px solid #c5e1f9;
   display: inline-block;
   padding-bottom: 5px;
 }
 
-/* Grid of vocab cards */
+/* Grid layout */
 .vocab-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
 }
 
+/* Vocabulary card (cart style) */
 .vocab-card {
   background: #fdfdfd;
   border-radius: 14px;
   padding: 18px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s, background 0.4s;
+  transition: all 0.3s ease;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
 .vocab-card:hover {
-  transform: translateY(-6px);
-  background: linear-gradient(135deg, #e3f2fd, #fce4ec);
+  transform: translateY(-6px) scale(1.02);
+  background: linear-gradient(145deg, #e3f2fd, #fce4ec);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Word styles */
+/* Card header */
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .word {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: #264653;
-  margin-bottom: 6px;
   font-weight: bold;
+}
+
+.batch-tag {
+  background: #4f9efc;
+  color: white;
+  font-size: 0.75rem;
+  border-radius: 12px;
+  padding: 3px 8px;
+  font-weight: 600;
+}
+
+/* Card body */
+.card-body {
+  margin-top: 10px;
 }
 
 .arabic {
   font-size: 1.1rem;
   color: #15616d;
-  margin-bottom: 4px;
   direction: rtl;
+  margin-bottom: 6px;
 }
 
 .english {
@@ -113,43 +161,110 @@
   from { transform: translateY(-20px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
-
-@keyframes fadeUp {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-.batch-buttons {
-  margin-top: 25px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-
-.batch-btn {
-  background: linear-gradient(135deg, #4f9efc, #90caf9);
-  border: none;
-  color: white;
-  font-weight: bold;
-  border-radius: 8px;
-  padding: 10px 18px;
+/* Heart icon */
+.heart-icon {
+  font-size: 1.3rem;
+  color: #999;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+.heart-icon:hover {
+  transform: scale(1.2);
+  color: #e63946;
+}
+
+.heart-icon.loved,
+.fas.heart-icon {
+  color: #e63946;
+}
+
+/* Floating Cart Button */
+.cart-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #e91e63, #f06292);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 24px;
+  font-weight: 600;
   font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+  z-index: 1000;
 }
 
-.batch-btn:hover {
-  background: linear-gradient(135deg, #1976d2, #64b5f6);
+.cart-button:hover {
   transform: scale(1.05);
+  background: linear-gradient(135deg, #ad1457, #f48fb1);
 }
 
-.batch-btn.active {
-  background: linear-gradient(135deg, #1e88e5, #1565c0);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
+/* Loved Cart Panel */
+.cart-panel {
+  position: fixed;
+  bottom: 90px;
+  right: 30px;
+  width: 300px;
+  max-height: 400px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  overflow-y: auto;
+  animation: fadeUp 0.4s ease;
+  z-index: 1100;
 }
 
-/* Smooth fade-in animation for vocab content */
-.fadeIn {
-  animation: fadeIn 0.8s ease;
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-header h3 {
+  margin: 0;
+  color: #e91e63;
+  font-size: 1.2rem;
+}
+
+.close-cart {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #777;
+}
+
+.cart-list {
+  list-style: none;
+  margin: 0;
+  padding: 10px 15px;
+}
+
+.cart-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f1f1;
+  color: #444;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
+
+/* Animation for cart */
+@keyframes fadeUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
