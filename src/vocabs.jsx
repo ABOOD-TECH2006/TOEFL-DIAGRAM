@@ -43,7 +43,7 @@ export default function Vocab() {
               className={`batch-btn ${activeBatch === batch ? "active" : ""}`}
               onClick={() => setActiveBatch(batch)}
             >
-              {batch.replace("batch", "Batch ")}
+              {batch.replace("batch", "Section ")}
             </button>
           ))}
         </div>
@@ -53,8 +53,8 @@ export default function Vocab() {
         <section className="vocab-section">
           <h2 className="batch-title">
             {activeBatch === "all"
-              ? "All TOEFL Batches"
-              : activeBatch.replace("batch", "Batch ")}
+              ? "All TOEFL Sections"
+              : activeBatch.replace("batch", "Section ")}
           </h2>
 
           <div className="vocab-grid">
