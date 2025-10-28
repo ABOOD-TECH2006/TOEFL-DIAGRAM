@@ -1,6 +1,8 @@
 import React, { useState,useEffect } from "react";
 import vocab from "./data/vocabs";
 import "./vocab.css";
+
+
 export default function Vocab() {
   const [activeBatch, setActiveBatch] = useState("batch1");
   const [lovedVocabs, setLovedVocabs] = useState([]);
@@ -34,6 +36,14 @@ export default function Vocab() {
     } else {
       setLovedVocabs([...lovedVocabs, wordObj]);
     }
+  };
+
+  // 🎤 Pronounce the word using browser speech API
+  const speakWord = (word) => {
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = "en-US";
+    utterance.rate = 0.9;
+    speechSynthesis.speak(utterance);
   };
 
   return (
@@ -76,12 +86,18 @@ export default function Vocab() {
                 <div key={index} className="vocab-card">
                   <div className="card-top">
                     <h3 className="word">{item.word}</h3>
-                    <i
-                      className={`fa-heart ${
-                        isLoved ? "fas loved" : "far"
-                      } heart-icon`}
-                      onClick={() => toggleLove(item)}
-                    ></i>
+                    <div className="icons">
+                      <i
+                        className={`fa-heart ${
+                          isLoved ? "fas loved" : "far"
+                        } heart-icon`}
+                        onClick={() => toggleLove(item)}
+                      ></i>
+                      <i
+                        className="fas fa-microphone mic-icon"
+                        onClick={() => speakWord(item.word)}
+                      ></i>
+                    </div>
                   </div>
                   <div className="card-body">
                     <p className="arabic">{item.arabic}</p>
@@ -123,7 +139,7 @@ export default function Vocab() {
       )}
 
       <footer className="vocab-footer">
-        <p>© 2025 ABOOD | JAMAL TOEFL Companion — Vocabulary Power!</p>
+        <p>© 2025 TOEFL Companion — Vocabulary Power!</p>
       </footer>
     </div>
   );
