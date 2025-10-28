@@ -142,7 +142,7 @@ export default function ToeflCompanion() {
       </main>
 
       <footer>
-        © 2025 TOEFL Companion — Built with 💜 to help you succeed.
+        © 2025 ABOOD | JAMAL TOEFL Companion — Built with 💜 to help you succeed.
       </footer>
     </div>
   );

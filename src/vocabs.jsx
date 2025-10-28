@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import vocab from "./data/vocabs";
 import "./vocab.css";
-
 export default function Vocab() {
   const [activeBatch, setActiveBatch] = useState("batch1");
   const [lovedVocabs, setLovedVocabs] = useState([]);
@@ -14,7 +13,20 @@ export default function Vocab() {
       ? Object.values(vocab).flat()
       : vocab[activeBatch] || [];
 
-  // Toggle love
+  // ✅ Load loved vocabs from localStorage on first render
+  useEffect(() => {
+    const saved = localStorage.getItem("lovedVocabs");
+    if (saved) {
+      setLovedVocabs(JSON.parse(saved));
+    }
+  }, []);
+
+  // ✅ Save loved vocabs to localStorage whenever they change
+  useEffect(() => {
+    localStorage.setItem("lovedVocabs", JSON.stringify(lovedVocabs));
+  }, [lovedVocabs]);
+
+  // ❤️ Toggle love state
   const toggleLove = (wordObj) => {
     const alreadyLoved = lovedVocabs.find((w) => w.word === wordObj.word);
     if (alreadyLoved) {
@@ -111,7 +123,7 @@ export default function Vocab() {
       )}
 
       <footer className="vocab-footer">
-        <p>© 2025 TOEFL Companion — Vocabulary Power!</p>
+        <p>© 2025 ABOOD | JAMAL TOEFL Companion — Vocabulary Power!</p>
       </footer>
     </div>
   );
