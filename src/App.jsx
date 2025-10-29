@@ -116,7 +116,7 @@ export default function ToeflCompanion() {
         <h1>TOEFL Companion</h1>
         <p>Get acquainted with the TOEFL — structure, strategies, and templates</p>
         <div className="controls">
-          <select value={theme} onChange={(e) => setTheme(e.target.value)}>
+          <select value={theme} style={{borderRadius:"1pc",outline:"none"}} onChange={(e) => setTheme(e.target.value)}>
             <option value="default">Classic</option>
             <option value="calm">Calm</option>
             <option value="mint">Mint</option>

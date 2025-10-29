@@ -1,7 +1,6 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import vocab from "./data/vocabs";
 import "./vocab.css";
-
 
 export default function Vocab() {
   const [activeBatch, setActiveBatch] = useState("batch1");
@@ -50,8 +49,12 @@ export default function Vocab() {
     <div className="vocab-wrapper">
       <header className="vocab-header">
         <h1>TOEFL Vocabulary Hub</h1>
-        <p>Master your TOEFL words — one batch at a time!</p>
-
+        <p>Master your TOEFL words — one Section at a time!</p>
+        <button style={{ marginTop: "10px" }}>
+          <a href="/" style={{ color: "white", textDecoration: "none" }}>
+            Home Page
+          </a>
+        </button>
         <div className="batch-buttons">
           <button
             className={`batch-btn ${activeBatch === "all" ? "active" : ""}`}
@@ -129,9 +132,15 @@ export default function Vocab() {
           ) : (
             <ul className="cart-list">
               {lovedVocabs.map((word, i) => (
-                <li key={i}>
-                  <strong>{word.word}</strong> — {word.arabic}
-                </li>
+                <div style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+                  <li key={i}>
+                    <strong>{word.word}</strong> — {word.arabic}
+                  </li>
+                  <i
+                    className="fas fa-microphone mic-icon"
+                    onClick={() => speakWord(word.word)}
+                  ></i>
+                </div>
               ))}
             </ul>
           )}
@@ -139,7 +148,7 @@ export default function Vocab() {
       )}
 
       <footer className="vocab-footer">
-        <p>© 2025 TOEFL Companion — Vocabulary Power!</p>
+        <p>© 2025 ABOOD | JAMAL TOEFL Companion — Vocabulary Power!</p>
       </footer>
     </div>
   );
