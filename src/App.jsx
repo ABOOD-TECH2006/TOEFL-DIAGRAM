@@ -4,26 +4,35 @@ import "./style.css";
 import { toeflData } from "./data/toeflUnified";
 import reading1 from "./assets/reading1.jpg";
 import reading2 from "./assets/reading2.jpg";
+import reading3 from "./assets/reading3.jpg";
+import reading4 from "./assets/reading4.jpg";
 
 import listening1 from "./assets/listening1.jpg";
 import listening2 from "./assets/listening2.jpg";
 import listening3 from "./assets/listening3.jpg";
+import listening4 from "./assets/listening4.jpg";
+import listening5 from "./assets/listening5.jpg";
 
 import speaking1 from "./assets/speaking1.jpg";
+import speaking2 from "./assets/speaking2.jpg";
+import speaking3 from "./assets/speaking3.jpg";
+import speaking4 from "./assets/speaking4.jpg";
 
 import writing1 from "./assets/writing1.jpg";
 import writing2 from "./assets/writing2.jpg";
 import writing3 from "./assets/writing3.jpg";
+import writing4 from "./assets/writing4.jpg";
+import writing5 from "./assets/writing5.jpg";
 
 export default function ToeflCompanion() {
   const [theme, setTheme] = useState("default");
 
   // Section images (multiple per section)
   const sectionImages = {
-    Reading: [reading1, reading2],
-    Listening: [listening1, listening2, listening3],
-    Speaking: [speaking1],
-    Writing: [writing1, writing2, writing3],
+    Reading: [reading1, reading2,reading3,reading4],
+    Listening: [listening1, listening2, listening3,listening3,listening4,listening5],
+    Speaking: [speaking1,speaking2,speaking3,speaking4,listening5],
+    Writing: [writing1, writing2, writing3,writing4,writing5],
   };
 
   const [currentImageIndex, setCurrentImageIndex] = useState({
