@@ -158,9 +158,14 @@ export default function Vocab() {
           )}
         </div>
       )}
+      <footer className="footer">
+        <p>
+          © 2025 <span className="brand">ABOOD | JAMAL</span>
+        </p>
+        <p className="quote-footer">
+          🎯 TOEFL Companion — Vocabulary Power!
 
-      <footer className="vocab-footer">
-        <p>© 2025 ABOOD | JAMAL TOEFL Companion — Vocabulary Power!</p>
+        </p>
       </footer>
     </div>
   );

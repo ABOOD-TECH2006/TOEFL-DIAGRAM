@@ -194,6 +194,10 @@ export default function ToeflCompanion() {
             <a href="/vocabs" style={{ color: "white", textDecoration: "none" }}>
               Vocabs
             </a>
+          </button>          <button>
+            <a href="/TOEFLGuide" style={{ color: "white", textDecoration: "none" }}>
+              TOEFL Guide
+            </a>
           </button>
         </div>
       </header>
