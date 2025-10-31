@@ -14,6 +14,12 @@ import listening2 from "./assets/listening2.jpg";
 import listening3 from "./assets/listening3.jpg";
 import listening4 from "./assets/listening4.jpg";
 import listening5 from "./assets/listening5.jpg";
+import listening6 from "./assets/listening6.jpg";
+import listening7 from "./assets/listening7.jpg";
+import listening8 from "./assets/listening8.jpg";
+import listening9 from "./assets/listening9.jpg";
+import listening10 from "./assets/listening10.jpg";
+import listening11 from "./assets/listening11.jpg";
 
 import speaking1 from "./assets/speaking1.jpg";
 import speaking2 from "./assets/speaking2.jpg";
@@ -25,6 +31,10 @@ import writing2 from "./assets/writing2.jpg";
 import writing3 from "./assets/writing3.jpg";
 import writing4 from "./assets/writing4.jpg";
 import writing5 from "./assets/writing5.jpg";
+import writing6 from "./assets/writing6.jpg";
+import writing7 from "./assets/writing7.jpg";
+import writing8 from "./assets/writing8.jpg";
+import writing9 from "./assets/writing9.jpg";
 
 export default function ToeflCompanion() {
   const [theme, setTheme] = useState("default");
@@ -32,9 +42,9 @@ export default function ToeflCompanion() {
   // 🔹 Section images (multiple per section)
   const sectionImages = {
     Reading: [reading1, reading2, reading3, reading4],
-    Listening: [listening1, listening2, listening3, listening4, listening5],
+    Listening: [listening1, listening2, listening3, listening4, listening5,listening6,listening7,listening8,listening9,listening10,listening11],
     Speaking: [speaking1, speaking2, speaking3, speaking4],
-    Writing: [writing1, writing2, writing3, writing4, writing5],
+    Writing: [writing1, writing2, writing3, writing4, writing5,writing6,writing7,writing8,writing9],
   };
 
   // 🔹 Track current index of images
