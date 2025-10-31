@@ -104,7 +104,13 @@ export default function Vocab() {
                   </div>
                   <div className="card-body">
                     <p className="arabic">{item.arabic}</p>
-                    <p className="english">{item.english}</p>
+                    <div style={{ display: "flex",columnGap:"5px" }}>
+                      <p className="english">{item.english}</p>
+                      <i
+                        className="fas fa-microphone mic-icon"
+                        onClick={() => speakWord(item.english)}
+                      ></i>
+                    </div>
                   </div>
                 </div>
               );
@@ -132,7 +138,13 @@ export default function Vocab() {
           ) : (
             <ul className="cart-list">
               {lovedVocabs.map((word, i) => (
-                <div style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                  }}
+                >
                   <li key={i}>
                     <strong>{word.word}</strong> — {word.arabic}
                   </li>

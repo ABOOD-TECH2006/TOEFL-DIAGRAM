@@ -261,6 +261,7 @@ footer {
 /* Section layout: text + image */
 .section-card .section-content {
   display: flex;
+  align-items: center;
   flex-direction: column; /* <-- change from column to row */
   align-items: flex-start;
   gap: 20px;
@@ -274,8 +275,8 @@ footer {
 .section-card .section-content .images {
   flex-shrink: 0;
   width: 100%;
-  height: 100%;
-  flex: 1;
+  /* height: 100%; */
+  /* flex: 1; */
 }
 
 .section-card .section-content img {
