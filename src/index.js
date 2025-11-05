@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './App';
 import Vocabs from "./vocabs"
 import TOEFLGuide from "./TOEFLGuide"
+import Topics from "./Topics"
 const router = createBrowserRouter([
   {
     path: "/",
@@ -16,6 +17,9 @@ const router = createBrowserRouter([
   },  {
     path: "/TOEFLGuide",
     element: <TOEFLGuide/>,
+  },  {
+    path: "/Topics",
+    element: <Topics/>,
   },])
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

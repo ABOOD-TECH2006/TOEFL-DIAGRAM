@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import jsPDF from "jspdf";
 import "./style.css";
 import { toeflData } from "./data/toeflUnified";
-
+// import TodoList from "./components/TodoList";
 // 🖼️ Import images
 import reading1 from "./assets/reading1.jpg";
 import reading2 from "./assets/reading2.jpg";
@@ -55,9 +55,44 @@ export default function ToeflCompanion() {
   // 🔹 Section images (multiple per section)
   const sectionImages = {
     Reading: [reading1, reading2, reading3, reading4],
-    Listening: [listening1, listening2, listening3, listening4, listening5,listening6,listening7,listening8,listening9,listening10,listening11,listening12,listening13,listening14],
+    Listening: [
+      listening1,
+      listening2,
+      listening3,
+      listening4,
+      listening5,
+      listening6,
+      listening7,
+      listening8,
+      listening9,
+      listening10,
+      listening11,
+      listening12,
+      listening13,
+      listening14,
+    ],
     Speaking: [speaking1, speaking2, speaking3, speaking4],
-    Writing: [writing1, writing2, writing3, writing4, writing5,writing6,writing7,writing8,writing9,writing11,writing12,writing13,writing14,writing15,writing16,writing17,writing18,writing19,writing20],
+    Writing: [
+      writing1,
+      writing2,
+      writing3,
+      writing4,
+      writing5,
+      writing6,
+      writing7,
+      writing8,
+      writing9,
+      writing11,
+      writing12,
+      writing13,
+      writing14,
+      writing15,
+      writing16,
+      writing17,
+      writing18,
+      writing19,
+      writing20,
+    ],
   };
 
   // 🔹 Track current index of images
@@ -204,11 +239,26 @@ export default function ToeflCompanion() {
           </select>
           <button onClick={generatePDF}>Download Study Plan (PDF)</button>
           <button>
-            <a href="/vocabs" style={{ color: "white", textDecoration: "none" }}>
+            <a
+              href="/vocabs"
+              style={{ color: "white", textDecoration: "none" }}
+            >
               Vocabs
             </a>
-          </button>          <button>
-            <a href="/TOEFLGuide" style={{ color: "white", textDecoration: "none" }}>
+          </button>
+                    <button>
+            <a
+              href="/Topics"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              Vocabs For Topics
+            </a>
+          </button>
+          <button>
+            <a
+              href="/TOEFLGuide"
+              style={{ color: "white", textDecoration: "none" }}
+            >
               TOEFL Guide
             </a>
           </button>
@@ -216,7 +266,11 @@ export default function ToeflCompanion() {
       </header>
 
       <main className="main-grid">
-        {renderSection("Reading Section", toeflData.studyMap.reading, "Reading")}
+        {renderSection(
+          "Reading Section",
+          toeflData.studyMap.reading,
+          "Reading"
+        )}
         {renderSection(
           "Listening Section",
           toeflData.studyMap.listening,
