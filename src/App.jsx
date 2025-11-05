@@ -20,6 +20,9 @@ import listening8 from "./assets/listening8.jpg";
 import listening9 from "./assets/listening9.jpg";
 import listening10 from "./assets/listening10.jpg";
 import listening11 from "./assets/listening11.jpg";
+import listening12 from "./assets/listening12.jpg";
+import listening13 from "./assets/listening13.jpg";
+import listening14 from "./assets/listening14.jpg";
 
 import speaking1 from "./assets/speaking1.jpg";
 import speaking2 from "./assets/speaking2.jpg";
@@ -35,16 +38,26 @@ import writing6 from "./assets/writing6.jpg";
 import writing7 from "./assets/writing7.jpg";
 import writing8 from "./assets/writing8.jpg";
 import writing9 from "./assets/writing9.jpg";
-
+import writing10 from "./assets/writing10.jpg";
+import writing11 from "./assets/writing11.jpg";
+import writing12 from "./assets/writing12.jpg";
+import writing13 from "./assets/writing13.jpg";
+import writing14 from "./assets/writing14.jpg";
+import writing15 from "./assets/writing15.jpg";
+import writing16 from "./assets/writing16.jpg";
+import writing17 from "./assets/writing17.jpg";
+import writing18 from "./assets/writing18.jpg";
+import writing19 from "./assets/writing19.jpg";
+import writing20 from "./assets/writing20.jpg";
 export default function ToeflCompanion() {
   const [theme, setTheme] = useState("default");
 
   // 🔹 Section images (multiple per section)
   const sectionImages = {
     Reading: [reading1, reading2, reading3, reading4],
-    Listening: [listening1, listening2, listening3, listening4, listening5,listening6,listening7,listening8,listening9,listening10,listening11],
+    Listening: [listening1, listening2, listening3, listening4, listening5,listening6,listening7,listening8,listening9,listening10,listening11,listening12,listening13,listening14],
     Speaking: [speaking1, speaking2, speaking3, speaking4],
-    Writing: [writing1, writing2, writing3, writing4, writing5,writing6,writing7,writing8,writing9],
+    Writing: [writing1, writing2, writing3, writing4, writing5,writing6,writing7,writing8,writing9,writing10,writing11,writing12,writing13,writing14,writing15,writing16,writing17,writing18,writing19,writing20],
   };
 
   // 🔹 Track current index of images
