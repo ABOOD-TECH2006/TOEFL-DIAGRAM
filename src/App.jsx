@@ -38,7 +38,7 @@ import writing6 from "./assets/writing6.jpg";
 import writing7 from "./assets/writing7.jpg";
 import writing8 from "./assets/writing8.jpg";
 import writing9 from "./assets/writing9.jpg";
-import writing10 from "./assets/writing10.jpg";
+// import writing10 from "./assets/writing10.jpg";
 import writing11 from "./assets/writing11.jpg";
 import writing12 from "./assets/writing12.jpg";
 import writing13 from "./assets/writing13.jpg";
@@ -57,7 +57,7 @@ export default function ToeflCompanion() {
     Reading: [reading1, reading2, reading3, reading4],
     Listening: [listening1, listening2, listening3, listening4, listening5,listening6,listening7,listening8,listening9,listening10,listening11,listening12,listening13,listening14],
     Speaking: [speaking1, speaking2, speaking3, speaking4],
-    Writing: [writing1, writing2, writing3, writing4, writing5,writing6,writing7,writing8,writing9,writing10,writing11,writing12,writing13,writing14,writing15,writing16,writing17,writing18,writing19,writing20],
+    Writing: [writing1, writing2, writing3, writing4, writing5,writing6,writing7,writing8,writing9,writing11,writing12,writing13,writing14,writing15,writing16,writing17,writing18,writing19,writing20],
   };
 
   // 🔹 Track current index of images
