@@ -125,39 +125,39 @@ export default function Vocab() {
       </button>
 
       {/* Loved Cart Panel */}
-      {showCart && (
-        <div className="cart-panel">
-          <div className="cart-header">
-            <h3>❤️ Loved Vocabs</h3>
-            <button onClick={() => setShowCart(false)} className="close-cart">
-              <i className="fas fa-times"></i>
-            </button>
-          </div>
-          {lovedVocabs.length === 0 ? (
-            <p className="empty-cart">No loved words yet!</p>
-          ) : (
-            <ul className="cart-list">
-              {lovedVocabs.map((word, i) => (
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <li key={i}>
-                    <strong>{word.word}</strong> — {word.arabic}
-                  </li>
-                  <i
-                    className="fas fa-microphone mic-icon"
-                    onClick={() => speakWord(word.word)}
-                  ></i>
-                </div>
-              ))}
-            </ul>
-          )}
-        </div>
-      )}
+  <div className={`cart-panel ${showCart ? "show" : ""}`}>  
+    <div className="cart-header">  
+      <h3>❤️ Loved Words</h3>  
+      <button onClick={() => setShowCart(false)} className="close-cart">  
+        <i className="fas fa-times"></i>  
+      </button>  
+    </div>  
+
+    {lovedVocabs.length === 0 ? (  
+      <p className="empty-cart">No loved words yet!</p>  
+    ) : (  
+      <ul className="cart-list">  
+        {lovedVocabs.map((word, i) => (  
+          <div  
+            key={i}  
+            style={{  
+              display: "flex",  
+              alignItems: "center",  
+              justifyContent: "space-between",  
+            }}  
+          >  
+            <li>  
+              <strong>{word.word}</strong> — {word.arabic}  
+            </li>  
+            <i  
+              className="fas fa-microphone mic-icon"  
+              onClick={() => speakWord(word.word)}  
+            ></i>  
+          </div>  
+        ))}  
+      </ul>  
+    )}  
+  </div>  
       <footer className="footer">
         <p>
           © 2025 <span className="brand">ABOOD | JAMAL</span>

@@ -15,14 +15,14 @@ activeTopic === "All"
 : vocab[activeTopic] || [];
 
 useEffect(() => {
-const saved = localStorage.getItem("lovedVocabs");
+const saved = localStorage.getItem("lovedVocabs2");
 if (saved) {
 setLovedVocabs(JSON.parse(saved));
 }
 }, []);
 
 useEffect(() => {
-localStorage.setItem("lovedVocabs", JSON.stringify(lovedVocabs));
+localStorage.setItem("lovedVocabs2", JSON.stringify(lovedVocabs));
 }, [lovedVocabs]);
 
 const toggleLove = (wordObj) => {
