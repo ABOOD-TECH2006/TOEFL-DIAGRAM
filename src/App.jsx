@@ -246,12 +246,20 @@ export default function ToeflCompanion() {
               Vocabs
             </a>
           </button>
-                    <button>
+          <button>
             <a
               href="/Topics"
               style={{ color: "white", textDecoration: "none" }}
             >
               Vocabs For Topics
+            </a>
+          </button>
+          <button>
+            <a
+              href="/pre-suf"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              prefix/suffix
             </a>
           </button>
           <button>
@@ -264,7 +272,6 @@ export default function ToeflCompanion() {
           </button>
         </div>
       </header>
-
       <main className="main-grid">
         {renderSection(
           "Reading Section",
@@ -293,7 +300,6 @@ export default function ToeflCompanion() {
           "Writing"
         )}
       </main>
-
       <footer>
         © 2025 ABOOD | JAMAL TOEFL Companion — Built with 💜 to help you
         succeed.

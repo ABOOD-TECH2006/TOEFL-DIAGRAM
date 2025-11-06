@@ -1,10 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from './App';
-import Vocabs from "./vocabs"
-import TOEFLGuide from "./TOEFLGuide"
-import Topics from "./Topics"
+import App from "./App";
+import Vocabs from "./vocabs";
+import TOEFLGuide from "./TOEFLGuide";
+import Topics from "./Topics";
+import Pre_Suf from './pre-suf'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -13,18 +14,24 @@ const router = createBrowserRouter([
   },
   {
     path: "/Vocabs",
-    element: <Vocabs/>,
-  },  {
+    element: <Vocabs />,
+  },
+  {
     path: "/TOEFLGuide",
-    element: <TOEFLGuide/>,
-  },  {
+    element: <TOEFLGuide />,
+  },
+  {
     path: "/Topics",
-    element: <Topics/>,
-  },])
+    element: <Topics />,
+  },
+  ,
+  {
+    path: "/pre-suf",
+    element: <Pre_Suf/>,
+  },
+]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-    <RouterProvider router={router} />
-);
+root.render(<RouterProvider router={router} />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
