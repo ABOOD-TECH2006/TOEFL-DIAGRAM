@@ -5,7 +5,8 @@ import App from "./App";
 import Vocabs from "./vocabs";
 import TOEFLGuide from "./TOEFLGuide";
 import Topics from "./Topics";
-import Pre_Suf from './pre-suf'
+import Pre_Suf from "./pre-suf";
+import StudyPlan from "./studyPlan";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,7 +28,11 @@ const router = createBrowserRouter([
   ,
   {
     path: "/pre-suf",
-    element: <Pre_Suf/>,
+    element: <Pre_Suf />,
+  },
+  {
+    path: "/studyPlan",
+    element: <StudyPlan/>,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));

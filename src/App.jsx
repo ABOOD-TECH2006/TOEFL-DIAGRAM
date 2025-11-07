@@ -240,6 +240,14 @@ export default function ToeflCompanion() {
           <button onClick={generatePDF}>Download Study Plan (PDF)</button>
           <button>
             <a
+              href="/studyPlan"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              Study Plan
+            </a>
+          </button>
+          <button>
+            <a
               href="/vocabs"
               style={{ color: "white", textDecoration: "none" }}
             >
