@@ -122,7 +122,7 @@ export default function StudyPlan() {
           <label>Select Week:</label>
           <select value={selectedWeek} onChange={e=>setSelectedWeek(Number(e.target.value))}>{weeks.map(w=><option key={w.weekNumber} value={w.weekNumber}>Week {w.weekNumber}</option>)}</select>
           <label>Filter:</label>
-          <select value={filter} onChange={e=>setFilter(e.target.value)}><option value="all">All</option><option value="pending">Pending</option><option value="completed">Completed</option></select>
+          <select style={{outline:"none"}} value={filter} onChange={e=>setFilter(e.target.value)}><option value="all">All</option><option value="pending">Pending</option><option value="completed">Completed</option></select>
           <button className="btn" onClick={()=>markWeekComplete(selectedWeek)}>Mark week complete</button>
           <button className="btn btn-ghost" onClick={resetProgress}>Reset progress</button>
           <button className="btn btn-download" onClick={downloadPlan}>Download JSON</button>
