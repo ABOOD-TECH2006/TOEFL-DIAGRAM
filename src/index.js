@@ -5,7 +5,7 @@ import App from "./App";
 import Vocabs from "./vocabs";
 import TOEFLGuide from "./TOEFLGuide";
 import Topics from "./Topics";
-import Pre_Suf from "./pre-suf";
+import PreSuf from "./pre-suf";
 import StudyPlan from "./studyPlan";
 const router = createBrowserRouter([
   {
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/pre-suf",
-    element: <Pre_Suf />,
+    element: <PreSuf />,
   },
   {
     path: "/studyPlan",

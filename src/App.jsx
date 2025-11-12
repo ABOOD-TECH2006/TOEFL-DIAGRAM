@@ -49,6 +49,7 @@ import writing17 from "./assets/writing17.jpg";
 import writing18 from "./assets/writing18.jpg";
 import writing19 from "./assets/writing19.jpg";
 import writing20 from "./assets/writing20.jpg";
+
 export default function ToeflCompanion() {
   const [theme, setTheme] = useState("default");
 
@@ -115,7 +116,12 @@ export default function ToeflCompanion() {
     }, 3000); // Change every 3 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [
+    sectionImages.Reading.length,
+    sectionImages.Listening.length,
+    sectionImages.Speaking.length,
+    sectionImages.Writing.length,
+  ]);
 
   // 📄 Generate PDF (updated version)
   const generatePDF = () => {
