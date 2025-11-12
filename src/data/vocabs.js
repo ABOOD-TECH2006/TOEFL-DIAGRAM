@@ -3,7 +3,7 @@ const vocab = {
     { word: "abundant", arabic: "وفير، موجود بكثرة", english: "Natural resources in this area are abundant." },
     { word: "accumulate", arabic: "يجمع تدريجيًا", english: "Snow accumulates on rooftops during winter" },
     { word: "accurate", arabic: "دقيق، خالٍ من الأخطاء", english: "The information in this book is accurate." },
-    { word: "accustomed", arabic: "معتاد على شيء", english: "I am accustomed to working long hours." },
+    { word: "accustomed", arabic: "معتاد على شيء", english: "I am accustomed to working long hours" },
     { word: "acquire", arabic: "يكتسب، يحصل على", english: "I acquired a lot of experience after years of work." },
     { word: "adamant", arabic: "عنيد، ثابت الرأي", english: "He was adamant in refusing to change his mind." },
     { word: "adequate", arabic: "كافٍ، مناسب", english: "The food on the trip was adequate." },
