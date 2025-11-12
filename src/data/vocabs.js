@@ -305,7 +305,7 @@ const vocab = {
   { word: "frequent", arabic: "متكرر، شائع", english: "Frequent breaks help improve productivity." },
   { word: "fulfill", arabic: "يحقق، يفي", english: "He fulfilled his promises to the team." },
   { word: "fundamental", arabic: "أساسي، جوهري", english: "Honesty is a fundamental value in society." },
-    { word: "react", arabic: "يتفاعل، يرد", english: "He reacted quickly to the emergency situation." },
+  { word: "react", arabic: "يتفاعل، يرد", english: "He reacted quickly to the emergency situation." },
   { word: "recover", arabic: "يتعافى، يستعيد", english: "The patient recovered after a few weeks." },
   { word: "refine", arabic: "يحسن، يصقل", english: "The company refined its processes to increase efficiency." },
   { word: "reflect", arabic: "يعكس، يتأمل", english: "The mirror reflects light. / She reflected on her choices." },
@@ -424,8 +424,7 @@ batch4 : [
   { word: "Trigger", arabic: "يحفز / يثير", english: "His speech triggered a strong reaction from the audience." },
   { word: "Ultimate", arabic: "نهائي / أقصى", english: "Winning the championship was the ultimate goal." },
   { word: "Utilize", arabic: "يستخدم", english: "We should utilize all available resources effectively." }
-]
-,
+],
 batch5 : [
   { word: "Forecast", arabic: "يتنبأ / يتوقع", english: "The weather forecast predicts rain tomorrow." },
   { word: "Formulate", arabic: "يضع / يصوغ", english: "She formulated a new plan for the project." },
@@ -477,7 +476,7 @@ batch5 : [
   { word: "Require", arabic: "يحتاج / يطلُب", english: "This job requires a high level of experience." },
   { word: "Resolve", arabic: "يُحل / يقرر", english: "The manager resolved the conflict quickly." },
   { word: "Restrict", arabic: "يُقيّد / يَحدّ", english: "The school restricts access to certain areas." },
-  { word: "Retain", arabic: "يحتفظ", english: "The company retains talented employees." }
+  { word: "Retain", arabic: "يحتفظ", english: "The company retains talented employees." },
 ],
 
 batch6 : [
@@ -531,8 +530,8 @@ batch6 : [
   { word: "Expand", arabic: "يوسّع / يُمدد", english: "The company plans to expand its operations next year." },
   { word: "Expose", arabic: "يكشف / يُظهر", english: "The investigation exposed corruption in the government." },
   { word: "Facilitate", arabic: "يُسهّل", english: "The guide facilitated the tour for the visitors." }
-]
-,batch7: [
+],
+batch7: [
  { word: "Analysis", arabic: "تحليل", english: "The scientist conducted a thorough analysis of the data." },
   { word: "Hypothesis", arabic: "فرضية", english: "She tested her hypothesis through several experiments." },
   { word: "Theory", arabic: "نظرية", english: "The theory explains how the planets orbit the sun." },
@@ -587,7 +586,7 @@ batch6 : [
   { word: "Graph", arabic: "رسم بياني", english: "Data was presented in a graph." },
   { word: "Interpretation", arabic: "تفسير", english: "The interpretation of results is key." }
 ],
-batch8: [
+batch8 : [
  { word: "Definition", arabic: "تعريف", english: "Provide a clear definition of the term." },
   { word: "Concept", arabic: "مفهوم", english: "The concept of democracy is widely studied." },
   { word: "Principle", arabic: "مبدأ", english: "Honesty is a fundamental principle." },
@@ -639,7 +638,7 @@ batch8: [
   { word: "Rationale", arabic: "مبرر", english: "The rationale for the study is clear." },
   { word: "Framework", arabic: "إطار عمل", english: "The theoretical framework guides research." },
   { word: "Hypothesis", arabic: "فرضية", english: "A hypothesis must be testable." }
-],
+]
 
 };
 
