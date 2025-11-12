@@ -25,7 +25,6 @@ const router = createBrowserRouter([
     path: "/Topics",
     element: <Topics />,
   },
-  ,
   {
     path: "/pre-suf",
     element: <Pre_Suf />,
