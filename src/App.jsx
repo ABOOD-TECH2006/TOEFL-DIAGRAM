@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import jsPDF from "jspdf";
-import "./style.css";
+import "./components/style/style.css";
 import { toeflData } from "./data/toeflUnified";
 // import TodoList from "./components/TodoList";
 // 🖼️ Import images

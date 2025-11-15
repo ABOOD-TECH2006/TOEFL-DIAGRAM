@@ -1,33 +1,30 @@
 import React, { useState, useEffect } from "react";
-import vocab from "./data/vocabs";
-import "./vocab.css";
-
+import vocab from "../data/studyVocabularies";
+import "./style/Topics.css";
+import { Helmet } from "react-helmet-async";
 export default function Vocab() {
-  const [activeBatch, setActiveBatch] = useState("batch1");
+  const [activeTopic, setActiveTopic] = useState("All");
   const [lovedVocabs, setLovedVocabs] = useState([]);
   const [showCart, setShowCart] = useState(false);
 
-  const batches = Object.keys(vocab);
+  const topics = Object.keys(vocab);
 
   const displayedWords =
-    activeBatch === "all"
+    activeTopic === "All"
       ? Object.values(vocab).flat()
-      : vocab[activeBatch] || [];
+      : vocab[activeTopic] || [];
 
-  // ✅ Load loved vocabs from localStorage on first render
   useEffect(() => {
-    const saved = localStorage.getItem("lovedVocabs");
+    const saved = localStorage.getItem("lovedVocabs2");
     if (saved) {
       setLovedVocabs(JSON.parse(saved));
     }
   }, []);
 
-  // ✅ Save loved vocabs to localStorage whenever they change
   useEffect(() => {
-    localStorage.setItem("lovedVocabs", JSON.stringify(lovedVocabs));
+    localStorage.setItem("lovedVocabs2", JSON.stringify(lovedVocabs));
   }, [lovedVocabs]);
 
-  // ❤️ Toggle love state
   const toggleLove = (wordObj) => {
     const alreadyLoved = lovedVocabs.find((w) => w.word === wordObj.word);
     if (alreadyLoved) {
@@ -37,7 +34,6 @@ export default function Vocab() {
     }
   };
 
-  // 🎤 Pronounce the word using browser speech API
   const speakWord = (word) => {
     const utterance = new SpeechSynthesisUtterance(word);
     utterance.lang = "en-US";
@@ -47,39 +43,37 @@ export default function Vocab() {
 
   return (
     <div className="vocab-wrapper">
+      <Helmet>
+        <title>ABOOD | Vocabs Topics</title>
+        <meta name="description" content="The Vocabs Topics For Toefl" />
+      </Helmet>
       <header className="vocab-header">
-        <h1>TOEFL Vocabulary Hub</h1>
-        <p>Master your TOEFL words — one Section at a time!</p>
-        <button style={{ marginTop: "10px" }}>
-          <a href="/" style={{ color: "white", textDecoration: "none" }}>
-            Home Page
-          </a>
-        </button>
+        
+        <h1>TOEFL Vocabulary Hub Of Most common Topics</h1>
+        <p>Master your TOEFL words — one topic at a time!</p>
         <div className="batch-buttons">
           <button
-            className={`batch-btn ${activeBatch === "all" ? "active" : ""}`}
-            onClick={() => setActiveBatch("all")}
+            className={`batch-btn ${activeTopic === "All" ? "active" : ""}`}
+            onClick={() => setActiveTopic("All")}
           >
             Show All
           </button>
-          {batches.map((batch) => (
+
+          {topics.map((topic) => (
             <button
-              key={batch}
-              className={`batch-btn ${activeBatch === batch ? "active" : ""}`}
-              onClick={() => setActiveBatch(batch)}
+              key={topic}
+              className={`batch-btn ${activeTopic === topic ? "active" : ""}`}
+              onClick={() => setActiveTopic(topic)}
             >
-              {batch.replace("batch", "Section ")}
+              {topic}
             </button>
           ))}
         </div>
       </header>
-
       <main className="vocab-content fadeIn">
         <section className="vocab-section">
           <h2 className="batch-title">
-            {activeBatch === "all"
-              ? "All TOEFL Sections"
-              : activeBatch.replace("batch", "Section ")}
+            {activeTopic === "All" ? "All Topics" : activeTopic}
           </h2>
 
           <div className="vocab-grid">
@@ -102,9 +96,10 @@ export default function Vocab() {
                       ></i>
                     </div>
                   </div>
+
                   <div className="card-body">
                     <p className="arabic">{item.arabic}</p>
-                    <div style={{ display: "flex",columnGap:"5px" }}>
+                    <div style={{ display: "flex", columnGap: "5px" }}>
                       <p className="english">{item.english}</p>
                       <i
                         className="fas fa-microphone mic-icon"
@@ -118,54 +113,47 @@ export default function Vocab() {
           </div>
         </section>
       </main>
-
-      {/* Floating Loved Cart Button */}
       <button className="cart-button" onClick={() => setShowCart(!showCart)}>
-        <i className="fas fa-heart"></i> My Loved Vocabs ({lovedVocabs.length})
+        <i className="fas fa-heart"></i> My Loved Words ({lovedVocabs.length})
       </button>
+      <div className={`cart-panel ${showCart ? "show" : ""}`}>
+        <div className="cart-header">
+          <h3>❤️ Loved Words</h3>
+          <button onClick={() => setShowCart(false)} className="close-cart">
+            <i className="fas fa-times"></i>
+          </button>
+        </div>
 
-      {/* Loved Cart Panel */}
-  <div className={`cart-panel ${showCart ? "show" : ""}`}>  
-    <div className="cart-header">  
-      <h3>❤️ Loved Words</h3>  
-      <button onClick={() => setShowCart(false)} className="close-cart">  
-        <i className="fas fa-times"></i>  
-      </button>  
-    </div>  
-
-    {lovedVocabs.length === 0 ? (  
-      <p className="empty-cart">No loved words yet!</p>  
-    ) : (  
-      <ul className="cart-list">  
-        {lovedVocabs.map((word, i) => (  
-          <div  
-            key={i}  
-            style={{  
-              display: "flex",  
-              alignItems: "center",  
-              justifyContent: "space-between",  
-            }}  
-          >  
-            <li>  
-              <strong>{word.word}</strong> — {word.arabic}  
-            </li>  
-            <i  
-              className="fas fa-microphone mic-icon"  
-              onClick={() => speakWord(word.word)}  
-            ></i>  
-          </div>  
-        ))}  
-      </ul>  
-    )}  
-  </div>  
+        {lovedVocabs.length === 0 ? (
+          <p className="empty-cart">No loved words yet!</p>
+        ) : (
+          <ul className="cart-list">
+            {lovedVocabs.map((word, i) => (
+              <div
+                key={i}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                }}
+              >
+                <li>
+                  <strong>{word.word}</strong> — {word.arabic}
+                </li>
+                <i
+                  className="fas fa-microphone mic-icon"
+                  onClick={() => speakWord(word.word)}
+                ></i>
+              </div>
+            ))}
+          </ul>
+        )}
+      </div>
       <footer className="footer">
         <p>
           © 2025 <span className="brand">ABOOD | JAMAL</span>
         </p>
-        <p className="quote-footer">
-          🎯 TOEFL Companion — Vocabulary Power!
-
-        </p>
+        <p className="quote-footer">🎯 TOEFL Companion — Vocabulary Power!</p>
       </footer>
     </div>
   );

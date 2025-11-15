@@ -1,5 +1,6 @@
 // File: src/ToeflTopics.jsx
 import React, { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 const CSS_ID = "toefl-topics-component-styles";
 const CSS = `
@@ -166,6 +167,10 @@ export default function ToeflTopics() {
 
   return (
     <div className="toefl-root">
+      <Helmet>
+        <title>ABOOD | Academic Topics</title>
+        <meta name="description" content="The academic Topics For Toefl"/>
+      </Helmet>
       <header className="toefl-header">
         <h1>TOEFL 2025 — Most Common Academic Topics</h1>
         <p>

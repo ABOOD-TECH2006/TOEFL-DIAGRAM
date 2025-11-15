@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import "./TOEFLGuide.css";
+import "./style/TOEFLGuide.css";
+import { Helmet } from "react-helmet-async";
 
 const TOEFLGuide = () => {
   const [query, setQuery] = useState("");
@@ -187,6 +188,10 @@ const TOEFLGuide = () => {
 
   return (
     <div className="toefl-page">
+      <Helmet>
+        <title>ABOOD | Toefl Guide </title>
+        <meta name="description" content="The Toefl Guide For Toefl" />
+      </Helmet>
       <motion.header
         className="header"
         initial={{ opacity: 0, y: -20 }}
@@ -203,7 +208,6 @@ const TOEFLGuide = () => {
           onChange={(e) => setQuery(e.target.value)}
         />
       </motion.header>
-
       <section className="content">
         <div className="section-grid">
           {filteredSections.map((section, i) => (
@@ -320,7 +324,6 @@ const TOEFLGuide = () => {
           </div>
         </div>
       </section>
-
       <footer className="footer">
         <p>
           © 2025 <span className="brand">ABOOD | JAMAL</span>

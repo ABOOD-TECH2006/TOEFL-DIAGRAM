@@ -1,39 +1,44 @@
 import React, { useState, useEffect } from "react";
-import { prefixes, suffixes } from "./data/prefixesAndSuffixes";
-import "./Topics.css";
+import vocab from "../data/vocabs";
+import "./style/vocab.css";
+import { Helmet } from "react-helmet-async";
 
-export default function PrefixesAndSuffixes() {
-  const [activeCategory, setActiveCategory] = useState("All");
-  const [lovedItems, setLovedItems] = useState([]);
+export default function Vocab() {
+  const [activeBatch, setActiveBatch] = useState("batch1");
+  const [lovedVocabs, setLovedVocabs] = useState([]);
   const [showCart, setShowCart] = useState(false);
 
-  const categories = ["Prefixes", "Suffixes"];
+  const batches = Object.keys(vocab);
 
-  const displayedItems =
-    activeCategory === "All"
-      ? [...prefixes, ...suffixes]
-      : activeCategory === "Prefixes"
-      ? prefixes
-      : suffixes;
+  const displayedWords =
+    activeBatch === "all"
+      ? Object.values(vocab).flat()
+      : vocab[activeBatch] || [];
 
+  // ✅ Load loved vocabs from localStorage on first render
   useEffect(() => {
-    const saved = localStorage.getItem("lovedAffixes");
-    if (saved) setLovedItems(JSON.parse(saved));
+    const saved = localStorage.getItem("lovedVocabs");
+    if (saved) {
+      setLovedVocabs(JSON.parse(saved));
+    }
   }, []);
 
+  // ✅ Save loved vocabs to localStorage whenever they change
   useEffect(() => {
-    localStorage.setItem("lovedAffixes", JSON.stringify(lovedItems));
-  }, [lovedItems]);
+    localStorage.setItem("lovedVocabs", JSON.stringify(lovedVocabs));
+  }, [lovedVocabs]);
 
-  const toggleLove = (item) => {
-    const exists = lovedItems.find((w) => w.word === item.word);
-    if (exists) {
-      setLovedItems(lovedItems.filter((w) => w.word !== item.word));
+  // ❤️ Toggle love state
+  const toggleLove = (wordObj) => {
+    const alreadyLoved = lovedVocabs.find((w) => w.word === wordObj.word);
+    if (alreadyLoved) {
+      setLovedVocabs(lovedVocabs.filter((w) => w.word !== wordObj.word));
     } else {
-      setLovedItems([...lovedItems, item]);
+      setLovedVocabs([...lovedVocabs, wordObj]);
     }
   };
 
+  // 🎤 Pronounce the word using browser speech API
   const speakWord = (word) => {
     const utterance = new SpeechSynthesisUtterance(word);
     utterance.lang = "en-US";
@@ -43,45 +48,57 @@ export default function PrefixesAndSuffixes() {
 
   return (
     <div className="vocab-wrapper">
+      <Helmet>
+        <title>ABOOD | Vocabs </title>
+        <meta name="description" content="The Vocabs Topics For Toefl" />
+      </Helmet>
       <header className="vocab-header">
-        <h1>TOEFL Prefixes & Suffixes Hub</h1>
-        <p>Understand how prefixes and suffixes build meaning!</p>
+        <h1>TOEFL Vocabulary Hub</h1>
+        <p>Master your TOEFL words — one Section at a time!</p>
+        <button style={{ marginTop: "10px" }}>
+          <a href="/" style={{ color: "white", textDecoration: "none" }}>
+            Home Page
+          </a>
+        </button>
         <div className="batch-buttons">
           <button
-            className={`batch-btn ${activeCategory === "All" ? "active" : ""}`}
-            onClick={() => setActiveCategory("All")}
+            className={`batch-btn ${activeBatch === "all" ? "active" : ""}`}
+            onClick={() => setActiveBatch("all")}
           >
             Show All
           </button>
-          {categories.map((cat) => (
+          {batches.map((batch) => (
             <button
-              key={cat}
-              className={`batch-btn ${activeCategory === cat ? "active" : ""}`}
-              onClick={() => setActiveCategory(cat)}
+              key={batch}
+              className={`batch-btn ${activeBatch === batch ? "active" : ""}`}
+              onClick={() => setActiveBatch(batch)}
             >
-              {cat}
+              {batch.replace("batch", "Section ")}
             </button>
           ))}
         </div>
       </header>
+
       <main className="vocab-content fadeIn">
         <section className="vocab-section">
           <h2 className="batch-title">
-            {activeCategory === "All"
-              ? "All Prefixes & Suffixes"
-              : activeCategory}
+            {activeBatch === "all"
+              ? "All TOEFL Sections"
+              : activeBatch.replace("batch", "Section ")}
           </h2>
 
           <div className="vocab-grid">
-            {displayedItems.map((item, index) => {
-              const loved = lovedItems.some((w) => w.word === item.word);
+            {displayedWords.map((item, index) => {
+              const isLoved = lovedVocabs.some((w) => w.word === item.word);
               return (
                 <div key={index} className="vocab-card">
                   <div className="card-top">
                     <h3 className="word">{item.word}</h3>
                     <div className="icons">
                       <i
-                        className={`fa-heart ${loved ? "fas loved" : "far"} heart-icon`}
+                        className={`fa-heart ${
+                          isLoved ? "fas loved" : "far"
+                        } heart-icon`}
                         onClick={() => toggleLove(item)}
                       ></i>
                       <i
@@ -90,24 +107,15 @@ export default function PrefixesAndSuffixes() {
                       ></i>
                     </div>
                   </div>
-
                   <div className="card-body">
-                    <p>
-                      <strong>Affix in Arabic:</strong> {item.affixNameArabic}
-                    </p>
-                    <p>
-                      <strong>Root:</strong> {item.root} ({item.rootMeaning})
-                    </p>
+                    <p className="arabic">{item.arabic}</p>
                     <div style={{ display: "flex", columnGap: "5px" }}>
-                      <p className="english">{item.example}</p>
+                      <p className="english">{item.english}</p>
                       <i
                         className="fas fa-microphone mic-icon"
-                        onClick={() => speakWord(item.example)}
+                        onClick={() => speakWord(item.english)}
                       ></i>
                     </div>
-                    <p>
-                      <strong>Arabic sentence:</strong> {item.arabicExample}
-                    </p>
                   </div>
                 </div>
               );
@@ -116,22 +124,25 @@ export default function PrefixesAndSuffixes() {
         </section>
       </main>
 
+      {/* Floating Loved Cart Button */}
       <button className="cart-button" onClick={() => setShowCart(!showCart)}>
-        <i className="fas fa-heart"></i> My Loved ({lovedItems.length})
+        <i className="fas fa-heart"></i> My Loved Vocabs ({lovedVocabs.length})
       </button>
 
+      {/* Loved Cart Panel */}
       <div className={`cart-panel ${showCart ? "show" : ""}`}>
         <div className="cart-header">
-          <h3>❤️ Loved Prefixes/Suffixes</h3>
+          <h3>❤️ Loved Words</h3>
           <button onClick={() => setShowCart(false)} className="close-cart">
             <i className="fas fa-times"></i>
           </button>
         </div>
-        {lovedItems.length === 0 ? (
-          <p className="empty-cart">No favorites yet!</p>
+
+        {lovedVocabs.length === 0 ? (
+          <p className="empty-cart">No loved words yet!</p>
         ) : (
           <ul className="cart-list">
-            {lovedItems.map((word, i) => (
+            {lovedVocabs.map((word, i) => (
               <div
                 key={i}
                 style={{
@@ -152,14 +163,11 @@ export default function PrefixesAndSuffixes() {
           </ul>
         )}
       </div>
-
       <footer className="footer">
         <p>
           © 2025 <span className="brand">ABOOD | JAMAL</span>
         </p>
-        <p className="quote-footer">
-          📘 TOEFL Companion — Master Word Formation!
-        </p>
+        <p className="quote-footer">🎯 TOEFL Companion — Vocabulary Power!</p>
       </footer>
     </div>
   );

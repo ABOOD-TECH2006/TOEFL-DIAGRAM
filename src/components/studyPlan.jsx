@@ -1,5 +1,6 @@
 // File: src/StudyPlan.jsx
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const CSS_ID = "studyplan-component-styles";
 const CSS = `
@@ -115,46 +116,108 @@ export default function StudyPlan() {
 
   return (
     <div className="study-root">
+      <Helmet>
+        <title>ABOOD | Study Plan </title>
+        <meta name="description" content="The  Study Plan For Toefl" />
+      </Helmet>
       <header className="study-header">
         <h1>TOEFL 8-Week Study Plan (Starting Today)</h1>
-        <p className="muted">Daily organized plan with dates & enhanced animations</p>
+        <p className="muted">
+          Daily organized plan with dates & enhanced animations
+        </p>
         <div className="controls">
           <label>Select Week:</label>
-          <select value={selectedWeek} onChange={e=>setSelectedWeek(Number(e.target.value))}>{weeks.map(w=><option key={w.weekNumber} value={w.weekNumber}>Week {w.weekNumber}</option>)}</select>
+          <select
+            value={selectedWeek}
+            onChange={(e) => setSelectedWeek(Number(e.target.value))}
+          >
+            {weeks.map((w) => (
+              <option key={w.weekNumber} value={w.weekNumber}>
+                Week {w.weekNumber}
+              </option>
+            ))}
+          </select>
           <label>Filter:</label>
-          <select style={{outline:"none"}} value={filter} onChange={e=>setFilter(e.target.value)}><option value="all">All</option><option value="pending">Pending</option><option value="completed">Completed</option></select>
-          <button className="btn" onClick={()=>markWeekComplete(selectedWeek)}>Mark week complete</button>
-          <button className="btn btn-ghost" onClick={resetProgress}>Reset progress</button>
-          <button className="btn btn-download" onClick={downloadPlan}>Download JSON</button>
+          <select
+            style={{ outline: "none" }}
+            value={filter}
+            onChange={(e) => setFilter(e.target.value)}
+          >
+            <option value="all">All</option>
+            <option value="pending">Pending</option>
+            <option value="completed">Completed</option>
+          </select>
+          <button
+            className="btn"
+            onClick={() => markWeekComplete(selectedWeek)}
+          >
+            Mark week complete
+          </button>
+          <button className="btn btn-ghost" onClick={resetProgress}>
+            Reset progress
+          </button>
+          <button className="btn btn-download" onClick={downloadPlan}>
+            Download JSON
+          </button>
         </div>
       </header>
       <main className="study-main">
         <aside className="weeks-sidebar">
-          {weeks.map(w=>(
-            <div key={w.weekNumber} className={`week-card ${w.weekNumber===selectedWeek?'active':''}`} onClick={()=>setSelectedWeek(w.weekNumber)}>
+          {weeks.map((w) => (
+            <div
+              key={w.weekNumber}
+              className={`week-card ${
+                w.weekNumber === selectedWeek ? "active" : ""
+              }`}
+              onClick={() => setSelectedWeek(w.weekNumber)}
+            >
               <strong>Week {w.weekNumber}</strong>
-              <div className="week-summary">{w.days.filter(d=>d.completed).length}/{w.days.length} completed</div>
-            </div>))}
+              <div className="week-summary">
+                {w.days.filter((d) => d.completed).length}/{w.days.length}{" "}
+                completed
+              </div>
+            </div>
+          ))}
         </aside>
         <section className="week-plan">
           <h2>Week {currentWeek.weekNumber} — Daily Plan</h2>
           <div className="days-grid">
-            {filteredDays(currentWeek.days).map(d=>(
-              <article key={d.id} className={`day-card ${d.completed?'done':''}`}>
+            {filteredDays(currentWeek.days).map((d) => (
+              <article
+                key={d.id}
+                className={`day-card ${d.completed ? "done" : ""}`}
+              >
                 <div className="day-head">
                   <div>
-                    <div className="day-title">{d.dayOfWeek} ({d.dateString}) — {d.title}</div>
+                    <div className="day-title">
+                      {d.dayOfWeek} ({d.dateString}) — {d.title}
+                    </div>
                     <div className="day-sub">Day ID: {d.id}</div>
                   </div>
-                  <div className="day-actions"><button className="small" onClick={()=>toggleComplete(d.id)}>{d.completed?'Unmark':'Done'}</button></div>
+                  <div className="day-actions">
+                    <button
+                      className="small"
+                      onClick={() => toggleComplete(d.id)}
+                    >
+                      {d.completed ? "Unmark" : "Done"}
+                    </button>
+                  </div>
                 </div>
-                <ul className="task-list">{d.tasks.map((t,idx)=><li key={idx}>{t}</li>)}</ul>
-              </article>))}
+                <ul className="task-list">
+                  {d.tasks.map((t, idx) => (
+                    <li key={idx}>{t}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
           </div>
         </section>
       </main>
       <footer className="study-footer">
-        <p>&copy; 2025 ABOOD | JAMAL TOEFL TEST. Automatically generated — adjust tasks to your level. Good luck!</p>
+        <p>
+          &copy; 2025 ABOOD | JAMAL TOEFL TEST. Automatically generated — adjust
+          tasks to your level. Good luck!
+        </p>
       </footer>
     </div>
   );
