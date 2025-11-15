@@ -65,7 +65,6 @@ import writing19 from "./assets/writing19.jpg";
 import writing20 from "./assets/writing20.jpg";
 
 export default function ToeflCompanion() {
-  const [theme, setTheme] = useState("default");
 
   // 🔹 Section images (multiple per section)
   const sectionImages = {
@@ -260,7 +259,7 @@ export default function ToeflCompanion() {
   );
 
   return (
-    <div className={`app-wrapper theme-${theme}`}>
+    <div className={`app-wrapper`}>
       <header>
         <h1>TOEFL Companion</h1>
         <p>
