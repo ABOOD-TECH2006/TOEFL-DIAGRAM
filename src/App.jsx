@@ -270,6 +270,14 @@ export default function ToeflCompanion() {
           </button>
           <button>
             <a
+              href="/AcademicTopics"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              Academic Topics
+            </a>
+          </button>
+          <button>
+            <a
               href="/pre-suf"
               style={{ color: "white", textDecoration: "none" }}
             >

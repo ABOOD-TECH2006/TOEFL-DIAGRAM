@@ -7,6 +7,7 @@ import TOEFLGuide from "./TOEFLGuide";
 import Topics from "./Topics";
 import PreSuf from "./pre-suf";
 import StudyPlan from "./studyPlan";
+import AcademicTopics from "./AcademicTopics";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,7 +32,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/studyPlan",
-    element: <StudyPlan/>,
+    element: <StudyPlan />,
+  },
+  {
+    path: "/AcademicTopics",
+    element: <AcademicTopics />,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
