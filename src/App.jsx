@@ -8,6 +8,20 @@ import reading1 from "./assets/reading1.jpg";
 import reading2 from "./assets/reading2.jpg";
 import reading3 from "./assets/reading3.jpg";
 import reading4 from "./assets/reading4.jpg";
+import reading5 from "./assets/reading5.jpg";
+import reading6 from "./assets/reading6.jpg";
+import reading7 from "./assets/reading7.jpg";
+import reading8 from "./assets/reading8.jpg";
+import reading9 from "./assets/reading9.jpg";
+import reading10 from "./assets/reading10.jpg";
+import reading11 from "./assets/reading11.jpg";
+import reading12 from "./assets/reading12.jpg";
+import reading13 from "./assets/reading13.jpg";
+import reading14 from "./assets/reading14.jpg";
+import reading15 from "./assets/reading15.jpg";
+import reading16 from "./assets/reading16.jpg";
+import reading17 from "./assets/reading17.jpg";
+import reading18 from "./assets/reading4.jpg";
 
 import listening1 from "./assets/listening1.jpg";
 import listening2 from "./assets/listening2.jpg";
@@ -55,7 +69,26 @@ export default function ToeflCompanion() {
 
   // 🔹 Section images (multiple per section)
   const sectionImages = {
-    Reading: [reading1, reading2, reading3, reading4],
+    Reading: [
+      reading1,
+      reading2,
+      reading3,
+      reading4,
+      reading5,
+      reading6,
+      reading7,
+      reading8,
+      reading9,
+      reading10,
+      reading11,
+      reading12,
+      reading13,
+      reading14,
+      reading15,
+      reading16,
+      reading17,
+      reading18,
+    ],
     Listening: [
       listening1,
       listening2,
