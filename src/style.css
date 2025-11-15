@@ -83,8 +83,14 @@ header p {
   justify-content: center;
   gap: 15px;
   flex-wrap: wrap;
+  flex-direction: column;
 }
-
+.controls .group{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
 select,
 button {
   border: none;
