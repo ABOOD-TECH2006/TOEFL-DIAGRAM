@@ -9,6 +9,7 @@ import Topics from "./components/Topics";
 import PreSuf from "./components/pre-suf";
 import StudyPlan from "./components/studyPlan";
 import AcademicTopics from "./components/AcademicTopics";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -50,3 +51,4 @@ root.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+serviceWorkerRegistration.register();
