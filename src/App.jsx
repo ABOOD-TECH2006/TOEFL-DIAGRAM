@@ -258,6 +258,10 @@ export default function ToeflCompanion() {
     </div>
   );
 
+ const [show,Setshow] = useState(false)
+   const onClickSHow = () => {
+    Setshow(! show)
+   };
   return (
     <div className={`app-wrapper`}>
       <header>
@@ -265,60 +269,59 @@ export default function ToeflCompanion() {
         <p>
           Get acquainted with the TOEFL — structure, strategies, and templates
         </p>
-        <div className="controls">
-          <div className="group">
-            <button onClick={generatePDF}>Download Study Plan (PDF)</button>
-            <button>
-              <a
-                href="/studyPlan"
-                style={{ color: "white", textDecoration: "none" }}
-              >
-                Study Plan
-              </a>
-            </button>
-            <button>
-              <a
-                href="/vocabs"
-                style={{ color: "white", textDecoration: "none" }}
-              >
-                Vocabs
-              </a>
-            </button>
-            <button>
-              <a
-                href="/Topics"
-                style={{ color: "white", textDecoration: "none" }}
-              >
-                Vocabs For Topics
-              </a>
-            </button>
-            <button>
-              <a
-                href="/AcademicTopics"
-                style={{ color: "white", textDecoration: "none" }}
-              >
-                Academic Topics
-              </a>
-            </button>
-          </div>
-          <div className="group">
-            <button>
-              <a
-                href="/pre-suf"
-                style={{ color: "white", textDecoration: "none" }}
-              >
-                prefix/suffix
-              </a>
-            </button>
-            <button>
-              <a
-                href="/TOEFLGuide"
-                style={{ color: "white", textDecoration: "none" }}
-              >
-                TOEFL Guide
-              </a>
-            </button>
-          </div>
+        <button onClick={onClickSHow} className="showButton">
+          {show ? "Hide Menu" : "Show Menu"}
+        </button>
+        <div className={`controls ${show ? "show" : "hide"}`}>
+          <button onClick={generatePDF}>Download Study Plan (PDF)</button>
+          <button>
+            <a
+              href="/studyPlan"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              Study Plan
+            </a>
+          </button>
+          <button>
+            <a
+              href="/vocabs"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              Vocabs
+            </a>
+          </button>
+          <button>
+            <a
+              href="/Topics"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              Vocabs For Topics
+            </a>
+          </button>
+          <button>
+            <a
+              href="/AcademicTopics"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              Academic Topics
+            </a>
+          </button>
+          <button>
+            <a
+              href="/pre-suf"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              prefix/suffix
+            </a>
+          </button>
+          <button>
+            <a
+              href="/TOEFLGuide"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              TOEFL Guide
+            </a>
+          </button>
         </div>
       </header>
       <main className="main-grid">
