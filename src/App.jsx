@@ -65,7 +65,6 @@ import writing19 from "./assets/writing19.jpg";
 import writing20 from "./assets/writing20.jpg";
 
 export default function ToeflCompanion() {
-
   // 🔹 Section images (multiple per section)
   const sectionImages = {
     Reading: [
@@ -258,10 +257,10 @@ export default function ToeflCompanion() {
     </div>
   );
 
- const [show,Setshow] = useState(false)
-   const onClickSHow = () => {
-    Setshow(! show)
-   };
+  const [show, Setshow] = useState(false);
+  const onClickSHow = () => {
+    Setshow(!show);
+  };
   return (
     <div className={`app-wrapper`}>
       <header>
@@ -274,54 +273,33 @@ export default function ToeflCompanion() {
         </button>
         <div className={`controls ${show ? "show" : "hide"}`}>
           <button onClick={generatePDF}>Download Study Plan (PDF)</button>
-          <button>
-            <a
-              href="/studyPlan"
-              style={{ color: "white", textDecoration: "none" }}
-            >
-              Study Plan
-            </a>
-          </button>
-          <button>
-            <a
-              href="/vocabs"
-              style={{ color: "white", textDecoration: "none" }}
-            >
-              Vocabs
-            </a>
-          </button>
-          <button>
-            <a
-              href="/Topics"
-              style={{ color: "white", textDecoration: "none" }}
-            >
-              Vocabs For Topics
-            </a>
-          </button>
-          <button>
-            <a
-              href="/AcademicTopics"
-              style={{ color: "white", textDecoration: "none" }}
-            >
-              Academic Topics
-            </a>
-          </button>
-          <button>
-            <a
-              href="/pre-suf"
-              style={{ color: "white", textDecoration: "none" }}
-            >
-              prefix/suffix
-            </a>
-          </button>
-          <button>
-            <a
-              href="/TOEFLGuide"
-              style={{ color: "white", textDecoration: "none" }}
-            >
-              TOEFL Guide
-            </a>
-          </button>
+          <a
+            href="/studyPlan"
+            style={{ color: "white", textDecoration: "none" }}
+          >
+            Study Plan
+          </a>
+          <a href="/vocabs" style={{ color: "white", textDecoration: "none" }}>
+            Vocabs
+          </a>
+          <a href="/Topics" style={{ color: "white", textDecoration: "none" }}>
+            Vocabs For Topics
+          </a>
+          <a
+            href="/AcademicTopics"
+            style={{ color: "white", textDecoration: "none" }}
+          >
+            Academic Topics
+          </a>
+          <a href="/pre-suf" style={{ color: "white", textDecoration: "none" }}>
+            prefix/suffix
+          </a>
+          <a
+            href="/TOEFLGuide"
+            style={{ color: "white", textDecoration: "none" }}
+          >
+            TOEFL Guide
+          </a>
         </div>
       </header>
       <main className="main-grid">

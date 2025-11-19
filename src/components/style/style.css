@@ -109,8 +109,9 @@ header p {
   justify-content: center;
   column-gap: 10px;
 } */
+
 select,
-button {
+button,a {
   border: none;
   border-radius: 10px;
   padding: 10px 18px;
@@ -129,12 +130,12 @@ select:hover {
   border-color: var(--primary);
 }
 
-button {
+button,a {
   background: var(--primary);
   color: #fff;
 }
 
-button:hover {
+button:hover,a:hover {
   background: var(--secondary);
   transform: translateY(-3px);
 }
