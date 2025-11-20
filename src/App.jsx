@@ -63,8 +63,9 @@ import writing17 from "./assets/writing17.jpg";
 import writing18 from "./assets/writing18.jpg";
 import writing19 from "./assets/writing19.jpg";
 import writing20 from "./assets/writing20.jpg";
-
+import Loading from "./components/Loading"; // import loading
 export default function ToeflCompanion() {
+  const [loading, setLoading] = useState(true);
   // 🔹 Section images (multiple per section)
   const sectionImages = {
     Reading: [
@@ -134,7 +135,11 @@ export default function ToeflCompanion() {
     Speaking: 0,
     Writing: 0,
   });
-
+  // Show loader for 2 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
   // 🌀 Rotate images every 3 seconds per section
   useEffect(() => {
     const interval = setInterval(() => {
@@ -261,6 +266,8 @@ export default function ToeflCompanion() {
   const onClickSHow = () => {
     Setshow(!show);
   };
+    if (loading) return <Loading />;
+
   return (
     <div className={`app-wrapper`}>
       <header>
