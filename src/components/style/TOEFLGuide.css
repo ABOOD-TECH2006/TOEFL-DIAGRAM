@@ -6,7 +6,13 @@ body {
   margin: 0;
   padding: 0;
 }
+*{
+  font-family: "Winky Rough" !important;
 
+}
+i{
+  font-family:"Font Awesome 6 Free" !important;
+}
 .toefl-page {
   padding: 20px;
   max-width: 1200px;

@@ -4,7 +4,13 @@ body {
   background: #f8f9fa; /* softer background */
   color: #333;
 }
+*{
+  font-family: "Winky Rough" !important;
 
+}
+i{
+  font-family:"Font Awesome 6 Free" !important;
+}
 /* Container */
 .vocab-container {
   max-width: 1200px;

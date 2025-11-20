@@ -1,8 +1,12 @@
+
 /* ========== GLOBAL RESET ========== */
+
 * {
   margin: 0;
   padding: 0;
+  font-family: "Winky Rough" !important;
   box-sizing: border-box;
+  font-size: medium;
   font-family: "Poppins", "Inter", sans-serif;
   transition: all 0.4s ease-in-out;
 }
