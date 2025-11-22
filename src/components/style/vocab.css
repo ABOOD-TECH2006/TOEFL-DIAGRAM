@@ -15,6 +15,16 @@
 i{
   font-family:"Font Awesome 6 Free" !important;
 }
+.batch-buttons.show{
+  display: "";
+  transition: all ease 0.5s;
+
+}
+.batch-buttons.hide{
+  display: none;
+  transition: all ease 0.5s;
+
+}
 /* Header */
 .vocab-header {
   text-align: center;

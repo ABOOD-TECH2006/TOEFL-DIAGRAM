@@ -45,7 +45,10 @@ export default function Vocab() {
     utterance.rate = 0.9;
     speechSynthesis.speak(utterance);
   };
-
+  const [show, Setshow] = useState(false);
+  const onClickSHow = () => {
+    Setshow(!show);
+  };
   return (
     <div className="vocab-wrapper">
       <Helmet>
@@ -55,12 +58,15 @@ export default function Vocab() {
       <header className="vocab-header">
         <h1>TOEFL Vocabulary Hub</h1>
         <p>Master your TOEFL words — one Section at a time!</p>
-        <button style={{ marginTop: "10px" }}>
+        <button style={{ margin: "10px" }}>
           <a href="/" style={{ color: "white", textDecoration: "none" }}>
             Home Page
           </a>
         </button>
-        <div className="batch-buttons">
+        <button onClick={onClickSHow} className="showButton">
+          {show ? "Hide Menu" : "Show Menu"}
+        </button>
+        <div className={`batch-buttons ${show ? "show" : "hide"}`}>
           <button
             className={`batch-btn ${activeBatch === "all" ? "active" : ""}`}
             onClick={() => setActiveBatch("all")}
