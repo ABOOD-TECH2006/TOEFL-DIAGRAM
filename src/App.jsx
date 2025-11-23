@@ -275,7 +275,11 @@ export default function ToeflCompanion() {
         <p>
           Get acquainted with the TOEFL — structure, strategies, and templates
         </p>
-        <button onClick={onClickSHow} className="showButton">
+        <button
+          style={{ paddingBlock: 7 }}
+          onClick={onClickSHow}
+          className="showButton"
+        >
           {show ? "Hide Menu" : "Show Menu"}
         </button>
         <div className={`controls ${show ? "show" : "hide"}`}>

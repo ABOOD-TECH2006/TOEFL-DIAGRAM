@@ -63,7 +63,7 @@ export default function Vocab() {
             Home Page
           </a>
         </button>
-        <button onClick={onClickSHow} className="showButton">
+        <button style={{paddingBlock:7,}} onClick={onClickSHow} className="showButton">
           {show ? "Hide Menu" : "Show Menu"}
         </button>
         <div className={`batch-buttons ${show ? "show" : "hide"}`}>
