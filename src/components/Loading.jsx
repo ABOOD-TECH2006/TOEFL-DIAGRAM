@@ -7,7 +7,7 @@ const Loading = () => {
     <div className="loading-wrapper">
       <img src={logo} alt="TOEFL Logo" className="loading-logo" />
       <div className="spinner"></div>
-      <p>Loading TOEFL Companion</p>
+      <p>Loading TOEFL Companion...</p>
     </div>
   );
 };
