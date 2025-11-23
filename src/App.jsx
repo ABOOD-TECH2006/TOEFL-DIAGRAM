@@ -64,6 +64,7 @@ import writing18 from "./assets/writing18.jpg";
 import writing19 from "./assets/writing19.jpg";
 import writing20 from "./assets/writing20.jpg";
 import Loading from "./components/Loading"; // import loading
+import { Link } from "react-router-dom";
 export default function ToeflCompanion() {
   const [loading, setLoading] = useState(true);
   // 🔹 Section images (multiple per section)
@@ -284,33 +285,30 @@ export default function ToeflCompanion() {
         </button>
         <div className={`controls ${show ? "show" : "hide"}`}>
           <button onClick={generatePDF}>Download Study Plan (PDF)</button>
-          <a
-            href="/studyPlan"
-            style={{ color: "white", textDecoration: "none" }}
-          >
-            Study Plan
-          </a>
-          <a href="/vocabs" style={{ color: "white", textDecoration: "none" }}>
+          <Link to="/vocabs" style={{ color: "white", textDecoration: "none" }}>
             Vocabs
-          </a>
-          <a href="/Topics" style={{ color: "white", textDecoration: "none" }}>
+          </Link>
+          <Link to="/Topics" style={{ color: "white", textDecoration: "none" }}>
             Vocabs For Topics
-          </a>
-          <a
-            href="/AcademicTopics"
+          </Link>
+          <Link
+            to="/AcademicTopics"
             style={{ color: "white", textDecoration: "none" }}
           >
             Academic Topics
-          </a>
-          <a href="/pre-suf" style={{ color: "white", textDecoration: "none" }}>
+          </Link>
+          <Link
+            to="/pre-suf"
+            style={{ color: "white", textDecoration: "none" }}
+          >
             prefix/suffix
-          </a>
-          <a
-            href="/TOEFLGuide"
+          </Link>
+          <Link
+            to="/TOEFLGuide"
             style={{ color: "white", textDecoration: "none" }}
           >
             TOEFL Guide
-          </a>
+          </Link>
         </div>
       </header>
       <main className="main-grid">
