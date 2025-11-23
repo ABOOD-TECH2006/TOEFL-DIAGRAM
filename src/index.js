@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 
 import App from "./App";
@@ -13,47 +13,26 @@ import AcademicTopics from "./components/AcademicTopics";
 
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    errorElement: <h1>Error Page</h1>,
-  },
-  {
-    path: "/Vocabs",
-    element: <Vocabs />,
-  },
-  {
-    path: "/TOEFLGuide",
-    element: <TOEFLGuide />,
-  },
-  {
-    path: "/Topics",
-    element: <Topics />,
-  },
-  {
-    path: "/pre-suf",
-    element: <PreSuf />,
-  },
-  {
-    path: "/studyPlan",
-    element: <StudyPlan />,
-  },
-  {
-    path: "/AcademicTopics",
-    element: <AcademicTopics />,
-  },
-]);
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <HelmetProvider>
-    <RouterProvider router={router} />
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/Vocabs" element={<Vocabs />} />
+        <Route path="/TOEFLGuide" element={<TOEFLGuide />} />
+        <Route path="/Topics" element={<Topics />} />
+        <Route path="/pre-suf" element={<PreSuf />} />
+        <Route path="/studyPlan" element={<StudyPlan />} />
+        <Route path="/AcademicTopics" element={<AcademicTopics />} />
+        <Route path="*" element={<h1>Error Page</h1>} />
+      </Routes>
+    </HashRouter>
   </HelmetProvider>
 );
 
-// 🔥 Auto-Update PWA (المهم جداً)
+// 🔥 Auto-Update PWA
 serviceWorkerRegistration.register({
   onUpdate: (registration) => {
     if (registration && registration.waiting) {
