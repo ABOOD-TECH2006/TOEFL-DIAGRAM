@@ -63,7 +63,11 @@ export default function Vocab() {
             Home Page
           </a>
         </button>
-        <button style={{paddingBlock:7,}} onClick={onClickSHow} className="showButton">
+        <button
+          style={{ paddingBlock: 7 }}
+          onClick={onClickSHow}
+          className="showButton"
+        >
           {show ? "Hide Menu" : "Show Menu"}
         </button>
         <div className={`batch-buttons ${show ? "show" : "hide"}`}>
@@ -113,8 +117,37 @@ export default function Vocab() {
                       ></i>
                     </div>
                   </div>
+
                   <div className="card-body">
+                    {/* Arabic meaning */}
                     <p className="arabic">{item.arabic}</p>
+
+                    {/* Arabic example */}
+                    {item.arabic_example && (
+                      <p className="arabic-example">{item.arabic_example}</p>
+                    )}
+
+                    {/* CEFR Level with dynamic color */}
+                    {item.level && (
+                      <span
+                        className="level-tag"
+                        style={{
+                          backgroundColor:
+                            item.level === "B2"
+                              ? "#42a5f5" // Blue
+                              : item.level === "C1"
+                              ? "#ab47bc" // Purple
+                              : item.level === "C2"
+                              ? "#ef5350" // Red
+                              : "#ffa726", // Default Orange
+                          color: "white",
+                        }}
+                      >
+                        {item.level}
+                      </span>
+                    )}
+
+                    {/* English meaning */}
                     <div style={{ display: "flex", columnGap: "5px" }}>
                       <p className="english">{item.english}</p>
                       <i
