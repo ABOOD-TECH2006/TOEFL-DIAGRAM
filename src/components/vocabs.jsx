@@ -50,7 +50,7 @@ export default function Vocab() {
     Setshow(!show);
   };
   return (
-    <div className="vocab-wrapper">
+    <div className="vocab-wrapper" style={{ width: "100% !important" }}>
       <Helmet>
         <title>ABOOD | Vocabs </title>
         <meta name="description" content="The Vocabs Topics For Toefl" />
@@ -90,18 +90,22 @@ export default function Vocab() {
       </header>
 
       <main className="vocab-content fadeIn">
-        <section className="vocab-section">
+        <section className="vocab-section" >
           <h2 className="batch-title">
             {activeBatch === "all"
               ? "All TOEFL Sections"
               : activeBatch.replace("batch", "Section ")}
           </h2>
 
-          <div className="vocab-grid">
+          <div className="vocab-grid" >
             {displayedWords.map((item, index) => {
               const isLoved = lovedVocabs.some((w) => w.word === item.word);
               return (
-                <div key={index} className="vocab-card">
+                <div
+                  key={index}
+                  className="vocab-card"
+
+                >
                   <div className="card-top">
                     <h3 className="word">{item.word}</h3>
                     <div className="icons">
