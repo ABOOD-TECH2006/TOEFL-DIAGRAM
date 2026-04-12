@@ -1,224 +1,345 @@
-// File: src/StudyPlan.jsx
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 
-const CSS_ID = "studyplan-component-styles";
-const CSS = `
-* { box-sizing: border-box; }
-body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin: 0; padding: 0; background: #f0f2f8; }
-.study-root { max-width: 1100px; margin: 18px auto; padding: 20px; border-radius: 14px; background: #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
-.study-header { border-bottom: 2px solid #cce0ff; padding-bottom: 16px; }
-.study-header h1 { margin: 0 0 6px 0; font-size: 24px; color: #1a73e8; }
-.muted { color: #555; font-size: 14px; margin: 0 0 10px 0; }
-.controls { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
-.controls label { font-size: 14px; color: #333; }
-.controls select { padding: 6px 10px; border-radius: 6px; border: 1px solid #bbb; }
-.btn { background: #1a73e8; color: #fff; border: none; padding: 10px 14px; border-radius: 10px; cursor: pointer; transition: all 0.3s ease; }
-.btn:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(26,115,232,0.3); }
-.btn-ghost { background: transparent; border: 1px solid #1a73e8; color: #1a73e8; }
-.btn-download { background: #0f9d58; }
-.small { padding: 6px 10px; border-radius: 6px; border: none; cursor: pointer; background: #d0e3ff; transition: all 0.3s ease; }
-.small:hover { background: #a8caff; transform: scale(1.05); }
-.study-main { display: flex; gap: 18px; margin-top: 18px; }
-.weeks-sidebar { width: 180px; }
-.week-card { padding: 14px; border-radius: 12px; border: 1px solid #cce0ff; margin-bottom: 12px; cursor: pointer; background: #e6f0ff; transition: all 0.3s ease; }
-.week-card:hover { transform: translateX(4px) scale(1.02); box-shadow: 0 4px 12px rgba(26,115,232,0.2); }
-.week-card.active { background: linear-gradient(90deg,#f0f7ff,#ffffff); border-color: #1a73e8; box-shadow: 0 6px 16px rgba(26,115,232,0.25); }
-.week-summary { font-size: 13px; color: #444; margin-top: 6px; }
-.week-plan { flex: 1; }
-.days-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin-top: 16px; }
-.day-card { border-radius: 14px; padding: 16px; border: 1px solid #dbe4ff; background: #f5f8ff; transition: all 0.3s ease, transform 0.4s ease-in-out; }
-.day-card:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 6px 16px rgba(26,115,232,0.15); }
-.day-card.done { opacity: 0.75; border-style: dashed; background: #dfffe0; }
-.day-head { display: flex; justify-content: space-between; align-items: start; }
-.day-title { font-weight: 700; color: #1a73e8; font-size: 15px; }
-.day-sub { font-size: 12px; color: #555; margin-top: 2px; }
-.day-actions .small { padding: 6px 10px; border-radius: 6px; border: none; cursor: pointer; background: #1c2c75ff; }
-.day-actions .small:hover { background: #85b3fcff; transform: scale(1.05); }
-.task-list { margin: 12px 0 0 22px; }
-.notes { margin-top: 22px; padding: 16px; border-radius: 12px; background: #eef4ff; border: 1px solid #dbe4ff; }
-.study-footer { text-align: center; margin-top: 18px; color: #333; font-size: 14px; font-weight: 500; }
-@media (max-width: 860px) { .study-main { flex-direction: column; } .weeks-sidebar { width: 100%; display: flex; gap: 8px; overflow-x: auto; } .week-card { min-width: 120px; }}
+const styles = `
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f0f5ff; color: #1a1a2e; min-height: 100vh; }
+
+  .sp-header { background: linear-gradient(135deg, #1855c8, #2563eb 55%, #3b82f6); padding: 36px 28px 28px; position: relative; overflow: hidden; }
+  .sp-header::before { content: ''; position: absolute; top: -80px; right: -80px; width: 300px; height: 300px; border-radius: 50%; background: rgba(255,255,255,.05); }
+  .sp-header h1 { color: #fff; font-size: 22px; font-weight: 800; margin-bottom: 6px; position: relative; }
+  .sp-header p { color: rgba(255,255,255,.72); font-size: 13px; margin-bottom: 20px; position: relative; }
+
+  .sp-overview { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; position: relative; }
+  .sp-ov-card { background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.22); border-radius: 12px; padding: 12px 18px; color: #fff; min-width: 120px; backdrop-filter: blur(6px); }
+  .sp-ov-num { font-size: 24px; font-weight: 900; line-height: 1; }
+  .sp-ov-label { font-size: 11px; opacity: .75; margin-top: 3px; font-weight: 500; }
+
+  .sp-controls { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; position: relative; }
+  .sp-ctrl-group { display: flex; align-items: center; gap: 7px; }
+  .sp-ctrl-label { color: rgba(255,255,255,.8); font-size: 12px; font-weight: 600; }
+  .sp-ctrl-select { padding: 7px 12px; border-radius: 9px; border: 1.5px solid rgba(255,255,255,.3); background: rgba(255,255,255,.12); color: #fff; font-size: 13px; outline: none; cursor: pointer; }
+  .sp-ctrl-select option { color: #1a1a2e; background: #fff; }
+  .sp-btn { padding: 8px 16px; border-radius: 9px; border: none; font-size: 13px; font-weight: 700; cursor: pointer; transition: all .2s; }
+  .sp-btn-primary { background: #fff; color: #1855c8; }
+  .sp-btn-primary:hover { background: #dbeafe; transform: translateY(-1px); }
+  .sp-btn-success { background: #0f9d58; color: #fff; }
+  .sp-btn-success:hover { background: #0d8a4e; transform: translateY(-1px); }
+  .sp-btn-ghost { background: transparent; border: 1.5px solid rgba(255,255,255,.4); color: #fff; }
+  .sp-btn-ghost:hover { background: rgba(255,255,255,.1); }
+
+  .sp-layout { display: flex; min-height: calc(100vh - 260px); }
+
+  .sp-sidebar { width: 200px; flex-shrink: 0; background: #fff; border-right: 1px solid #dbeafe; padding: 16px 12px; overflow-y: auto; }
+  .sp-sidebar-title { font-size: 11px; font-weight: 800; color: #9ca3af; text-transform: uppercase; letter-spacing: .8px; margin-bottom: 12px; padding: 0 4px; }
+  .sp-week-item { border-radius: 10px; padding: 10px 12px; cursor: pointer; margin-bottom: 6px; transition: all .2s; border: 1.5px solid transparent; }
+  .sp-week-item:hover { background: #eff6ff; border-color: #dbeafe; }
+  .sp-week-item.active { background: linear-gradient(135deg, #eff6ff, #dbeafe); border-color: #93c5fd; box-shadow: 0 2px 10px rgba(24,85,200,.1); }
+  .sp-week-num { font-weight: 800; font-size: 13px; color: #1855c8; }
+  .sp-week-bar { width: 100%; height: 4px; background: #dbeafe; border-radius: 3px; margin-top: 6px; overflow: hidden; }
+  .sp-week-fill { height: 100%; background: linear-gradient(90deg, #1855c8, #3b82f6); border-radius: 3px; transition: width .4s; }
+  .sp-week-frac { font-size: 11px; color: #9ca3af; margin-top: 3px; }
+
+  .sp-content { flex: 1; padding: 20px 24px; overflow-y: auto; }
+  .sp-content-title { font-size: 18px; font-weight: 800; color: #1855c8; }
+  .sp-content-sub { font-size: 13px; color: #6b7280; margin-top: 2px; margin-bottom: 20px; }
+
+  .sp-chips { display: flex; gap: 7px; margin-bottom: 20px; flex-wrap: wrap; }
+  .sp-chip { padding: 6px 14px; border-radius: 20px; border: 1.5px solid #dbeafe; background: #fff; color: #374151; font-size: 12px; font-weight: 600; cursor: pointer; transition: all .18s; }
+  .sp-chip.active, .sp-chip:hover { background: #1855c8; color: #fff; border-color: #1855c8; }
+
+  .sp-days-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+
+  .sp-day-card { background: #fff; border-radius: 14px; border: 1.5px solid #dbeafe; box-shadow: 0 2px 12px rgba(24,85,200,.06); transition: all .22s; overflow: hidden; }
+  .sp-day-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(24,85,200,.12); border-color: #93c5fd; }
+  .sp-day-card.done { background: #f0fdf4; border-color: #86efac; }
+  .sp-day-card.done .sp-day-title { color: #0f9d58; }
+  .sp-top-bar { height: 4px; width: 100%; }
+  .sp-day-head { padding: 14px 16px 10px; display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+  .sp-day-label { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .7px; color: #9ca3af; margin-bottom: 3px; }
+  .sp-day-title { font-size: 13px; font-weight: 700; color: #1855c8; line-height: 1.3; }
+  .sp-day-id { font-size: 10px; color: #d1d5db; margin-top: 3px; font-family: monospace; }
+  .sp-done-btn { flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; border: 2px solid #dbeafe; background: #f8faff; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 14px; transition: all .2s; }
+  .sp-done-btn:hover { border-color: #93c5fd; background: #eff6ff; transform: scale(1.1); }
+  .sp-day-card.done .sp-done-btn { background: #dcfce7; border-color: #86efac; color: #0f9d58; }
+  .sp-tasks { padding: 0 16px 14px; }
+  .sp-task { display: flex; align-items: flex-start; gap: 7px; padding: 5px 0; border-bottom: 1px solid #f0f5ff; font-size: 12px; color: #374151; line-height: 1.4; }
+  .sp-task:last-child { border-bottom: none; }
+  .sp-task-dot { width: 6px; height: 6px; border-radius: 50%; background: #3b82f6; flex-shrink: 0; margin-top: 5px; }
+  .sp-day-card.done .sp-task-dot { background: #0f9d58; }
+
+  .sp-empty { text-align: center; padding: 60px 20px; color: #9ca3af; }
+
+  .sp-footer { background: #fff; border-top: 1px solid #dbeafe; text-align: center; padding: 18px; color: #6b7280; font-size: 13px; }
+  .sp-footer .brand { color: #1855c8; font-weight: 700; }
+
+  @media (max-width: 700px) {
+    .sp-layout { flex-direction: column; }
+    .sp-sidebar { width: 100%; display: flex; gap: 8px; overflow-x: auto; padding: 12px; border-right: none; border-bottom: 1px solid #dbeafe; }
+    .sp-week-item { min-width: 100px; flex-shrink: 0; }
+  }
 `;
 
-function ensureInjectedCSS() { if (typeof document === "undefined") return; if (!document.getElementById(CSS_ID)) { const s=document.createElement("style"); s.id=CSS_ID; s.innerHTML=CSS; document.head.appendChild(s); }}
+const TOPICS = [
+  {
+    label: "Grammar & Core Vocabulary", icon: "📝",
+    color: "linear-gradient(90deg,#1855c8,#3b82f6)",
+    tasks: ["30 min: Grammar review", "20 min: Learn 12 academic words", "20 min: Quick reading passage"],
+  },
+  {
+    label: "Reading: Main Idea & Details", icon: "📖",
+    color: "linear-gradient(90deg,#0f766e,#0d9488)",
+    tasks: ["1 full academic reading passage", "Identify main idea + key details", "10 min error review"],
+  },
+  {
+    label: "Listening: Lectures & Talks", icon: "🎧",
+    color: "linear-gradient(90deg,#7c3aed,#8b5cf6)",
+    tasks: ["1 lecture + summarize notes", "Practice active note-taking", "10 comprehension questions"],
+  },
+  {
+    label: "Speaking: Independent Tasks", icon: "🎤",
+    color: "linear-gradient(90deg,#b45309,#d97706)",
+    tasks: ["4 recorded responses (45 sec each)", "Template: intro → 2 supports → conclusion", "Listen back and timestamp weak spots"],
+  },
+  {
+    label: "Writing: Integrated Task", icon: "✍️",
+    color: "linear-gradient(90deg,#be185d,#ec4899)",
+    tasks: ["Integrated writing (read + listen + write 20 min)", "Independent essay (30 min)", "Revise structure and transitions"],
+  },
+  {
+    label: "Full Timed Section Practice", icon: "⏱️",
+    color: "linear-gradient(90deg,#0369a1,#0ea5e9)",
+    tasks: ["Full timed section (choose one skill)", "Review every mistake carefully", "10 min vocabulary review"],
+  },
+  {
+    label: "Review & Rest Day", icon: "🔄",
+    color: "linear-gradient(90deg,#374151,#6b7280)",
+    tasks: ["Review error log from the week", "Light practice on weakest skill", "Active recall + rest"],
+  },
+];
 
-function generatePlan(startDate) {
-  const weeks = 8;
-  const daysPerWeek = 7;
-  const topics = [
-    "Grammar review & Core vocabulary",
-    "Reading practice: Main idea & details",
-    "Listening practice: Lectures & conversations",
-    "Speaking practice: Independent tasks",
-    "Writing practice: Integrated task",
-    "Timed full-section practice",
-    "Review, rest, and weak-point focus",
-  ];
-  const plan = [];
-  for (let w = 0; w < weeks; w++) {
-    const week = { weekNumber: w+1, days: [] };
-    for (let d = 0; d < daysPerWeek; d++) {
-      const dayIndex = d % topics.length;
-      const dayDate = new Date(startDate);
-      dayDate.setDate(dayDate.getDate() + w*7 + d);
-      const day = {
-        id: `w${w+1}d${d+1}`,
-        week: w+1,
-        dayOfWeek: dayDate.toLocaleDateString('en-US', { weekday: 'short' }),
-        dateString: dayDate.toLocaleDateString(),
-        title: `Week ${w+1} — ${topics[dayIndex]}`,
-        tasks: generateTasksForTopic(topics[dayIndex]),
-        completed: false
+function generatePlan() {
+  const today = new Date();
+  return Array.from({ length: 8 }, (_, w) => ({
+    weekNumber: w + 1,
+    days: Array.from({ length: 7 }, (_, d) => {
+      const t = TOPICS[d % TOPICS.length];
+      const date = new Date(today);
+      date.setDate(today.getDate() + w * 7 + d);
+      return {
+        id: `w${w + 1}d${d + 1}`,
+        week: w + 1,
+        dayOfWeek: date.toLocaleDateString("en-US", { weekday: "short" }),
+        dateString: date.toLocaleDateString("en-US", { month: "short", day: "numeric" }),
+        title: t.label,
+        icon: t.icon,
+        color: t.color,
+        tasks: t.tasks,
+        completed: false,
       };
-      week.days.push(day);
-    }
-    plan.push(week);
-  }
-  return plan;
-}
-
-function generateTasksForTopic(topic) {
-  switch(topic){
-    case "Grammar review & Core vocabulary": return ["30 min: Grammar","20 min: Learn 12 academic words","20 min: Quick reading"];
-    case "Reading practice: Main idea & details": return ["1 reading passage","Identify main idea/details","10 min review"];
-    case "Listening practice: Lectures & conversations": return ["1 lecture + summarize","Practice note-taking","10 comprehension Qs"];
-    case "Speaking practice: Independent tasks": return ["4 recorded responses","Use template: intro/2 supports/conclusion","Listen & timestamp"];
-    case "Writing practice: Integrated task": return ["Integrated writing 20min","Independent essay 30min","Revise structure"];
-    case "Timed full-section practice": return ["Full timed section","Review mistakes","10 min vocab review"];
-    case "Review, rest, and weak-point focus": return ["Review error log","Light practice on weak skill","Rest & active recall"];
-    default: return ["Practice & review"];
-  }
+    }),
+  }));
 }
 
 export default function StudyPlan() {
-  useEffect(()=>{ensureInjectedCSS();},[]);
-  const today = new Date();
-  const [plan,setPlan] = useState(()=>{
-    const raw = typeof window!=='undefined'?window.localStorage.getItem('toeflStudyPlan_v1'):null;
-    if(raw){ try{ return JSON.parse(raw); } catch(e){ return generatePlan(today);} }
-    return generatePlan(today);
+  const [plan, setPlan] = useState(() => {
+    try {
+      const raw = localStorage.getItem("toeflPlan_v3");
+      if (raw) return JSON.parse(raw);
+    } catch (e) {}
+    return generatePlan();
   });
 
-  const [selectedWeek,setSelectedWeek]=useState(1);
-  const [filter,setFilter]=useState('all');
+  const [selectedWeek, setSelectedWeek] = useState(1);
+  const [filter, setFilter] = useState("all");
 
-  useEffect(()=>{ if(typeof window!=='undefined') window.localStorage.setItem('toeflStudyPlan_v1',JSON.stringify(plan)); },[plan]);
+  useEffect(() => {
+    if (!document.getElementById("sp-styles")) {
+      const style = document.createElement("style");
+      style.id = "sp-styles";
+      style.innerHTML = styles;
+      document.head.appendChild(style);
+    }
+  }, []);
 
-  const toggleComplete=(dayId)=>{ setPlan(plan.map(w=>({ ...w, days: w.days.map(d=>d.id===dayId?{...d,completed:!d.completed}:d)})));};
-  const markWeekComplete=(weekNum)=>{ setPlan(plan.map(w=>w.weekNumber===weekNum?{...w,days:w.days.map(d=>({...d,completed:true}))}:w));};
-  const resetProgress=()=>{ setPlan(plan.map(w=>({...w,days:w.days.map(d=>({...d,completed:false}))})));};
-  const downloadPlan=()=>{ const dataStr="data:text/json;charset=utf-8,"+encodeURIComponent(JSON.stringify(plan,null,2)); const el=document.createElement('a'); el.setAttribute('href',dataStr); el.setAttribute('download',`toefl-study-plan-${new Date().toISOString().slice(0,10)}.json`); document.body.appendChild(el); el.click(); el.remove(); };
+  useEffect(() => {
+    try { localStorage.setItem("toeflPlan_v3", JSON.stringify(plan)); } catch (e) {}
+  }, [plan]);
 
-  const weeks = plan;
-  const currentWeek = weeks.find(w=>w.weekNumber===selectedWeek)||weeks[0];
-  const filteredDays = days=>filter==='all'?days:filter==='completed'?days.filter(d=>d.completed):days.filter(d=>!d.completed);
+  const allDays = plan.flatMap((w) => w.days);
+  const doneDays = allDays.filter((d) => d.completed).length;
+  const totalDays = allDays.length;
+  const pct = Math.round((doneDays / totalDays) * 100);
+
+  const computeStreak = () => {
+    let streak = 0;
+    for (let i = allDays.length - 1; i >= 0; i--) {
+      if (allDays[i].completed) streak++;
+      else break;
+    }
+    return streak;
+  };
+
+  const currentWeek = plan.find((w) => w.weekNumber === selectedWeek) || plan[0];
+
+  const filteredDays = currentWeek.days.filter((d) => {
+    if (filter === "done") return d.completed;
+    if (filter === "pending") return !d.completed;
+    return true;
+  });
+
+  const toggleDay = (id) => {
+    setPlan(plan.map((w) => ({
+      ...w,
+      days: w.days.map((d) => d.id === id ? { ...d, completed: !d.completed } : d),
+    })));
+  };
+
+  const markWeekDone = () => {
+    setPlan(plan.map((w) =>
+      w.weekNumber === selectedWeek
+        ? { ...w, days: w.days.map((d) => ({ ...d, completed: true })) }
+        : w
+    ));
+  };
+
+  const resetAll = () => {
+    if (window.confirm("Reset all progress?")) setPlan(generatePlan());
+  };
+
+  const exportJSON = () => {
+    const a = document.createElement("a");
+    a.href = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(plan, null, 2));
+    a.download = `toefl-plan-${new Date().toISOString().slice(0, 10)}.json`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  };
 
   return (
-    <div className="study-root">
+    <>
       <Helmet>
-        <title>ABOOD | Study Plan </title>
-        <meta name="description" content="The  Study Plan For Toefl" />
+        <title>ABOOD | Study Plan</title>
+        <meta name="description" content="TOEFL 8-Week Study Plan" />
       </Helmet>
-      <header className="study-header">
-        <h1>TOEFL 8-Week Study Plan (Starting Today)</h1>
-        <p className="muted">
-          Daily organized plan with dates & enhanced animations
-        </p>
-        <div className="controls">
-          <label>Select Week:</label>
-          <select
-            value={selectedWeek}
-            onChange={(e) => setSelectedWeek(Number(e.target.value))}
-          >
-            {weeks.map((w) => (
-              <option key={w.weekNumber} value={w.weekNumber}>
-                Week {w.weekNumber}
-              </option>
-            ))}
-          </select>
-          <label>Filter:</label>
-          <select
-            style={{ outline: "none" }}
-            value={filter}
-            onChange={(e) => setFilter(e.target.value)}
-          >
-            <option value="all">All</option>
-            <option value="pending">Pending</option>
-            <option value="completed">Completed</option>
-          </select>
-          <button
-            className="btn"
-            onClick={() => markWeekComplete(selectedWeek)}
-          >
-            Mark week complete
-          </button>
-          <button className="btn btn-ghost" onClick={resetProgress}>
-            Reset progress
-          </button>
-          <button className="btn btn-download" onClick={downloadPlan}>
-            Download JSON
-          </button>
+
+      <div className="sp-header">
+        <h1>📅 TOEFL 8-Week Study Plan</h1>
+        <p>Personalized daily plan with progress tracking — starting from today</p>
+
+        <div className="sp-overview">
+          <div className="sp-ov-card"><div className="sp-ov-num">{doneDays}</div><div className="sp-ov-label">Days Done</div></div>
+          <div className="sp-ov-card"><div className="sp-ov-num">{pct}%</div><div className="sp-ov-label">Progress</div></div>
+          <div className="sp-ov-card"><div className="sp-ov-num">{computeStreak()}</div><div className="sp-ov-label">Day Streak</div></div>
+          <div className="sp-ov-card"><div className="sp-ov-num">{totalDays - doneDays}</div><div className="sp-ov-label">Days Left</div></div>
         </div>
-      </header>
-      <main className="study-main">
-        <aside className="weeks-sidebar">
-          {weeks.map((w) => (
-            <div
-              key={w.weekNumber}
-              className={`week-card ${
-                w.weekNumber === selectedWeek ? "active" : ""
-              }`}
-              onClick={() => setSelectedWeek(w.weekNumber)}
+
+        <div className="sp-controls">
+          <div className="sp-ctrl-group">
+            <span className="sp-ctrl-label">Week:</span>
+            <select
+              className="sp-ctrl-select"
+              value={selectedWeek}
+              onChange={(e) => setSelectedWeek(+e.target.value)}
             >
-              <strong>Week {w.weekNumber}</strong>
-              <div className="week-summary">
-                {w.days.filter((d) => d.completed).length}/{w.days.length}{" "}
-                completed
-              </div>
-            </div>
-          ))}
-        </aside>
-        <section className="week-plan">
-          <h2>Week {currentWeek.weekNumber} — Daily Plan</h2>
-          <div className="days-grid">
-            {filteredDays(currentWeek.days).map((d) => (
-              <article
-                key={d.id}
-                className={`day-card ${d.completed ? "done" : ""}`}
+              {plan.map((w) => (
+                <option key={w.weekNumber} value={w.weekNumber}>Week {w.weekNumber}</option>
+              ))}
+            </select>
+          </div>
+          <button className="sp-btn sp-btn-primary" onClick={markWeekDone}>✓ Mark Week Done</button>
+          <button className="sp-btn sp-btn-success" onClick={exportJSON}>⬇ Export JSON</button>
+          <button className="sp-btn sp-btn-ghost" onClick={resetAll}>↺ Reset</button>
+        </div>
+      </div>
+
+      <div className="sp-layout">
+        {/* Sidebar */}
+        <div className="sp-sidebar">
+          <div className="sp-sidebar-title">8 Weeks</div>
+          {plan.map((w) => {
+            const done = w.days.filter((d) => d.completed).length;
+            const p = Math.round((done / w.days.length) * 100);
+            return (
+              <div
+                key={w.weekNumber}
+                className={`sp-week-item${w.weekNumber === selectedWeek ? " active" : ""}`}
+                onClick={() => setSelectedWeek(w.weekNumber)}
               >
-                <div className="day-head">
-                  <div>
-                    <div className="day-title">
-                      {d.dayOfWeek} ({d.dateString}) — {d.title}
-                    </div>
-                    <div className="day-sub">Day ID: {d.id}</div>
-                  </div>
-                  <div className="day-actions">
-                    <button
-                      className="small"
-                      onClick={() => toggleComplete(d.id)}
-                    >
-                      {d.completed ? "Unmark" : "Done"}
-                    </button>
-                  </div>
-                </div>
-                <ul className="task-list">
-                  {d.tasks.map((t, idx) => (
-                    <li key={idx}>{t}</li>
-                  ))}
-                </ul>
-              </article>
+                <div className="sp-week-num">Week {w.weekNumber}</div>
+                <div className="sp-week-bar"><div className="sp-week-fill" style={{ width: `${p}%` }} /></div>
+                <div className="sp-week-frac">{done}/{w.days.length} days</div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Content */}
+        <div className="sp-content">
+          <div className="sp-content-title">Week {currentWeek.weekNumber} — Daily Plan</div>
+          <div className="sp-content-sub">
+            {currentWeek.days.filter((d) => d.completed).length} of {currentWeek.days.length} days completed
+          </div>
+
+          <div className="sp-chips">
+            {[
+              { key: "all", label: "All Days" },
+              { key: "pending", label: "⏳ Pending" },
+              { key: "done", label: "✅ Completed" },
+            ].map(({ key, label }) => (
+              <div
+                key={key}
+                className={`sp-chip${filter === key ? " active" : ""}`}
+                onClick={() => setFilter(key)}
+              >
+                {label}
+              </div>
             ))}
           </div>
-        </section>
-      </main>
-      <footer className="study-footer">
-        <p>
-          &copy; 2025 ABOOD | JAMAL TOEFL TEST. Automatically generated — adjust
-          tasks to your level. Good luck!
-        </p>
+
+          {filteredDays.length === 0 ? (
+            <div className="sp-empty">
+              <div style={{ fontSize: 42, marginBottom: 12 }}>✅</div>
+              <div style={{ fontSize: 16, fontWeight: 700, color: "#374151", marginBottom: 6 }}>All caught up!</div>
+              <div>No days match this filter</div>
+            </div>
+          ) : (
+            <div className="sp-days-grid">
+              {filteredDays.map((d) => (
+                <div key={d.id} className={`sp-day-card${d.completed ? " done" : ""}`}>
+                  <div className="sp-top-bar" style={{ background: d.color }} />
+                  <div className="sp-day-head">
+                    <div style={{ flex: 1 }}>
+                      <div className="sp-day-label">{d.dayOfWeek} · {d.dateString}</div>
+                      <div className="sp-day-title">{d.icon} {d.title}</div>
+                      <div className="sp-day-id">{d.id}</div>
+                    </div>
+                    <button
+                      className="sp-done-btn"
+                      onClick={() => toggleDay(d.id)}
+                      title={d.completed ? "Mark incomplete" : "Mark complete"}
+                    >
+                      {d.completed ? "✓" : "○"}
+                    </button>
+                  </div>
+                  <div className="sp-tasks">
+                    {d.tasks.map((t, i) => (
+                      <div key={i} className="sp-task">
+                        <div className="sp-task-dot" />
+                        <span>{t}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+
+      <footer className="sp-footer">
+        <p>© 2025 <span className="brand">ABOOD | JAMAL TOEFL TEST</span> — Automatically generated. Good luck!</p>
       </footer>
-    </div>
+    </>
   );
 }
