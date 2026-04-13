@@ -148,7 +148,6 @@ export default function VocabTopics() {
   const [lovedVocabs, setLovedVocabs] = useState([]);
   const [showCart, setShowCart] = useState(false);
   const [searchQuery, setSearchQuery] = useState(false);
-  const [showTopicMenu, setShowTopicMenu] = useState(false);
 
   const topics = Object.keys(vocab);
 
