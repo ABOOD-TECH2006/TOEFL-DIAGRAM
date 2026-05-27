@@ -2898,7 +2898,212 @@ batch38: [
   { word: "wrist", arabic: "معصم", english: "She wore a watch on her wrist.", level: "B2", arabic_example: "ارتدت ساعة على معصمها." },
   { word: "yell", arabic: "يصرخ", english: "He had to yell to be heard over the noise.", level: "C1", arabic_example: "اضطر للصراخ ليُسمع فوق الضوضاء." },
   { word: "yield", arabic: "يعطي / محصول", english: "The farm yields a good harvest every year.", level: "C1", arabic_example: "تنتج الحقول محصولًا جيدًا كل عام." }
-]
+],
+  batch39:[
+      {
+    word: "startup",
+    arabic: "شركة ناشئة",
+    english: "A startup is a newly created company designed to grow fast by solving a specific problem under uncertainty.",
+    level: "B2",
+    arabic_example: "الشركة الناشئة تحتاج إلى اختبار فكرتها قبل التوسع."
+  },
+  {
+    word: "scalability",
+    arabic: "قابلية التوسع",
+    english: "Scalability is the ability of a system or business to grow without losing performance or increasing costs proportionally.",
+    level: "C1",
+    arabic_example: "قابلية التوسع مهمة جدًا في التطبيقات التقنية الحديثة."
+  },
+  {
+    word: "lean startup",
+    arabic: "الشركة الناشئة الرشيقة",
+    english: "Lean startup is a method of building businesses by testing ideas quickly using minimal resources.",
+    level: "C1",
+    arabic_example: "اعتمدنا أسلوب الشركة الناشئة الرشيقة لتقليل المخاطر."
+  },
+  {
+    word: "iteration",
+    arabic: "تكرار وتحسين",
+    english: "Iteration is the process of improving a product step by step through repeated cycles.",
+    level: "B2",
+    arabic_example: "نقوم بتحسين التطبيق عبر تكرارات مستمرة."
+  },
+  {
+    word: "prototype",
+    arabic: "نموذج أولي",
+    english: "A prototype is an early version of a product used to test ideas before full development.",
+    level: "B2",
+    arabic_example: "صممنا نموذجًا أوليًا لاختبار فكرة التطبيق."
+  },
+  {
+    word: "MVP",
+    arabic: "النسخة الأولية القابلة للتجربة",
+    english: "MVP is the simplest usable version of a product built to validate an idea quickly.",
+    level: "C1",
+    arabic_example: "أطلقنا النسخة الأولية القابلة للتجربة لجمع ردود فعل المستخدمين."
+  },
+  {
+    word: "product-market fit",
+    arabic: "ملاءمة المنتج للسوق",
+    english: "Product-market fit means your product satisfies strong market demand.",
+    level: "C1",
+    arabic_example: "وصلنا إلى ملاءمة المنتج للسوق بعد تحسين التجربة."
+  },
+  {
+    word: "customer acquisition",
+    arabic: "اكتساب العملاء",
+    english: "Customer acquisition is the process of gaining new paying users or clients.",
+    level: "C1",
+    arabic_example: "نركز على اكتساب العملاء عبر التسويق الرقمي."
+  },
+  {
+    word: "retention",
+    arabic: "الاحتفاظ بالعملاء",
+    english: "Retention is the ability to keep customers using your product over time.",
+    level: "C1",
+    arabic_example: "تحسين التجربة يزيد من الاحتفاظ بالعملاء."
+  },
+  {
+    word: "churn",
+    arabic: "معدل فقدان العملاء",
+    english: "Churn is the percentage of customers who stop using a product over time.",
+    level: "C1",
+    arabic_example: "ارتفاع معدل فقدان العملاء يشير إلى مشكلة في المنتج."
+  },
+  {
+    word: "freelancing",
+    arabic: "العمل الحر",
+    english: "Freelancing is working independently for multiple clients instead of a single employer.",
+    level: "B2",
+    arabic_example: "العمل الحر يوفر مرونة في اختيار المشاريع."
+  },
+  {
+    word: "portfolio",
+    arabic: "معرض الأعمال",
+    english: "A portfolio is a collection of work that demonstrates your skills and experience.",
+    level: "B2",
+    arabic_example: "أنشأت معرض أعمال لعرض مشاريع البرمجة الخاصة بي."
+  },
+  {
+    word: "client",
+    arabic: "عميل",
+    english: "A client is a person or company that hires you for a service.",
+    level: "A2",
+    arabic_example: "تواصلت مع عميل جديد لمشروع تصميم موقع."
+  },
+  {
+    word: "contract",
+    arabic: "عقد",
+    english: "A contract is a legal agreement between two parties defining work terms.",
+    level: "B2",
+    arabic_example: "وقعت عقد عمل حر مع شركة خارجية."
+  },
+  {
+    word: "invoice",
+    arabic: "فاتورة",
+    english: "An invoice is a document requesting payment for services or goods.",
+    level: "B2",
+    arabic_example: "أرسلت فاتورة للعميل بعد إنهاء المشروع."
+  },
+  {
+    word: "pricing strategy",
+    arabic: "استراتيجية التسعير",
+    english: "Pricing strategy is how a business decides the price of its product or service.",
+    level: "C1",
+    arabic_example: "استراتيجية التسعير تؤثر على حجم المبيعات بشكل مباشر."
+  },
+  {
+    word: "revenue",
+    arabic: "الإيرادات",
+    english: "Revenue is the total income a business earns from its operations.",
+    level: "B2",
+    arabic_example: "زادت الإيرادات بعد إطلاق المنتج الجديد."
+  },
+  {
+    word: "profit",
+    arabic: "الربح",
+    english: "Profit is the money left after subtracting costs from revenue.",
+    level: "A2",
+    arabic_example: "الربح هو الهدف الأساسي لأي مشروع تجاري."
+  },
+  {
+    word: "cost structure",
+    arabic: "هيكل التكاليف",
+    english: "Cost structure describes all costs involved in running a business.",
+    level: "C1",
+    arabic_example: "تحليل هيكل التكاليف يساعد في تحسين الأرباح."
+  },
+  {
+    word: "burn rate",
+    arabic: "معدل استهلاك المال",
+    english: "Burn rate is how fast a startup spends its cash before becoming profitable.",
+    level: "C1",
+    arabic_example: "معدل استهلاك المال مرتفع في المراحل الأولى من الشركة."
+  },
+  {
+    word: "funding",
+    arabic: "تمويل",
+    english: "Funding is the money raised to start or grow a business.",
+    level: "B2",
+    arabic_example: "نبحث عن تمويل لتوسيع المشروع."
+  },
+  {
+    word: "investor",
+    arabic: "مستثمر",
+    english: "An investor is a person who provides money expecting future profit.",
+    level: "A2",
+    arabic_example: "اجتمعنا مع مستثمر لعرض فكرة المشروع."
+  },
+  {
+    word: "pitch deck",
+    arabic: "عرض استثماري",
+    english: "A pitch deck is a presentation used to explain a startup idea to investors.",
+    level: "C1",
+    arabic_example: "جهزنا عرضًا استثماريًا لعرضه على المستثمرين."
+  },
+  {
+    word: "networking",
+    arabic: "بناء العلاقات المهنية",
+    english: "Networking is building professional relationships to create opportunities.",
+    level: "B2",
+    arabic_example: "بناء العلاقات المهنية يساعد في الحصول على فرص عمل."
+  },
+  {
+    word: "personal branding",
+    arabic: "العلامة الشخصية",
+    english: "Personal branding is how you present your skills, identity, and reputation professionally.",
+    level: "C1",
+    arabic_example: "أعمل على تطوير علامتي الشخصية كمطور برمجيات."
+  },
+  {
+    word: "authority",
+    arabic: "السلطة / الموثوقية",
+    english: "Authority in business means being recognized as a trusted expert in a field.",
+    level: "C1",
+    arabic_example: "بناء الموثوقية يحتاج إلى محتوى وخبرة مستمرة."
+  },
+  {
+    word: "content strategy",
+    arabic: "استراتيجية المحتوى",
+    english: "Content strategy is planning and creating content to attract and engage an audience.",
+    level: "C1",
+    arabic_example: "استراتيجية المحتوى مهمة لبناء علامة شخصية قوية."
+  },
+  {
+    word: "conversion rate",
+    arabic: "معدل التحويل",
+    english: "Conversion rate is the percentage of users who take a desired action.",
+    level: "C1",
+    arabic_example: "تحسين الصفحة زاد معدل التحويل بشكل واضح."
+  },
+  {
+    word: "traffic",
+    arabic: "الزيارات",
+    english: "Traffic refers to the number of users visiting a website or app.",
+    level: "A2",
+    arabic_example: "الموقع حصل على زيارات عالية بعد الحملة الإعلانية."
+  }
+  ]
 
 };
 export default vocab;
