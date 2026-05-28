@@ -3103,6 +3103,260 @@ batch38: [
     level: "A2",
     arabic_example: "الموقع حصل على زيارات عالية بعد الحملة الإعلانية."
   }
+    
+  {
+    word: "marketing funnel",
+    arabic: "قمع التسويق",
+    english: "A marketing funnel represents the stages users go through before becoming customers.",
+    level: "C1",
+    arabic_example: "نحلل قمع التسويق لمعرفة أين نخسر العملاء المحتملين."
+  },
+  {
+    word: "awareness",
+    arabic: "الوعي بالعلامة",
+    english: "Awareness is the stage where people first discover your product or brand.",
+    level: "B2",
+    arabic_example: "الحملة الإعلانية ساعدت في زيادة الوعي بالعلامة التجارية."
+  },
+  {
+    word: "lead",
+    arabic: "عميل محتمل",
+    english: "A lead is a person who has shown interest in your product or service.",
+    level: "B2",
+    arabic_example: "جمعنا مئات العملاء المحتملين من صفحة التسجيل."
+  },
+  {
+    word: "qualified lead",
+    arabic: "عميل محتمل مؤهل",
+    english: "A qualified lead is a potential customer who is likely to buy your product.",
+    level: "C1",
+    arabic_example: "فريق المبيعات يركز على العملاء المحتملين المؤهلين فقط."
+  },
+  {
+    word: "CTA",
+    arabic: "دعوة لاتخاذ إجراء",
+    english: "CTA stands for Call To Action, which encourages users to take a specific step.",
+    level: "C1",
+    arabic_example: "تغيير نص دعوة اتخاذ الإجراء زاد التسجيلات."
+  },
+  {
+    word: "landing page",
+    arabic: "صفحة هبوط",
+    english: "A landing page is a focused web page designed to convert visitors into customers or leads.",
+    level: "C1",
+    arabic_example: "أنشأنا صفحة هبوط مخصصة للحملة الإعلانية."
+  },
+  {
+    word: "copywriting",
+    arabic: "الكتابة التسويقية",
+    english: "Copywriting is writing persuasive text that motivates people to take action.",
+    level: "C1",
+    arabic_example: "الكتابة التسويقية القوية تحسن معدل التحويل."
+  },
+  {
+    word: "headline",
+    arabic: "العنوان الرئيسي",
+    english: "A headline is the main title designed to capture attention quickly.",
+    level: "B2",
+    arabic_example: "العنوان الرئيسي الجذاب يزيد من تفاعل الزوار."
+  },
+  {
+    word: "engagement",
+    arabic: "التفاعل",
+    english: "Engagement measures how actively users interact with your content or product.",
+    level: "B2",
+    arabic_example: "ارتفع التفاعل بعد نشر الفيديوهات التعليمية."
+  },
+  {
+    word: "organic growth",
+    arabic: "النمو العضوي",
+    english: "Organic growth happens naturally without relying heavily on paid advertising.",
+    level: "C1",
+    arabic_example: "النمو العضوي القوي يقلل من تكاليف التسويق."
+  },
+  {
+    word: "paid ads",
+    arabic: "الإعلانات المدفوعة",
+    english: "Paid ads are advertisements businesses pay for to reach targeted audiences.",
+    level: "B2",
+    arabic_example: "استخدمنا الإعلانات المدفوعة لاختبار السوق بسرعة."
+  },
+  {
+    word: "SEO",
+    arabic: "تحسين محركات البحث",
+    english: "SEO stands for Search Engine Optimization, which improves website visibility on search engines.",
+    level: "C1",
+    arabic_example: "تحسين محركات البحث يساعد في جلب زيارات مجانية."
+  },
+  {
+    word: "keyword",
+    arabic: "كلمة مفتاحية",
+    english: "A keyword is a term users type into search engines when looking for information.",
+    level: "B2",
+    arabic_example: "اخترنا كلمات مفتاحية تناسب جمهورنا المستهدف."
+  },
+  {
+    word: "analytics",
+    arabic: "تحليلات البيانات",
+    english: "Analytics refers to collecting and studying data to improve business decisions.",
+    level: "C1",
+    arabic_example: "تحليلات البيانات كشفت سلوك المستخدمين داخل التطبيق."
+  },
+  {
+    word: "A/B testing",
+    arabic: "اختبار أ/ب",
+    english: "A/B testing compares two versions of something to determine which performs better.",
+    level: "C1",
+    arabic_example: "أجرينا اختبار أ/ب لمعرفة أي تصميم يحقق تحويلات أعلى."
+  },
+  {
+    word: "user acquisition",
+    arabic: "اكتساب المستخدمين",
+    english: "User acquisition is the process of attracting new users to a platform or product.",
+    level: "C1",
+    arabic_example: "نحتاج إلى استراتيجية قوية لاكتساب المستخدمين."
+  },
+  {
+    word: "CAC",
+    arabic: "تكلفة اكتساب العميل",
+    english: "CAC stands for Customer Acquisition Cost, which measures how much it costs to gain one customer.",
+    level: "C1",
+    arabic_example: "تكلفة اكتساب العميل مرتفعة مقارنة بالإيرادات الحالية."
+  },
+  {
+    word: "LTV",
+    arabic: "القيمة العمرية للعميل",
+    english: "LTV stands for Lifetime Value, which estimates the total revenue from one customer over time.",
+    level: "C1",
+    arabic_example: "القيمة العمرية للعميل يجب أن تكون أعلى من تكلفة اكتسابه."
+  },
+  {
+    word: "sales pipeline",
+    arabic: "خط سير المبيعات",
+    english: "A sales pipeline tracks potential customers through each stage of the sales process.",
+    level: "C1",
+    arabic_example: "فريق المبيعات يدير خط سير المبيعات باستخدام نظام CRM."
+  },
+  {
+    word: "CRM",
+    arabic: "نظام إدارة علاقات العملاء",
+    english: "CRM stands for Customer Relationship Management, a system used to manage customer interactions.",
+    level: "C1",
+    arabic_example: "نستخدم نظام إدارة علاقات العملاء لتنظيم بيانات العملاء."
+  },
+  {
+    word: "cold outreach",
+    arabic: "التواصل البارد",
+    english: "Cold outreach means contacting potential clients who have never interacted with you before.",
+    level: "C1",
+    arabic_example: "التواصل البارد يحتاج إلى رسالة مختصرة ومقنعة."
+  },
+  {
+    word: "sales call",
+    arabic: "مكالمة مبيعات",
+    english: "A sales call is a conversation intended to persuade a prospect to buy a product or service.",
+    level: "B2",
+    arabic_example: "أجرينا مكالمة مبيعات مع شركة مهتمة بالخدمة."
+  },
+  {
+    word: "closing",
+    arabic: "إغلاق الصفقة",
+    english: "Closing is the final stage where a prospect agrees to purchase.",
+    level: "C1",
+    arabic_example: "إغلاق الصفقة يتطلب فهم احتياجات العميل جيدًا."
+  },
+  {
+    word: "upselling",
+    arabic: "البيع التصاعدي",
+    english: "Upselling means encouraging customers to buy a more expensive version of a product.",
+    level: "C1",
+    arabic_example: "استخدمنا البيع التصاعدي لزيادة متوسط الإيرادات."
+  },
+  {
+    word: "cross-selling",
+    arabic: "البيع المتقاطع",
+    english: "Cross-selling means offering related products in addition to the original purchase.",
+    level: "C1",
+    arabic_example: "المتجر يستخدم البيع المتقاطع لزيادة المبيعات."
+  },
+  {
+    word: "viral growth",
+    arabic: "النمو الفيروسي",
+    english: "Viral growth happens when users naturally invite or attract more users.",
+    level: "C1",
+    arabic_example: "التطبيق حقق نموًا فيروسيًا عبر المشاركة بين الأصدقاء."
+  },
+  {
+    word: "network effect",
+    arabic: "تأثير الشبكة",
+    english: "A network effect occurs when a product becomes more valuable as more people use it.",
+    level: "C1",
+    arabic_example: "وسائل التواصل الاجتماعي تعتمد على تأثير الشبكة."
+  },
+  {
+    word: "monetization",
+    arabic: "تحقيق الدخل",
+    english: "Monetization is the process of turning users or traffic into revenue.",
+    level: "C1",
+    arabic_example: "ما زلنا نبحث عن أفضل طريقة لتحقيق الدخل من التطبيق."
+  },
+  {
+    word: "subscription model",
+    arabic: "نموذج الاشتراك",
+    english: "A subscription model charges customers repeatedly on a monthly or yearly basis.",
+    level: "C1",
+    arabic_example: "العديد من شركات البرمجيات تعتمد نموذج الاشتراك."
+  },
+  {
+    word: "freemium",
+    arabic: "مجاني مع مزايا مدفوعة",
+    english: "Freemium is a model where basic features are free but advanced features require payment.",
+    level: "C1",
+    arabic_example: "التطبيق يستخدم نموذج مجاني مع مزايا مدفوعة لجذب المستخدمين."
+  },
+  {
+    word: "growth hacking",
+    arabic: "اختراق النمو",
+    english: "Growth hacking is using creative, low-cost strategies to achieve rapid business growth.",
+    level: "C1",
+    arabic_example: "الشركات الناشئة تستخدم اختراق النمو لتحقيق انتشار سريع."
+  },
+  {
+    word: "brand positioning",
+    arabic: "تموضع العلامة التجارية",
+    english: "Brand positioning defines how a company wants customers to perceive it compared to competitors.",
+    level: "C1",
+    arabic_example: "تموضع العلامة التجارية يؤثر على قرارات الشراء."
+  },
+  {
+    word: "target audience",
+    arabic: "الجمهور المستهدف",
+    english: "A target audience is the specific group of people a business wants to reach.",
+    level: "B2",
+    arabic_example: "فهم الجمهور المستهدف ضروري لنجاح أي حملة."
+  },
+  {
+    word: "customer persona",
+    arabic: "الشخصية النموذجية للعميل",
+    english: "A customer persona is a fictional profile representing your ideal customer.",
+    level: "C1",
+    arabic_example: "أنشأنا شخصية نموذجية لفهم احتياجات المستخدمين."
+  },
+  {
+    word: "competitive advantage",
+    arabic: "الميزة التنافسية",
+    english: "A competitive advantage is a unique factor that makes a business stronger than competitors.",
+    level: "C1",
+    arabic_example: "السرعة في التطوير من أهم ميزاتنا التنافسية."
+  },
+  {
+    word: "market share",
+    arabic: "الحصة السوقية",
+    english: "Market share is the percentage of total sales a company controls in a market.",
+    level: "C1",
+    arabic_example: "الشركة تسعى لزيادة حصتها السوقية هذا العام."
+  }
+
   ]
 
 };
