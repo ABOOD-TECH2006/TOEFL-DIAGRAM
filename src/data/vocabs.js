@@ -3102,7 +3102,7 @@ batch38: [
     english: "Traffic refers to the number of users visiting a website or app.",
     level: "A2",
     arabic_example: "الموقع حصل على زيارات عالية بعد الحملة الإعلانية."
-  }
+  },
     
   {
     word: "marketing funnel",
