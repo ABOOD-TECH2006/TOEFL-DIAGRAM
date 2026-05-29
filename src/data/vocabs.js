@@ -3355,7 +3355,254 @@ batch38: [
     english: "Market share is the percentage of total sales a company controls in a market.",
     level: "C1",
     arabic_example: "الشركة تسعى لزيادة حصتها السوقية هذا العام."
+  },
+    
+  {
+    word: "SaaS",
+    arabic: "البرمجيات كخدمة",
+    english: "SaaS stands for Software as a Service, where software is delivered online through subscriptions.",
+    level: "C1",
+    arabic_example: "معظم أدوات الذكاء الاصطناعي الحديثة تعمل كنظام برمجيات كخدمة."
+  },
+  {
+    word: "bootstrapping",
+    arabic: "التمويل الذاتي",
+    english: "Bootstrapping means building a business using your own money and revenue instead of external investment.",
+    level: "C1",
+    arabic_example: "بدأ المؤسس مشروعه عبر التمويل الذاتي دون مستثمرين."
+  },
+  {
+    word: "venture capital",
+    arabic: "رأس المال الجريء",
+    english: "Venture capital is investment money provided to high-growth startups with strong potential.",
+    level: "C1",
+    arabic_example: "حصلت الشركة الناشئة على تمويل من رأس المال الجريء."
+  },
+  {
+    word: "angel investor",
+    arabic: "مستثمر ملاك",
+    english: "An angel investor is an individual who invests personal money into early-stage startups.",
+    level: "C1",
+    arabic_example: "تواصلنا مع مستثمر ملاك لدعم المرحلة الأولى من المشروع."
+  },
+  {
+    word: "equity",
+    arabic: "حصة ملكية",
+    english: "Equity represents ownership percentage in a company.",
+    level: "C1",
+    arabic_example: "المستثمر طلب حصة ملكية مقابل التمويل."
+  },
+  {
+    word: "valuation",
+    arabic: "تقييم الشركة",
+    english: "Valuation is the estimated financial value of a company.",
+    level: "C1",
+    arabic_example: "ارتفع تقييم الشركة بعد زيادة عدد المستخدمين."
+  },
+  {
+    word: "runway",
+    arabic: "المدة المالية المتبقية",
+    english: "Runway is the amount of time a startup can survive before running out of money.",
+    level: "C1",
+    arabic_example: "الشركة لديها مدة مالية تكفي لثمانية أشهر."
+  },
+  {
+    word: "pivot",
+    arabic: "تغيير الاتجاه",
+    english: "A pivot is a significant change in business strategy based on market feedback.",
+    level: "C1",
+    arabic_example: "قامت الشركة بتغيير الاتجاه بعد فشل النموذج الأول."
+  },
+  {
+    word: "disruption",
+    arabic: "إحداث تغيير جذري",
+    english: "Disruption happens when a new product changes an industry dramatically.",
+    level: "C1",
+    arabic_example: "الذكاء الاصطناعي أحدث تغييرًا جذريًا في سوق البرمجيات."
+  },
+  {
+    word: "market validation",
+    arabic: "التحقق من السوق",
+    english: "Market validation is proving that customers truly want a product before scaling.",
+    level: "C1",
+    arabic_example: "نحتاج إلى التحقق من السوق قبل الاستثمار الكبير."
+  },
+  {
+    word: "traction",
+    arabic: "الجذب السوقي",
+    english: "Traction is measurable evidence that customers are using or paying for a product.",
+    level: "C1",
+    arabic_example: "حقق التطبيق جذبًا سوقيًا قويًا خلال شهرين."
+  },
+  {
+    word: "onboarding",
+    arabic: "تهيئة المستخدم",
+    english: "Onboarding is the process of helping new users understand and start using a product effectively.",
+    level: "C1",
+    arabic_example: "تحسين تهيئة المستخدم زاد نسبة الاحتفاظ."
+  },
+  {
+    word: "user experience",
+    arabic: "تجربة المستخدم",
+    english: "User experience refers to how users feel while interacting with a product or system.",
+    level: "C1",
+    arabic_example: "تجربة المستخدم الممتازة تزيد من رضا العملاء."
+  },
+  {
+    word: "UI",
+    arabic: "واجهة المستخدم",
+    english: "UI stands for User Interface, which includes the visual elements users interact with.",
+    level: "B2",
+    arabic_example: "قمنا بتحسين واجهة المستخدم لتصبح أبسط."
+  },
+  {
+    word: "UX",
+    arabic: "تجربة المستخدم",
+    english: "UX stands for User Experience, focusing on usability and satisfaction.",
+    level: "C1",
+    arabic_example: "تجربة المستخدم الجيدة تقلل من تعقيد التطبيق."
+  },
+  {
+    word: "retention rate",
+    arabic: "معدل الاحتفاظ",
+    english: "Retention rate measures how many users continue using a product over time.",
+    level: "C1",
+    arabic_example: "معدل الاحتفاظ المرتفع يدل على جودة المنتج."
+  },
+  {
+    word: "engagement rate",
+    arabic: "معدل التفاعل",
+    english: "Engagement rate measures how actively users interact with a platform or content.",
+    level: "C1",
+    arabic_example: "ارتفع معدل التفاعل بعد تحديث التصميم."
+  },
+  {
+    word: "virality",
+    arabic: "الانتشار الفيروسي",
+    english: "Virality is the tendency of users to rapidly share a product with others.",
+    level: "C1",
+    arabic_example: "حقق التطبيق انتشارًا فيروسيًا على وسائل التواصل."
+  },
+  {
+    word: "network effect",
+    arabic: "تأثير الشبكة",
+    english: "A network effect occurs when a product becomes more valuable as more people use it.",
+    level: "C1",
+    arabic_example: "منصات التواصل تعتمد بشكل أساسي على تأثير الشبكة."
+  },
+  {
+    word: "market penetration",
+    arabic: "اختراق السوق",
+    english: "Market penetration measures how much of a market a product has captured.",
+    level: "C1",
+    arabic_example: "نسعى إلى زيادة اختراق السوق في الخليج."
+  },
+  {
+    word: "brand loyalty",
+    arabic: "ولاء العلامة التجارية",
+    english: "Brand loyalty means customers repeatedly choose the same brand over competitors.",
+    level: "C1",
+    arabic_example: "ولاء العلامة التجارية يقلل من فقدان العملاء."
+  },
+  {
+    word: "social proof",
+    arabic: "الإثبات الاجتماعي",
+    english: "Social proof is evidence that other people trust or use a product.",
+    level: "C1",
+    arabic_example: "التقييمات الإيجابية تعتبر إثباتًا اجتماعيًا قويًا."
+  },
+  {
+    word: "testimonial",
+    arabic: "شهادة عميل",
+    english: "A testimonial is a positive statement from a customer about a product or service.",
+    level: "B2",
+    arabic_example: "أضفنا شهادات العملاء إلى صفحة الهبوط."
+  },
+  {
+    word: "case study",
+    arabic: "دراسة حالة",
+    english: "A case study explains how a product solved a real problem for a customer.",
+    level: "C1",
+    arabic_example: "نشرنا دراسة حالة لزيادة ثقة العملاء."
+  },
+  {
+    word: "automation",
+    arabic: "الأتمتة",
+    english: "Automation means using technology to perform tasks automatically with minimal human involvement.",
+    level: "C1",
+    arabic_example: "الأتمتة ساعدت الشركة على تقليل التكاليف."
+  },
+  {
+    word: "workflow",
+    arabic: "سير العمل",
+    english: "A workflow is the sequence of steps needed to complete a process.",
+    level: "B2",
+    arabic_example: "قمنا بتحسين سير العمل داخل النظام."
+  },
+  {
+    word: "integration",
+    arabic: "تكامل",
+    english: "Integration is connecting different systems or tools to work together.",
+    level: "C1",
+    arabic_example: "تكامل واتساب مع النظام زاد سرعة التواصل."
+  },
+  {
+    word: "API",
+    arabic: "واجهة برمجة التطبيقات",
+    english: "An API allows different software systems to communicate with each other.",
+    level: "C1",
+    arabic_example: "استخدمنا واجهة برمجة التطبيقات لربط الخدمات."
+  },
+  {
+    word: "data-driven",
+    arabic: "معتمد على البيانات",
+    english: "Data-driven decision making relies on analytics and evidence instead of assumptions.",
+    level: "C1",
+    arabic_example: "الشركات الحديثة تعتمد على قرارات مبنية على البيانات."
+  },
+  {
+    word: "analytics dashboard",
+    arabic: "لوحة التحليلات",
+    english: "An analytics dashboard displays important business metrics visually.",
+    level: "C1",
+    arabic_example: "لوحة التحليلات تساعد في متابعة أداء المنصة."
+  },
+  {
+    word: "customer journey",
+    arabic: "رحلة العميل",
+    english: "Customer journey describes every interaction a user has with a business.",
+    level: "C1",
+    arabic_example: "درسنا رحلة العميل لتحسين التحويلات."
+  },
+  {
+    word: "pain point",
+    arabic: "نقطة الألم",
+    english: "A pain point is a specific problem customers experience and want solved.",
+    level: "C1",
+    arabic_example: "يجب فهم نقاط الألم الحقيقية للعملاء."
+  },
+  {
+    word: "solution-oriented",
+    arabic: "موجه نحو الحلول",
+    english: "Solution-oriented thinking focuses on solving problems effectively instead of complaining about them.",
+    level: "C1",
+    arabic_example: "المؤسسون الناجحون يفكرون بطريقة موجهة نحو الحلول."
+  },
+  {
+    word: "blue ocean strategy",
+    arabic: "استراتيجية المحيط الأزرق",
+    english: "Blue ocean strategy means creating a new uncontested market instead of competing directly.",
+    level: "C1",
+    arabic_example: "نسعى لبناء سوق جديد بدل الدخول في منافسة مباشرة."
+  },
+  {
+    word: "founder mindset",
+    arabic: "عقلية المؤسس",
+    english: "Founder mindset refers to strategic thinking focused on ownership, growth, and long-term vision.",
+    level: "C1",
+    arabic_example: "عقلية المؤسس تحتاج إلى تحمل المخاطر واتخاذ القرارات."
   }
+
 
   ]
 
