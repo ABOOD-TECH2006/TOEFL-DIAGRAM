@@ -3601,7 +3601,216 @@ batch38: [
     english: "Founder mindset refers to strategic thinking focused on ownership, growth, and long-term vision.",
     level: "C1",
     arabic_example: "عقلية المؤسس تحتاج إلى تحمل المخاطر واتخاذ القرارات."
-  }
+  },{
+    word: "product strategy",
+    arabic: "استراتيجية المنتج",
+    english: "Product strategy is the plan for how a product will achieve its goals, serve users, and compete in the market.",
+    level: "C1",
+    arabic_example: "استراتيجية المنتج تحدد كيف سنجعل التطبيق ناجحًا في السوق."
+  },
+  {
+    word: "roadmap",
+    arabic: "خارطة الطريق",
+    english: "A roadmap is a plan that outlines the features and direction of a product over time.",
+    level: "C1",
+    arabic_example: "خارطة الطريق توضح الميزات التي سنضيفها خلال الأشهر القادمة."
+  },
+  {
+    word: "feature",
+    arabic: "ميزة",
+    english: "A feature is a specific function or capability of a product.",
+    level: "A2",
+    arabic_example: "أضفنا ميزة جديدة لتحسين تجربة المستخدم."
+  },
+  {
+    word: "feature prioritization",
+    arabic: "ترتيب الأولويات للميزات",
+    english: "Feature prioritization is deciding which features to build first based on value and impact.",
+    level: "C1",
+    arabic_example: "نقوم بترتيب أولويات الميزات حسب احتياجات المستخدمين."
+  },
+  {
+    word: "user feedback",
+    arabic: "ملاحظات المستخدمين",
+    english: "User feedback is the opinions and suggestions users give about a product.",
+    level: "B2",
+    arabic_example: "ملاحظات المستخدمين ساعدتنا على تحسين التطبيق."
+  },
+  {
+    word: "iteration cycle",
+    arabic: "دورة التحسين",
+    english: "An iteration cycle is the repeated process of improving a product based on feedback.",
+    level: "C1",
+    arabic_example: "نحسن المنتج عبر دورات تحسين مستمرة."
+  },
+  {
+    word: "usability",
+    arabic: "سهولة الاستخدام",
+    english: "Usability refers to how easy and intuitive a product is for users.",
+    level: "C1",
+    arabic_example: "سهولة الاستخدام عامل مهم في نجاح أي تطبيق."
+  },
+  {
+    word: "accessibility",
+    arabic: "إمكانية الوصول",
+    english: "Accessibility ensures that a product can be used by people with disabilities or limitations.",
+    level: "C1",
+    arabic_example: "تحسين إمكانية الوصول يجعل التطبيق مناسبًا للجميع."
+  },
+  {
+    word: "onboarding flow",
+    arabic: "مسار التهيئة",
+    english: "An onboarding flow is the step-by-step process that introduces new users to a product.",
+    level: "C1",
+    arabic_example: "قمنا بتبسيط مسار التهيئة لتسهيل بدء الاستخدام."
+  },
+  {
+    word: "activation",
+    arabic: "التفعيل",
+    english: "Activation is when a user experiences the first real value of a product.",
+    level: "C1",
+    arabic_example: "التفعيل يحدث عندما يستخدم المستخدم الميزة الأساسية لأول مرة."
+  },
+  {
+    word: "retention cohort",
+    arabic: "مجموعة الاحتفاظ",
+    english: "A retention cohort is a group of users tracked over time to measure how many stay active.",
+    level: "C1",
+    arabic_example: "درسنا مجموعة الاحتفاظ لفهم سلوك المستخدمين."
+  },
+  {
+    word: "churn rate",
+    arabic: "معدل فقدان المستخدمين",
+    english: "Churn rate is the percentage of users who stop using a product over time.",
+    level: "C1",
+    arabic_example: "ارتفاع معدل فقدان المستخدمين مشكلة يجب حلها."
+  },
+  {
+    word: "north star metric",
+    arabic: "المؤشر الأساسي",
+    english: "A north star metric is the most important metric that represents a product’s core value.",
+    level: "C1",
+    arabic_example: "المؤشر الأساسي لدينا هو عدد المستخدمين النشطين يوميًا."
+  },
+  {
+    word: "KPI",
+    arabic: "مؤشر الأداء الرئيسي",
+    english: "KPI stands for Key Performance Indicator, a measurable value showing success.",
+    level: "C1",
+    arabic_example: "نستخدم مؤشرات الأداء لتتبع النمو."
+  },
+  {
+    word: "metrics",
+    arabic: "مقاييس",
+    english: "Metrics are data points used to measure performance.",
+    level: "B2",
+    arabic_example: "نراجع المقاييس أسبوعيًا لتحسين الأداء."
+  },
+  {
+    word: "dashboard",
+    arabic: "لوحة التحكم",
+    english: "A dashboard is a visual interface showing key data and metrics.",
+    level: "B2",
+    arabic_example: "لوحة التحكم تعرض أداء التطبيق في الوقت الحقيقي."
+  },
+  {
+    word: "data visualization",
+    arabic: "تصوير البيانات",
+    english: "Data visualization is the representation of data in charts and graphs.",
+    level: "C1",
+    arabic_example: "تصوير البيانات يساعد في فهم الأداء بسرعة."
+  },
+  {
+    word: "AARRR framework",
+    arabic: "إطار AARRR",
+    english: "AARRR is a growth model: Acquisition, Activation, Retention, Revenue, Referral.",
+    level: "C1",
+    arabic_example: "نستخدم إطار AARRR لتحليل نمو التطبيق."
+  },
+  {
+    word: "activation rate",
+    arabic: "معدل التفعيل",
+    english: "Activation rate measures how many users reach the first valuable action.",
+    level: "C1",
+    arabic_example: "معدل التفعيل يساعدنا على فهم نجاح تجربة المستخدم."
+  },
+  {
+    word: "conversion funnel",
+    arabic: "قمع التحويل",
+    english: "A conversion funnel tracks how users move from awareness to purchase.",
+    level: "C1",
+    arabic_example: "نحلل قمع التحويل لتحسين المبيعات."
+  },
+  {
+    word: "engagement loop",
+    arabic: "حلقة التفاعل",
+    english: "An engagement loop is a system that encourages users to keep coming back.",
+    level: "C1",
+    arabic_example: "تصميم حلقة التفاعل يزيد من استخدام التطبيق."
+  },
+  {
+    word: "virality coefficient",
+    arabic: "معامل الانتشار",
+    english: "Virality coefficient measures how many new users each user brings.",
+    level: "C1",
+    arabic_example: "إذا كان معامل الانتشار أكبر من 1، ينمو المنتج بسرعة."
+  },
+  {
+    word: "monetization strategy",
+    arabic: "استراتيجية تحقيق الدخل",
+    english: "Monetization strategy defines how a product generates revenue.",
+    level: "C1",
+    arabic_example: "نختار استراتيجية تحقيق الدخل المناسبة للتطبيق."
+  },
+  {
+    word: "pricing model",
+    arabic: "نموذج التسعير",
+    english: "A pricing model defines how customers are charged for a product.",
+    level: "C1",
+    arabic_example: "نموذج التسعير يؤثر على قرار الشراء."
+  },
+  {
+    word: "subscription",
+    arabic: "اشتراك",
+    english: "A subscription is a recurring payment for continuous access to a product.",
+    level: "B2",
+    arabic_example: "نظام الاشتراك الشهري شائع في التطبيقات."
+  },
+  {
+    word: "freemium funnel",
+    arabic: "قمع فريميوم",
+    english: "A freemium funnel shows how free users convert into paying users.",
+    level: "C1",
+    arabic_example: "نحلل قمع الفريميوم لزيادة التحويل."
+  },
+  {
+    word: "value metric",
+    arabic: "مقياس القيمة",
+    english: "A value metric is what users are charged based on (usage, seats, etc.).",
+    level: "C1",
+    arabic_example: "اختيار مقياس القيمة الصحيح مهم لنمو الإيرادات."
+  },
+  {
+    word: "customer journey map",
+    arabic: "خريطة رحلة العميل",
+    english: "A customer journey map visualizes all steps a user takes with a product.",
+    level: "C1",
+    arabic_example: "خريطة رحلة العميل تساعد في تحسين التجربة."
+  },
+  {
+    word: "product-market feedback loop",
+    arabic: "حلقة تغذية راجعة للسوق",
+    english: "A feedback loop where user feedback improves the product continuously.",
+    level: "C1",
+    arabic_example: "حلقة التغذية الراجعة تسريع تحسين المنتج."
+  },
+  {
+    word: "lean product development",
+    arabic: "تطوير منتج رشيق",
+    english: "Lean product development focuses on building quickly, testing, and iterating.",
+    level: "C1",
+    arabic_example: "نستخدم تطوير المنتج الرشيق لتقليل الهدر."
+  },
 
 
   ]
