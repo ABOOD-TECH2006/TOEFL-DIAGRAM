@@ -3811,6 +3811,216 @@ batch38: [
     level: "C1",
     arabic_example: "نستخدم تطوير المنتج الرشيق لتقليل الهدر."
   },
+      {
+    word: "sales",
+    arabic: "المبيعات",
+    english: "Sales is the process of persuading customers to purchase a product or service.",
+    level: "B2",
+    arabic_example: "المبيعات هي المصدر الرئيسي للإيرادات في معظم الشركات."
+  },
+  {
+    word: "business development",
+    arabic: "تطوير الأعمال",
+    english: "Business development focuses on creating growth opportunities through partnerships, markets, and relationships.",
+    level: "C1",
+    arabic_example: "يعمل فريق تطوير الأعمال على إيجاد فرص نمو جديدة للشركة."
+  },
+  {
+    word: "prospecting",
+    arabic: "البحث عن العملاء المحتملين",
+    english: "Prospecting is the process of finding potential customers who may need your product.",
+    level: "C1",
+    arabic_example: "يقضي مندوب المبيعات وقتًا كبيرًا في البحث عن العملاء المحتملين."
+  },
+  {
+    word: "decision maker",
+    arabic: "صاحب القرار",
+    english: "A decision maker is the person who has the authority to approve a purchase.",
+    level: "C1",
+    arabic_example: "يجب الوصول إلى صاحب القرار لتسريع عملية البيع."
+  },
+  {
+    word: "stakeholder",
+    arabic: "صاحب مصلحة",
+    english: "A stakeholder is any person or group affected by a business decision.",
+    level: "C1",
+    arabic_example: "يجب مراعاة جميع أصحاب المصلحة عند اتخاذ القرارات."
+  },
+  {
+    word: "discovery call",
+    arabic: "مكالمة استكشافية",
+    english: "A discovery call is an initial conversation used to understand a prospect's needs and challenges.",
+    level: "C1",
+    arabic_example: "أجرينا مكالمة استكشافية لفهم احتياجات العميل."
+  },
+  {
+    word: "pain point",
+    arabic: "نقطة ألم",
+    english: "A pain point is a specific problem that customers want solved.",
+    level: "C1",
+    arabic_example: "فهم نقطة الألم هو أساس عملية البيع الناجحة."
+  },
+  {
+    word: "needs assessment",
+    arabic: "تحليل الاحتياجات",
+    english: "Needs assessment is the process of identifying a customer's goals and problems.",
+    level: "C1",
+    arabic_example: "بدأنا المشروع بتحليل احتياجات العميل."
+  },
+  {
+    word: "value proposition",
+    arabic: "القيمة المقترحة",
+    english: "A value proposition explains why customers should choose your solution.",
+    level: "C1",
+    arabic_example: "يجب أن تكون القيمة المقترحة واضحة ومقنعة."
+  },
+  {
+    word: "sales pitch",
+    arabic: "عرض مبيعات",
+    english: "A sales pitch is a persuasive presentation designed to convince prospects to buy.",
+    level: "C1",
+    arabic_example: "قدم عرض مبيعات مختصرًا وواضحًا."
+  },
+  {
+    word: "objection",
+    arabic: "اعتراض",
+    english: "An objection is a concern raised by a prospect during the sales process.",
+    level: "C1",
+    arabic_example: "السعر كان الاعتراض الرئيسي لدى العميل."
+  },
+  {
+    word: "objection handling",
+    arabic: "معالجة الاعتراضات",
+    english: "Objection handling is addressing concerns that prevent a prospect from buying.",
+    level: "C1",
+    arabic_example: "معالجة الاعتراضات مهارة أساسية في المبيعات."
+  },
+  {
+    word: "negotiation",
+    arabic: "التفاوض",
+    english: "Negotiation is a discussion aimed at reaching a mutually beneficial agreement.",
+    level: "C1",
+    arabic_example: "التفاوض الجيد يساعد على بناء علاقات طويلة الأمد."
+  },
+  {
+    word: "BATNA",
+    arabic: "أفضل بديل للاتفاق",
+    english: "BATNA stands for Best Alternative To a Negotiated Agreement.",
+    level: "C1",
+    arabic_example: "معرفة أفضل بديل للاتفاق تعطي قوة أثناء التفاوض."
+  },
+  {
+    word: "discount",
+    arabic: "خصم",
+    english: "A discount is a reduction in the normal selling price.",
+    level: "B2",
+    arabic_example: "طلب العميل خصمًا قبل توقيع العقد."
+  },
+  {
+    word: "proposal",
+    arabic: "عرض سعر / مقترح",
+    english: "A proposal is a formal document describing a solution and pricing.",
+    level: "C1",
+    arabic_example: "أرسلنا عرض سعر مفصلًا للعميل."
+  },
+  {
+    word: "quotation",
+    arabic: "عرض سعر",
+    english: "A quotation is an official estimate of the cost of a product or service.",
+    level: "C1",
+    arabic_example: "تم إرسال عرض السعر خلال 24 ساعة."
+  },
+  {
+    word: "procurement",
+    arabic: "المشتريات",
+    english: "Procurement is the process through which organizations purchase products and services.",
+    level: "C1",
+    arabic_example: "يجب موافقة قسم المشتريات قبل إتمام الصفقة."
+  },
+  {
+    word: "deal",
+    arabic: "صفقة",
+    english: "A deal is an agreement between a buyer and seller.",
+    level: "B2",
+    arabic_example: "أغلق الفريق صفقة مهمة هذا الأسبوع."
+  },
+  {
+    word: "closing",
+    arabic: "إغلاق الصفقة",
+    english: "Closing is the final stage where the customer agrees to purchase.",
+    level: "C1",
+    arabic_example: "إغلاق الصفقة يحتاج إلى توقيت مناسب."
+  },
+  {
+    word: "contract value",
+    arabic: "قيمة العقد",
+    english: "Contract value is the total monetary value of an agreement.",
+    level: "C1",
+    arabic_example: "قيمة العقد تجاوزت خمسين ألف دولار."
+  },
+  {
+    word: "annual recurring revenue",
+    arabic: "الإيرادات السنوية المتكررة",
+    english: "ARR measures yearly recurring subscription revenue.",
+    level: "C1",
+    arabic_example: "تركز شركات SaaS على زيادة الإيرادات السنوية المتكررة."
+  },
+  {
+    word: "monthly recurring revenue",
+    arabic: "الإيرادات الشهرية المتكررة",
+    english: "MRR measures recurring monthly subscription revenue.",
+    level: "C1",
+    arabic_example: "ارتفعت الإيرادات الشهرية المتكررة بنسبة 20٪."
+  },
+  {
+    word: "customer success",
+    arabic: "نجاح العميل",
+    english: "Customer success ensures customers achieve their desired outcomes.",
+    level: "C1",
+    arabic_example: "فريق نجاح العميل يساعد العملاء على تحقيق أهدافهم."
+  },
+  {
+    word: "account management",
+    arabic: "إدارة الحسابات",
+    english: "Account management involves maintaining relationships with existing customers.",
+    level: "C1",
+    arabic_example: "إدارة الحسابات القوية تزيد من الاحتفاظ بالعملاء."
+  },
+  {
+    word: "renewal",
+    arabic: "تجديد الاشتراك",
+    english: "A renewal occurs when a customer continues a subscription or contract.",
+    level: "C1",
+    arabic_example: "حققنا معدل تجديد مرتفع هذا الربع."
+  },
+  {
+    word: "expansion revenue",
+    arabic: "إيرادات التوسع",
+    english: "Expansion revenue comes from existing customers purchasing more services.",
+    level: "C1",
+    arabic_example: "إيرادات التوسع زادت بفضل عمليات البيع التصاعدي."
+  },
+  {
+    word: "channel partner",
+    arabic: "شريك توزيع",
+    english: "A channel partner helps sell or distribute your products to customers.",
+    level: "C1",
+    arabic_example: "وقعنا اتفاقية مع شريك توزيع جديد."
+  },
+  {
+    word: "strategic partnership",
+    arabic: "شراكة استراتيجية",
+    english: "A strategic partnership is a collaboration that benefits both organizations.",
+    level: "C1",
+    arabic_example: "ساعدت الشراكة الاستراتيجية في دخول سوق جديد."
+  },
+  {
+    word: "enterprise sales",
+    arabic: "مبيعات المؤسسات",
+    english: "Enterprise sales refers to selling large solutions to organizations and corporations.",
+    level: "C1",
+    arabic_example: "مبيعات المؤسسات تتطلب دورات بيع أطول."
+  },
 
 
   ]
