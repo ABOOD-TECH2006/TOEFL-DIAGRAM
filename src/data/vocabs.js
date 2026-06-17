@@ -4021,6 +4021,216 @@ batch38: [
     level: "C1",
     arabic_example: "مبيعات المؤسسات تتطلب دورات بيع أطول."
   },
+    {
+  word: "leadership",
+  arabic: "القيادة",
+  english: "Leadership is the ability to guide, influence, and inspire people toward a common goal.",
+  level: "C1",
+  arabic_example: "القيادة الفعالة تساعد الفريق على تحقيق أهدافه."
+},
+{
+  word: "vision",
+  arabic: "الرؤية",
+  english: "A vision describes the long-term future a company wants to create.",
+  level: "C1",
+  arabic_example: "يمتلك المؤسس رؤية واضحة لمستقبل الشركة."
+},
+{
+  word: "mission",
+  arabic: "الرسالة",
+  english: "A mission explains why a company exists and what problem it aims to solve.",
+  level: "C1",
+  arabic_example: "تركز رسالة الشركة على تسهيل التعليم للجميع."
+},
+{
+  word: "company culture",
+  arabic: "ثقافة الشركة",
+  english: "Company culture is the collection of values, behaviors, and practices within an organization.",
+  level: "C1",
+  arabic_example: "ثقافة الشركة الإيجابية تزيد من إنتاجية الموظفين."
+},
+{
+  word: "core values",
+  arabic: "القيم الأساسية",
+  english: "Core values are the principles that guide decisions and behavior inside a company.",
+  level: "C1",
+  arabic_example: "النزاهة والابتكار من القيم الأساسية للشركة."
+},
+{
+  word: "ownership",
+  arabic: "تحمل المسؤولية",
+  english: "Ownership means taking responsibility for outcomes instead of making excuses.",
+  level: "C1",
+  arabic_example: "يتوقع المدير من الموظفين تحمل المسؤولية عن نتائج عملهم."
+},
+{
+  word: "accountability",
+  arabic: "المساءلة",
+  english: "Accountability is being responsible for actions, decisions, and results.",
+  level: "C1",
+  arabic_example: "تعزز المساءلة من أداء الفرق الناجحة."
+},
+{
+  word: "delegation",
+  arabic: "تفويض المهام",
+  english: "Delegation is assigning responsibilities to others to improve efficiency.",
+  level: "C1",
+  arabic_example: "تفويض المهام يسمح للقادة بالتركيز على الأولويات."
+},
+{
+  word: "micromanagement",
+  arabic: "الإدارة المفرطة",
+  english: "Micromanagement is excessive control over employees' work and decisions.",
+  level: "C1",
+  arabic_example: "الإدارة المفرطة قد تقلل من إبداع الفريق."
+},
+{
+  word: "empowerment",
+  arabic: "التمكين",
+  english: "Empowerment means giving employees authority and confidence to make decisions.",
+  level: "C1",
+  arabic_example: "يساعد التمكين على بناء فرق قوية ومستقلة."
+},
+{
+  word: "recruitment",
+  arabic: "التوظيف",
+  english: "Recruitment is the process of finding and hiring suitable candidates.",
+  level: "C1",
+  arabic_example: "تسعى الشركة إلى تحسين عملية التوظيف."
+},
+{
+  word: "talent acquisition",
+  arabic: "استقطاب المواهب",
+  english: "Talent acquisition is the strategic process of attracting highly qualified candidates.",
+  level: "C1",
+  arabic_example: "استقطاب المواهب ضروري لنمو الشركات التقنية."
+},
+{
+  word: "job description",
+  arabic: "الوصف الوظيفي",
+  english: "A job description outlines the responsibilities and requirements of a role.",
+  level: "B2",
+  arabic_example: "تم نشر الوصف الوظيفي لمطور الواجهة الأمامية."
+},
+{
+  word: "candidate",
+  arabic: "مرشح وظيفي",
+  english: "A candidate is a person being considered for a job position.",
+  level: "B2",
+  arabic_example: "أجرينا مقابلات مع عدة مرشحين للوظيفة."
+},
+{
+  word: "interview",
+  arabic: "مقابلة عمل",
+  english: "An interview is a formal meeting to assess a candidate's suitability.",
+  level: "B2",
+  arabic_example: "نجح المرشح في مقابلة العمل التقنية."
+},
+{
+  word: "probation period",
+  arabic: "فترة التجربة",
+  english: "A probation period is an initial trial period for a new employee.",
+  level: "C1",
+  arabic_example: "سيتم تقييم الموظف خلال فترة التجربة."
+},
+{
+  word: "performance review",
+  arabic: "تقييم الأداء",
+  english: "A performance review is a formal assessment of an employee's work.",
+  level: "C1",
+  arabic_example: "يتم إجراء تقييم الأداء كل ستة أشهر."
+},
+{
+  word: "feedback culture",
+  arabic: "ثقافة التغذية الراجعة",
+  english: "Feedback culture encourages open communication and continuous improvement.",
+  level: "C1",
+  arabic_example: "تبنت الشركة ثقافة التغذية الراجعة بين جميع الفرق."
+},
+{
+  word: "mentorship",
+  arabic: "الإرشاد المهني",
+  english: "Mentorship is guidance provided by an experienced person to support growth.",
+  level: "C1",
+  arabic_example: "ساعده الإرشاد المهني على تطوير مهاراته القيادية."
+},
+{
+  word: "organizational structure",
+  arabic: "الهيكل التنظيمي",
+  english: "An organizational structure defines reporting relationships and responsibilities.",
+  level: "C1",
+  arabic_example: "قامت الشركة بتحديث هيكلها التنظيمي."
+},
+{
+  word: "cross-functional team",
+  arabic: "فريق متعدد التخصصات",
+  english: "A cross-functional team includes members from different departments working together.",
+  level: "C1",
+  arabic_example: "تم تشكيل فريق متعدد التخصصات لإطلاق المنتج الجديد."
+},
+{
+  word: "alignment",
+  arabic: "المواءمة",
+  english: "Alignment means ensuring everyone is working toward the same objectives.",
+  level: "C1",
+  arabic_example: "تحقيق المواءمة بين الفرق يزيد من الكفاءة."
+},
+{
+  word: "decision-making",
+  arabic: "اتخاذ القرار",
+  english: "Decision-making is the process of choosing between alternatives.",
+  level: "C1",
+  arabic_example: "يتطلب اتخاذ القرار الجيد بيانات دقيقة."
+},
+{
+  word: "conflict resolution",
+  arabic: "حل النزاعات",
+  english: "Conflict resolution is the process of addressing disagreements constructively.",
+  level: "C1",
+  arabic_example: "مهارات حل النزاعات مهمة للقادة."
+},
+{
+  word: "employee retention",
+  arabic: "الاحتفاظ بالموظفين",
+  english: "Employee retention measures a company's ability to keep employees over time.",
+  level: "C1",
+  arabic_example: "الاحتفاظ بالموظفين يقلل تكاليف التوظيف."
+},
+{
+  word: "succession planning",
+  arabic: "تخطيط التعاقب الوظيفي",
+  english: "Succession planning prepares future leaders for critical positions.",
+  level: "C1",
+  arabic_example: "تعتمد الشركات الكبيرة على تخطيط التعاقب الوظيفي."
+},
+{
+  word: "remote work",
+  arabic: "العمل عن بعد",
+  english: "Remote work allows employees to work outside a traditional office.",
+  level: "B2",
+  arabic_example: "أصبحت سياسة العمل عن بعد شائعة في الشركات التقنية."
+},
+{
+  word: "employee engagement",
+  arabic: "اندماج الموظفين",
+  english: "Employee engagement measures employees' commitment and enthusiasm toward their work.",
+  level: "C1",
+  arabic_example: "زيادة اندماج الموظفين تحسن الأداء العام."
+},
+{
+  word: "team dynamics",
+  arabic: "ديناميكيات الفريق",
+  english: "Team dynamics refers to the interactions and relationships among team members.",
+  level: "C1",
+  arabic_example: "ديناميكيات الفريق الجيدة تسرع تنفيذ المشاريع."
+},
+{
+  word: "high-performing team",
+  arabic: "فريق عالي الأداء",
+  english: "A high-performing team consistently achieves exceptional results.",
+  level: "C1",
+  arabic_example: "تسعى الشركات الناشئة لبناء فرق عالية الأداء."
+},
 
 
   ]
