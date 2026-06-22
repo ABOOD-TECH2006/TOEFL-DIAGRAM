@@ -4233,7 +4233,303 @@ batch38: [
 },
 
 
-  ]
+  ],
+  batch40 : [
+  {
+    word: "latte",
+    arabic: "لاتيه",
+    english: "I usually order a latte in the morning.",
+    level: "B1",
+    arabic_example: "أطلب لاتيه عادةً في الصباح."
+  },
+  {
+    word: "foam",
+    arabic: "رغوة",
+    english: "The foam on top of the coffee was perfect.",
+    level: "B1",
+    arabic_example: "كانت الرغوة فوق القهوة مثالية."
+  },
+  {
+    word: "skimmed latte",
+    arabic: "لاتيه بالحليب خالي الدسم",
+    english: "She prefers a skimmed latte to reduce calories.",
+    level: "B2",
+    arabic_example: "تفضل لاتيه بالحليب خالي الدسم لتقليل السعرات."
+  },
+  {
+    word: "extra shot",
+    arabic: "جرعة إسبريسو إضافية",
+    english: "Can I get an extra shot in my coffee?",
+    level: "B1",
+    arabic_example: "هل يمكنني الحصول على جرعة إسبريسو إضافية في قهوتي؟"
+  },
+  {
+    word: "drip coffee",
+    arabic: "قهوة مُقطّرة",
+    english: "Drip coffee is popular in many offices.",
+    level: "B1",
+    arabic_example: "القهوة المقطرة شائعة في العديد من المكاتب."
+  },
+  {
+    word: "searing hot",
+    arabic: "شديد السخونة",
+    english: "Be careful, the soup is searing hot.",
+    level: "C1",
+    arabic_example: "انتبه، الحساء شديد السخونة."
+  },
+  {
+    word: "head on the chopping block",
+    arabic: "في موقف خطر أو مهدد بالعقاب",
+    english: "After the mistake, his head was on the chopping block.",
+    level: "C1",
+    arabic_example: "بعد الخطأ، أصبح في موقف مهدد بالعقاب."
+  },
+  {
+    word: "fling",
+    arabic: "يرمي بعشوائية",
+    english: "He flung the papers onto the desk.",
+    level: "B2",
+    arabic_example: "رمى الأوراق على المكتب بعشوائية."
+  },
+  {
+    word: "roll to voicemail",
+    arabic: "يُحوَّل إلى البريد الصوتي",
+    english: "My call rolled to voicemail again.",
+    level: "B2",
+    arabic_example: "تم تحويل مكالمتي إلى البريد الصوتي مرة أخرى."
+  },
+  {
+    word: "chained to",
+    arabic: "مقيد بـ / عالق في",
+    english: "I am chained to my desk all day.",
+    level: "B2",
+    arabic_example: "أنا عالق في مكتبي طوال اليوم."
+  },
+  {
+    word: "letter opener",
+    arabic: "فتاحة رسائل",
+    english: "She used a letter opener to open the envelope.",
+    level: "B1",
+    arabic_example: "استخدمت فتاحة رسائل لفتح الظرف."
+  },
+  {
+    word: "man",
+    arabic: "يتولى تشغيل أو إدارة",
+    english: "He mans the reception desk every morning.",
+    level: "B2",
+    arabic_example: "يتولى إدارة مكتب الاستقبال كل صباح."
+  },
+  {
+    word: "run errands",
+    arabic: "يقوم بالمشاوير",
+    english: "I need to run some errands this afternoon.",
+    level: "B1",
+    arabic_example: "أحتاج إلى القيام ببعض المشاوير هذا المساء."
+  },
+  {
+    word: "deal with it",
+    arabic: "تعامل مع الأمر",
+    english: "You created the problem, now deal with it.",
+    level: "B1",
+    arabic_example: "أنت من سببت المشكلة، لذا تعامل معها."
+  },
+  {
+    word: "bore someone",
+    arabic: "يُشعر شخصاً بالملل",
+    english: "Long meetings bore me.",
+    level: "B1",
+    arabic_example: "الاجتماعات الطويلة تجعلني أشعر بالملل."
+  },
+  {
+    word: "couture",
+    arabic: "أزياء راقية مصممة خصيصاً",
+    english: "The designer specializes in couture dresses.",
+    level: "C1",
+    arabic_example: "يتخصص المصمم في الأزياء الراقية المصممة خصيصاً."
+  },
+  {
+    word: "haute couture",
+    arabic: "الهوت كوتور",
+    english: "Haute couture pieces are handmade and exclusive.",
+    level: "C2",
+    arabic_example: "قطع الهوت كوتور مصنوعة يدوياً وحصرية."
+  },
+  {
+    word: "fall",
+    arabic: "فصل الخريف",
+    english: "The brand launched its fall collection.",
+    level: "B1",
+    arabic_example: "أطلقت العلامة التجارية مجموعة الخريف الخاصة بها."
+  },
+  {
+    word: "satchel",
+    arabic: "حقيبة بغطاء أمامي",
+    english: "She carried a leather satchel to work.",
+    level: "B2",
+    arabic_example: "حملت حقيبة جلدية إلى العمل."
+  },
+  {
+    word: "in the pony",
+    arabic: "مصنوع من شعر المهر",
+    english: "The handbag is available in the pony.",
+    level: "C1",
+    arabic_example: "الحقيبة متوفرة بخامة شعر المهر."
+  },
+  {
+    word: "casting",
+    arabic: "اختيار العارضين أو الممثلين",
+    english: "The model attended a casting yesterday.",
+    level: "B2",
+    arabic_example: "حضرت العارضة جلسة اختيار أمس."
+  },
+  {
+    word: "disregard",
+    arabic: "تجاهل تام",
+    english: "His disregard for the rules caused problems.",
+    level: "C1",
+    arabic_example: "تسبّب تجاهله التام للقواعد في مشكلات."
+  },
+  {
+    word: "cavalier",
+    arabic: "مستهتر / غير مبالٍ",
+    english: "She had a cavalier attitude toward deadlines.",
+    level: "C2",
+    arabic_example: "كان لديها موقف مستهتر تجاه المواعيد النهائية."
+  },
+  {
+    word: "hideous",
+    arabic: "قبيح للغاية",
+    english: "That wallpaper is absolutely hideous.",
+    level: "B2",
+    arabic_example: "ورق الجدران هذا قبيح للغاية."
+  },
+  {
+    word: "take someone away",
+    arabic: "يأخذ شخصاً بعيداً بالقوة",
+    english: "The police took him away for questioning.",
+    level: "B2",
+    arabic_example: "أخذته الشرطة للاستجواب."
+  },
+  {
+    word: "test drive",
+    arabic: "تجربة قبل الشراء",
+    english: "I took the car for a test drive.",
+    level: "B1",
+    arabic_example: "قمت بتجربة السيارة قبل شرائها."
+  },
+  {
+    word: "I can make this",
+    arabic: "أستطيع فعلها / سأنجح",
+    english: "The jump looks difficult, but I can make this.",
+    level: "B2",
+    arabic_example: "القفزة تبدو صعبة، لكنني أستطيع فعلها."
+  },
+  {
+    word: "any minute",
+    arabic: "في أي لحظة",
+    english: "The train should arrive any minute.",
+    level: "B1",
+    arabic_example: "يجب أن يصل القطار في أي لحظة."
+  },
+  {
+    word: "livelihood",
+    arabic: "مصدر الرزق",
+    english: "Fishing is their main livelihood.",
+    level: "C1",
+    arabic_example: "الصيد هو مصدر رزقهم الرئيسي."
+  },
+  {
+    word: "pick up",
+    arabic: "يبدأ أو يتعلم",
+    english: "She picked up photography as a hobby.",
+    level: "B1",
+    arabic_example: "بدأت تعلم التصوير كهواية."
+  },
+  {
+    word: "for a living",
+    arabic: "كمهنة / لكسب العيش",
+    english: "What do you do for a living?",
+    level: "B1",
+    arabic_example: "ماذا تعمل لكسب العيش؟"
+  },
+  {
+    word: "slow your roll",
+    arabic: "اهدأ / تمهل",
+    english: "Slow your roll and think before acting.",
+    level: "C1",
+    arabic_example: "تمهل وفكر قبل أن تتصرف."
+  },
+  {
+    word: "happy as a clam",
+    arabic: "سعيد جداً",
+    english: "She was happy as a clam after hearing the news.",
+    level: "C1",
+    arabic_example: "كانت سعيدة جداً بعد سماع الخبر."
+  },
+  {
+    word: "not all that",
+    arabic: "ليس مميزاً كما يبدو",
+    english: "That restaurant is not all that.",
+    level: "B2",
+    arabic_example: "ذلك المطعم ليس مميزاً كما يعتقد الناس."
+  },
+  {
+    word: "pay someone mind",
+    arabic: "يعير اهتماماً",
+    english: "Don't pay them any mind.",
+    level: "C1",
+    arabic_example: "لا تعرهم أي اهتمام."
+  },
+  {
+    word: "bring someone down",
+    arabic: "يحبط شخصاً",
+    english: "Negative comments can bring people down.",
+    level: "B2",
+    arabic_example: "التعليقات السلبية قد تحبط الناس."
+  },
+  {
+    word: "cover up",
+    arabic: "يخفي",
+    english: "They tried to cover up the mistake.",
+    level: "B2",
+    arabic_example: "حاولوا إخفاء الخطأ."
+  },
+  {
+    word: "cut deep",
+    arabic: "يؤلم عاطفياً بشدة",
+    english: "His words cut deep.",
+    level: "C1",
+    arabic_example: "كلماته آلمتني بشدة."
+  },
+  {
+    word: "dumb",
+    arabic: "غبي / سخيف",
+    english: "That was a dumb decision.",
+    level: "B1",
+    arabic_example: "كان ذلك قراراً سخيفاً."
+  },
+  {
+    word: "spool",
+    arabic: "بكرة خيط",
+    english: "The spool ran out of thread.",
+    level: "B2",
+    arabic_example: "نفد الخيط من بكرة الخياطة."
+  },
+  {
+    word: "spark",
+    arabic: "شغف أو موهبة مميزة",
+    english: "She is still searching for her spark.",
+    level: "C1",
+    arabic_example: "ما زالت تبحث عن شغفها الحقيقي."
+  },
+  {
+    word: "regular old living",
+    arabic: "حياة عادية يومية",
+    english: "There is nothing wrong with regular old living.",
+    level: "C1",
+    arabic_example: "لا يوجد أي خطأ في عيش حياة عادية."
+  }
+]
 
 };
 export default vocab;
