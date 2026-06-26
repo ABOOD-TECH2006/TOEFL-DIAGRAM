@@ -4528,7 +4528,217 @@ batch38: [
     english: "There is nothing wrong with regular old living.",
     level: "C1",
     arabic_example: "لا يوجد أي خطأ في عيش حياة عادية."
-  }
+  },
+    {
+  word: "cash flow",
+  arabic: "التدفق النقدي",
+  english: "Cash flow is the movement of money into and out of a business.",
+  level: "C1",
+  arabic_example: "التدفق النقدي الإيجابي يساعد الشركة على تغطية نفقاتها."
+},
+{
+  word: "cash reserve",
+  arabic: "الاحتياطي النقدي",
+  english: "A cash reserve is money kept available to cover unexpected expenses or emergencies.",
+  level: "C1",
+  arabic_example: "تحتفظ الشركة باحتياطي نقدي لمواجهة الظروف الطارئة."
+},
+{
+  word: "operating expenses",
+  arabic: "المصاريف التشغيلية",
+  english: "Operating expenses are the ongoing costs required to run a business.",
+  level: "C1",
+  arabic_example: "ارتفعت المصاريف التشغيلية بعد افتتاح مكتب جديد."
+},
+{
+  word: "capital expenditure",
+  arabic: "النفقات الرأسمالية",
+  english: "Capital expenditure refers to money spent on acquiring or improving long-term assets.",
+  level: "C1",
+  arabic_example: "استثمرت الشركة في خوادم جديدة ضمن النفقات الرأسمالية."
+},
+{
+  word: "operating profit",
+  arabic: "الربح التشغيلي",
+  english: "Operating profit is the profit earned from normal business operations before taxes and interest.",
+  level: "C1",
+  arabic_example: "ارتفع الربح التشغيلي بفضل زيادة الكفاءة."
+},
+{
+  word: "net profit",
+  arabic: "صافي الربح",
+  english: "Net profit is the amount remaining after all expenses, taxes, and costs have been deducted.",
+  level: "B2",
+  arabic_example: "حقق المشروع صافي ربح أعلى من المتوقع."
+},
+{
+  word: "gross revenue",
+  arabic: "إجمالي الإيرادات",
+  english: "Gross revenue is the total income generated before any deductions.",
+  level: "C1",
+  arabic_example: "بلغ إجمالي الإيرادات مليون دولار هذا العام."
+},
+{
+  word: "break-even point",
+  arabic: "نقطة التعادل",
+  english: "The break-even point is when total revenue equals total costs, resulting in no profit or loss.",
+  level: "C1",
+  arabic_example: "وصلت الشركة إلى نقطة التعادل بعد عشرة أشهر."
+},
+{
+  word: "liquidity",
+  arabic: "السيولة",
+  english: "Liquidity is a company's ability to meet its short-term financial obligations.",
+  level: "C1",
+  arabic_example: "الحفاظ على السيولة أمر ضروري لاستمرار الشركة."
+},
+{
+  word: "working capital",
+  arabic: "رأس المال العامل",
+  english: "Working capital is the difference between a company's current assets and current liabilities.",
+  level: "C1",
+  arabic_example: "تحسن رأس المال العامل خلال الربع الأخير."
+},
+{
+  word: "accounts receivable",
+  arabic: "الذمم المدينة",
+  english: "Accounts receivable is money owed to a business by its customers.",
+  level: "C1",
+  arabic_example: "تعمل الشركة على تحصيل الذمم المدينة بسرعة."
+},
+{
+  word: "accounts payable",
+  arabic: "الذمم الدائنة",
+  english: "Accounts payable is money a business owes to suppliers or vendors.",
+  level: "C1",
+  arabic_example: "تم سداد جميع الذمم الدائنة في نهاية الشهر."
+},
+{
+  word: "invoice",
+  arabic: "فاتورة",
+  english: "An invoice is a document requesting payment for goods or services provided.",
+  level: "B2",
+  arabic_example: "أرسلنا الفاتورة إلى العميل بعد انتهاء المشروع."
+},
+{
+  word: "purchase order",
+  arabic: "أمر شراء",
+  english: "A purchase order is an official document authorizing the purchase of goods or services.",
+  level: "C1",
+  arabic_example: "أصدر قسم المشتريات أمر شراء جديد."
+},
+{
+  word: "budget",
+  arabic: "ميزانية",
+  english: "A budget is a financial plan that estimates income and expenses over a period.",
+  level: "B2",
+  arabic_example: "راجعنا الميزانية قبل بدء المشروع."
+},
+{
+  word: "forecast",
+  arabic: "توقع مالي",
+  english: "A forecast predicts future business performance based on current data.",
+  level: "C1",
+  arabic_example: "أظهر التوقع المالي نموًا في المبيعات."
+},
+{
+  word: "cash burn",
+  arabic: "استهلاك النقد",
+  english: "Cash burn refers to the actual cash a business spends over a period.",
+  level: "C1",
+  arabic_example: "انخفض استهلاك النقد بعد تقليل المصروفات."
+},
+{
+  word: "fixed cost",
+  arabic: "تكلفة ثابتة",
+  english: "A fixed cost does not change with production or sales volume.",
+  level: "B2",
+  arabic_example: "إيجار المكتب يعتبر تكلفة ثابتة."
+},
+{
+  word: "variable cost",
+  arabic: "تكلفة متغيرة",
+  english: "A variable cost changes depending on production or sales volume.",
+  level: "B2",
+  arabic_example: "تكلفة الشحن تعد من التكاليف المتغيرة."
+},
+{
+  word: "profit margin",
+  arabic: "هامش الربح",
+  english: "Profit margin measures how much profit a business earns from each unit of revenue.",
+  level: "C1",
+  arabic_example: "ارتفع هامش الربح بعد تحسين العمليات."
+},
+{
+  word: "financial statement",
+  arabic: "القوائم المالية",
+  english: "Financial statements summarize a company's financial performance and position.",
+  level: "C1",
+  arabic_example: "راجع المستثمر القوائم المالية قبل الاستثمار."
+},
+{
+  word: "balance sheet",
+  arabic: "الميزانية العمومية",
+  english: "A balance sheet shows a company's assets, liabilities, and owner's equity at a specific point in time.",
+  level: "C1",
+  arabic_example: "تعكس الميزانية العمومية الوضع المالي للشركة."
+},
+{
+  word: "income statement",
+  arabic: "قائمة الدخل",
+  english: "An income statement reports revenue, expenses, and profit over a period.",
+  level: "C1",
+  arabic_example: "أظهرت قائمة الدخل نموًا في الأرباح."
+},
+{
+  word: "cash flow statement",
+  arabic: "قائمة التدفقات النقدية",
+  english: "A cash flow statement shows how cash moves through a business during a period.",
+  level: "C1",
+  arabic_example: "توضح قائمة التدفقات النقدية مصادر واستخدامات الأموال."
+},
+{
+  word: "asset",
+  arabic: "أصل",
+  english: "An asset is something valuable that a company owns.",
+  level: "B2",
+  arabic_example: "تعتبر البرمجيات أحد أصول الشركة."
+},
+{
+  word: "liability",
+  arabic: "التزام مالي",
+  english: "A liability is a financial obligation that a company owes to others.",
+  level: "C1",
+  arabic_example: "خفضت الشركة التزاماتها المالية هذا العام."
+},
+{
+  word: "depreciation",
+  arabic: "الاستهلاك المحاسبي",
+  english: "Depreciation is the gradual reduction in the value of a long-term asset over time.",
+  level: "C1",
+  arabic_example: "يتم احتساب استهلاك المعدات سنويًا."
+},
+{
+  word: "book value",
+  arabic: "القيمة الدفترية",
+  english: "Book value is the value of an asset according to accounting records.",
+  level: "C1",
+  arabic_example: "القيمة الدفترية تختلف عن القيمة السوقية."
+},
+{
+  word: "opportunity cost",
+  arabic: "تكلفة الفرصة البديلة",
+  english: "Opportunity cost is the value of the best alternative that is given up when making a decision.",
+  level: "C1",
+  arabic_example: "يجب أن يفكر المؤسس في تكلفة الفرصة البديلة قبل الاستثمار."
+},
+{
+  word: "capital allocation",
+  arabic: "تخصيص رأس المال",
+  english: "Capital allocation is the process of deciding where a company should invest its financial resources.",
+  level: "C1",
+  arabic_example: "يعد تخصيص رأس المال من أهم مسؤوليات المدير التنفيذي."
+},
 ]
 
 };
