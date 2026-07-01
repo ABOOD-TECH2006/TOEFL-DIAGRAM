@@ -4739,6 +4739,335 @@ batch38: [
     level: "C1",
     arabic_example: "لا يوجد أي خطأ في عيش حياة عادية."
   },
+     {
+    word: "lousy",
+    arabic: "سيئ جداً",
+    english: "The food at that restaurant was lousy.",
+    level: "B1",
+    arabic_example: "كان الطعام في ذلك المطعم سيئاً جداً."
+  },
+  {
+    word: "tipper",
+    arabic: "شخص يعطي بقشيشاً",
+    english: "He's a generous tipper.",
+    level: "B2",
+    arabic_example: "إنه شخص كريم في إعطاء البقشيش."
+  },
+  {
+    word: "order up!",
+    arabic: "الطلب جاهز!",
+    english: "Order up! Table five is ready.",
+    level: "B1",
+    arabic_example: "الطلب جاهز! طاولة رقم خمسة."
+  },
+  {
+    word: "it is said",
+    arabic: "يُقال إن",
+    english: "It is said that this temple is over 500 years old.",
+    level: "B2",
+    arabic_example: "يُقال إن هذا المعبد يزيد عمره عن 500 سنة."
+  },
+  {
+    word: "months at a time",
+    arabic: "لعدة أشهر متواصلة",
+    english: "He travels abroad for months at a time.",
+    level: "B2",
+    arabic_example: "يسافر إلى الخارج لعدة أشهر متواصلة."
+  },
+  {
+    word: "impersonation",
+    arabic: "تقليد شخص",
+    english: "Her impersonation of the teacher was hilarious.",
+    level: "B2",
+    arabic_example: "كان تقليدها للمعلم مضحكاً جداً."
+  },
+  {
+    word: "stink at",
+    arabic: "سيئ جداً في",
+    english: "I stink at playing chess.",
+    level: "B1",
+    arabic_example: "أنا سيئ جداً في لعب الشطرنج."
+  },
+  {
+    word: "get through to someone",
+    arabic: "يوصل الفكرة لشخص",
+    english: "I couldn't get through to him.",
+    level: "B2",
+    arabic_example: "لم أستطع إيصال الفكرة إليه."
+  },
+  {
+    word: "vow",
+    arabic: "يتعهد / وعد جاد",
+    english: "She vowed to never give up.",
+    level: "B2",
+    arabic_example: "تعهدت ألا تستسلم أبداً."
+  },
+  {
+    word: "free to",
+    arabic: "حر في أن",
+    english: "You're free to leave whenever you want.",
+    level: "B1",
+    arabic_example: "أنت حر في المغادرة متى شئت."
+  },
+  {
+    word: "have a",
+    arabic: "تفضل / تناول",
+    english: "Have a cookie before you go.",
+    level: "B1",
+    arabic_example: "تفضل قطعة بسكويت قبل أن تذهب."
+  },
+  {
+    word: "how'd you",
+    arabic: "كيف فعلت؟",
+    english: "How'd you solve that problem so quickly?",
+    level: "B1",
+    arabic_example: "كيف حللت تلك المشكلة بهذه السرعة؟"
+  },
+  {
+    word: "what are ya",
+    arabic: "ماذا تفعل؟ (عامية)",
+    english: "What are ya doing this weekend?",
+    level: "B1",
+    arabic_example: "ماذا ستفعل في عطلة نهاية الأسبوع؟"
+  },
+  {
+    word: "pound (lb)",
+    arabic: "رطل",
+    english: "The package weighs five pounds.",
+    level: "A2",
+    arabic_example: "يزن الطرد خمسة أرطال."
+  },
+  {
+    word: "foot (ft)",
+    arabic: "قدم",
+    english: "The wall is ten feet tall.",
+    level: "A2",
+    arabic_example: "يبلغ ارتفاع الجدار عشرة أقدام."
+  },
+  {
+    word: "mile",
+    arabic: "ميل",
+    english: "We walked three miles today.",
+    level: "A2",
+    arabic_example: "مشينا ثلاثة أميال اليوم."
+  },
+  {
+    word: "astrophage",
+    arabic: "أستروفاج (كائن خيالي)",
+    english: "The novel introduces an organism called Astrophage.",
+    level: "C2",
+    arabic_example: "تقدم الرواية كائناً خيالياً يسمى أستروفاج."
+  },
+  {
+    word: "interstellar",
+    arabic: "بين النجوم",
+    english: "The spacecraft entered interstellar space.",
+    level: "C1",
+    arabic_example: "دخلت المركبة الفضاء بين النجوم."
+  },
+  {
+    word: "clearance",
+    arabic: "تصريح رسمي",
+    english: "Only staff with clearance may enter.",
+    level: "B2",
+    arabic_example: "يسمح بالدخول فقط لمن لديهم تصريح."
+  },
+  {
+    word: "pertaining to",
+    arabic: "المتعلق بـ",
+    english: "This document pertains to your application.",
+    level: "C1",
+    arabic_example: "هذه الوثيقة تتعلق بطلبك."
+  },
+  {
+    word: "hereby",
+    arabic: "بموجب هذا",
+    english: "You are hereby notified of the decision.",
+    level: "C2",
+    arabic_example: "يتم بموجب هذا إخطارك بالقرار."
+  },
+  {
+    word: "starvation",
+    arabic: "المجاعة / الجوع الشديد",
+    english: "Millions suffer from starvation.",
+    level: "C1",
+    arabic_example: "يعاني الملايين من المجاعة."
+  },
+  {
+    word: "no big whoop",
+    arabic: "ليس بالأمر الكبير",
+    english: "It's no big whoop, don't worry.",
+    level: "C1",
+    arabic_example: "ليس بالأمر الكبير، لا تقلق."
+  },
+  {
+    word: "freefall",
+    arabic: "سقوط حر",
+    english: "The company went into freefall after the scandal.",
+    level: "C1",
+    arabic_example: "دخلت الشركة في سقوط حر بعد الفضيحة."
+  },
+  {
+    word: "teeny weeny",
+    arabic: "صغير جداً",
+    english: "There's only a teeny weeny problem.",
+    level: "B2",
+    arabic_example: "هناك مشكلة صغيرة جداً فقط."
+  },
+  {
+    word: "why on earth",
+    arabic: "لماذا بحق السماء",
+    english: "Why on earth would you do that?",
+    level: "B2",
+    arabic_example: "لماذا بحق السماء فعلت ذلك؟"
+  },
+  {
+    word: "kick around",
+    arabic: "يناقش فكرة بشكل غير رسمي",
+    english: "Let's kick around a few ideas.",
+    level: "C1",
+    arabic_example: "دعنا نناقش بعض الأفكار."
+  },
+  {
+    word: "long shot",
+    arabic: "احتمال ضعيف جداً",
+    english: "Winning is a long shot.",
+    level: "B2",
+    arabic_example: "الفوز احتمال ضعيف جداً."
+  },
+  {
+    word: "Hail Mary",
+    arabic: "محاولة أخيرة يائسة",
+    english: "The team made a Hail Mary pass.",
+    level: "C2",
+    arabic_example: "قام الفريق بمحاولة أخيرة يائسة."
+  },
+  {
+    word: "see what's up",
+    arabic: "يرى ما الذي يحدث",
+    english: "I'll go see what's up.",
+    level: "B1",
+    arabic_example: "سأذهب لأرى ما الذي يحدث."
+  },
+  {
+    word: "self-deprecating humor",
+    arabic: "السخرية من النفس",
+    english: "He uses self-deprecating humor in interviews.",
+    level: "C2",
+    arabic_example: "يستخدم السخرية من نفسه في المقابلات."
+  },
+  {
+    word: "what the heck",
+    arabic: "ما هذا بحق الجحيم؟ (ألطف)",
+    english: "What the heck is going on?",
+    level: "B1",
+    arabic_example: "ما الذي يحدث بحق الجحيم؟"
+  },
+  {
+    word: "clear out",
+    arabic: "يفرغ المكان",
+    english: "Please clear out the garage.",
+    level: "B1",
+    arabic_example: "من فضلك أفرغ المرآب."
+  },
+  {
+    word: "demo day",
+    arabic: "يوم الهدم",
+    english: "Tomorrow is demo day.",
+    level: "B2",
+    arabic_example: "غداً هو يوم الهدم."
+  },
+  {
+    word: "be in charge",
+    arabic: "يكون مسؤولاً عن",
+    english: "Sarah is in charge of the project.",
+    level: "B1",
+    arabic_example: "سارة مسؤولة عن المشروع."
+  },
+  {
+    word: "tear apart",
+    arabic: "يمزق / يدمر",
+    english: "The dog tore the toy apart.",
+    level: "B2",
+    arabic_example: "مزق الكلب اللعبة بالكامل."
+  },
+  {
+    word: "no can do",
+    arabic: "لا يمكن / مستحيل",
+    english: "Sorry, no can do.",
+    level: "B1",
+    arabic_example: "آسف، لا أستطيع."
+  },
+  {
+    word: "all set",
+    arabic: "جاهز تماماً",
+    english: "Everything is all set.",
+    level: "B1",
+    arabic_example: "كل شيء جاهز."
+  },
+  {
+    word: "be on someone",
+    arabic: "يضغط أو يزعج شخصاً باستمرار",
+    english: "My parents are always on me about my grades.",
+    level: "B2",
+    arabic_example: "والداي يضغطان علي دائماً بشأن درجاتي."
+  },
+  {
+    word: "lay off",
+    arabic: "كف عن إزعاج",
+    english: "Lay off your brother for a while.",
+    level: "B2",
+    arabic_example: "كف عن مضايقة أخيك قليلاً."
+  },
+  {
+    word: "overreact much?",
+    arabic: "ألا تبالغ قليلاً؟",
+    english: "Overreact much? It was just a joke.",
+    level: "B2",
+    arabic_example: "ألا تبالغ قليلاً؟ لقد كانت مجرد مزحة."
+  },
+  {
+    word: "barely touched",
+    arabic: "لم يُستخدم أو يُؤكل إلا قليلاً",
+    english: "She barely touched her dinner.",
+    level: "B2",
+    arabic_example: "لم تأكل من عشاءها إلا القليل."
+  },
+  {
+    word: "gross",
+    arabic: "مقزز",
+    english: "That's gross!",
+    level: "B1",
+    arabic_example: "هذا مقزز!"
+  },
+  {
+    word: "make a big deal out of",
+    arabic: "يضخم الأمر",
+    english: "Don't make a big deal out of it.",
+    level: "B2",
+    arabic_example: "لا تضخم الأمر."
+  },
+  {
+    word: "stick to the script",
+    arabic: "التزم بالخطة",
+    english: "Please stick to the script.",
+    level: "B2",
+    arabic_example: "من فضلك التزم بالخطة."
+  },
+  {
+    word: "gosh",
+    arabic: "يا إلهي (مهذبة)",
+    english: "Gosh, that's amazing!",
+    level: "B1",
+    arabic_example: "يا إلهي، هذا مذهل!"
+  },
+  {
+    word: "preview",
+    arabic: "معاينة / عرض مسبق",
+    english: "We watched a preview of the movie.",
+    level: "B1",
+    arabic_example: "شاهدنا عرضاً مسبقاً للفيلم."
+  }
 
 ]
 
