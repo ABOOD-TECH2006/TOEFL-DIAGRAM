@@ -5067,7 +5067,217 @@ batch38: [
     english: "We watched a preview of the movie.",
     level: "B1",
     arabic_example: "شاهدنا عرضاً مسبقاً للفيلم."
-  }
+  },
+    {
+  word: "legal entity",
+  arabic: "كيان قانوني",
+  english: "A legal entity is an organization that has legal rights and responsibilities separate from its owners.",
+  level: "C1",
+  arabic_example: "تم تسجيل الشركة ككيان قانوني مستقل."
+},
+{
+  word: "sole proprietorship",
+  arabic: "الملكية الفردية",
+  english: "A sole proprietorship is a business owned and operated by one individual.",
+  level: "C1",
+  arabic_example: "بدأ مشروعه كملكية فردية قبل أن يؤسس شركة."
+},
+{
+  word: "limited liability company",
+  arabic: "شركة ذات مسؤولية محدودة",
+  english: "A Limited Liability Company (LLC) protects the owners' personal assets from business liabilities.",
+  level: "C1",
+  arabic_example: "اختار تأسيس شركة ذات مسؤولية محدودة لحماية أصوله الشخصية."
+},
+{
+  word: "corporation",
+  arabic: "شركة مساهمة",
+  english: "A corporation is a separate legal entity owned by shareholders.",
+  level: "C1",
+  arabic_example: "تحولت الشركة إلى شركة مساهمة استعدادًا للتوسع."
+},
+{
+  word: "shareholder",
+  arabic: "مساهم",
+  english: "A shareholder is a person or organization that owns shares in a company.",
+  level: "B2",
+  arabic_example: "يمتلك المستثمر نسبة من الأسهم بصفته مساهمًا."
+},
+{
+  word: "board of directors",
+  arabic: "مجلس الإدارة",
+  english: "The board of directors oversees the company's strategy and major decisions.",
+  level: "C1",
+  arabic_example: "وافق مجلس الإدارة على خطة التوسع."
+},
+{
+  word: "bylaws",
+  arabic: "النظام الداخلي",
+  english: "Bylaws are the internal rules that govern how a company operates.",
+  level: "C1",
+  arabic_example: "تنظم اللوائح الداخلية آلية اتخاذ القرارات."
+},
+{
+  word: "compliance",
+  arabic: "الامتثال",
+  english: "Compliance means following laws, regulations, and internal policies.",
+  level: "C1",
+  arabic_example: "يجب على الشركة الالتزام بجميع القوانين المحلية."
+},
+{
+  word: "regulation",
+  arabic: "لائحة تنظيمية",
+  english: "A regulation is an official rule issued by a government or authority.",
+  level: "C1",
+  arabic_example: "تلتزم الشركة باللوائح التنظيمية الخاصة بحماية البيانات."
+},
+{
+  word: "intellectual property",
+  arabic: "الملكية الفكرية",
+  english: "Intellectual property refers to creations of the mind that are legally protected.",
+  level: "C1",
+  arabic_example: "تحرص الشركة على حماية ملكيتها الفكرية."
+},
+{
+  word: "patent",
+  arabic: "براءة اختراع",
+  english: "A patent gives an inventor exclusive rights to an invention for a limited time.",
+  level: "C1",
+  arabic_example: "حصلت الشركة على براءة اختراع لتقنيتها الجديدة."
+},
+{
+  word: "trademark",
+  arabic: "علامة تجارية",
+  english: "A trademark legally protects a brand name, logo, or slogan.",
+  level: "C1",
+  arabic_example: "سجلت الشركة علامتها التجارية رسميًا."
+},
+{
+  word: "copyright",
+  arabic: "حقوق النشر",
+  english: "Copyright protects original creative works such as software, books, and designs.",
+  level: "C1",
+  arabic_example: "الكود البرمجي محمي بحقوق النشر."
+},
+{
+  word: "non-disclosure agreement",
+  arabic: "اتفاقية عدم الإفصاح",
+  english: "A Non-Disclosure Agreement (NDA) is a contract that protects confidential information.",
+  level: "C1",
+  arabic_example: "وقع جميع الموظفين اتفاقية عدم الإفصاح."
+},
+{
+  word: "terms of service",
+  arabic: "شروط الاستخدام",
+  english: "Terms of service define the rules users agree to when using a product.",
+  level: "B2",
+  arabic_example: "وافق المستخدم على شروط الاستخدام قبل التسجيل."
+},
+{
+  word: "privacy policy",
+  arabic: "سياسة الخصوصية",
+  english: "A privacy policy explains how a company collects and uses user data.",
+  level: "B2",
+  arabic_example: "تم تحديث سياسة الخصوصية لتتوافق مع القوانين الجديدة."
+},
+{
+  word: "service level agreement",
+  arabic: "اتفاقية مستوى الخدمة",
+  english: "A Service Level Agreement (SLA) defines the expected quality and availability of a service.",
+  level: "C1",
+  arabic_example: "تنص اتفاقية مستوى الخدمة على توفر بنسبة 99.9٪."
+},
+{
+  word: "vendor",
+  arabic: "مورد",
+  english: "A vendor is a business or person that supplies goods or services.",
+  level: "B2",
+  arabic_example: "تتعاون الشركة مع موردين من عدة دول."
+},
+{
+  word: "supply chain",
+  arabic: "سلسلة التوريد",
+  english: "A supply chain is the network involved in producing and delivering a product.",
+  level: "C1",
+  arabic_example: "أدت الأزمة إلى تعطيل سلسلة التوريد."
+},
+{
+  word: "procurement cycle",
+  arabic: "دورة المشتريات",
+  english: "The procurement cycle is the complete process of purchasing goods or services.",
+  level: "C1",
+  arabic_example: "تسعى الشركة إلى تقصير دورة المشتريات."
+},
+{
+  word: "standard operating procedure",
+  arabic: "إجراءات التشغيل القياسية",
+  english: "A Standard Operating Procedure (SOP) is a documented process for performing routine tasks.",
+  level: "C1",
+  arabic_example: "تتبع الشركة إجراءات تشغيل قياسية لجميع العمليات."
+},
+{
+  word: "workflow",
+  arabic: "سير العمل",
+  english: "A workflow is the sequence of tasks required to complete a process.",
+  level: "B2",
+  arabic_example: "قمنا بأتمتة سير العمل لتوفير الوقت."
+},
+{
+  word: "quality assurance",
+  arabic: "ضمان الجودة",
+  english: "Quality assurance ensures products and services consistently meet defined standards.",
+  level: "C1",
+  arabic_example: "يراجع فريق ضمان الجودة المنتج قبل الإطلاق."
+},
+{
+  word: "quality control",
+  arabic: "مراقبة الجودة",
+  english: "Quality control is the inspection of products to identify defects before delivery.",
+  level: "C1",
+  arabic_example: "اكتشف فريق مراقبة الجودة عدة أخطاء قبل التسليم."
+},
+{
+  word: "risk assessment",
+  arabic: "تقييم المخاطر",
+  english: "Risk assessment identifies and evaluates potential threats to a business.",
+  level: "C1",
+  arabic_example: "أجرى الفريق تقييمًا للمخاطر قبل إطلاق الخدمة."
+},
+{
+  word: "business continuity",
+  arabic: "استمرارية الأعمال",
+  english: "Business continuity is the ability to continue operating during disruptions.",
+  level: "C1",
+  arabic_example: "وضعت الشركة خطة لاستمرارية الأعمال في حالات الطوارئ."
+},
+{
+  word: "contingency plan",
+  arabic: "خطة طوارئ",
+  english: "A contingency plan is a backup plan prepared for unexpected events.",
+  level: "C1",
+  arabic_example: "أعد الفريق خطة طوارئ لمواجهة انقطاع الخدمة."
+},
+{
+  word: "audit",
+  arabic: "تدقيق",
+  english: "An audit is a formal examination of financial records, processes, or compliance.",
+  level: "C1",
+  arabic_example: "خضعت الشركة لتدقيق مالي سنوي."
+},
+{
+  word: "governance",
+  arabic: "الحوكمة",
+  english: "Governance is the system of rules and processes used to direct and control an organization.",
+  level: "C1",
+  arabic_example: "تعزز الحوكمة الجيدة ثقة المستثمرين."
+},
+{
+  word: "fiduciary duty",
+  arabic: "الواجب الائتماني",
+  english: "Fiduciary duty is the legal obligation to act in the best interests of another party, such as shareholders.",
+  level: "C1",
+  arabic_example: "يلتزم أعضاء مجلس الإدارة بالواجب الائتماني تجاه المساهمين."
+}
 
 ]
 
